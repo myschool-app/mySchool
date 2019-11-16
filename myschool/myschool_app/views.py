@@ -45,6 +45,13 @@ class SobreView(TemplateView):
     """
     template_name = 'myschool_app/publico/sobre.html'
 
+
+class EquipaView(TemplateView):
+    """
+    Mostra a página equipa
+    """
+    template_name = 'myschool_app/publico/equipa.html'
+
 # Contactos
 
 

@@ -19,8 +19,14 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'publico-funcionalidades' %}">Funcionalidades</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'publico-sobre' %}">Sobre</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="{% url 'publico-sobre' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sobre
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'publico-equipa' %}">Equipa</a>
+          <a class="dropdown-item" href="#">História</a>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'publico-contactos' %}">Contactos</a>

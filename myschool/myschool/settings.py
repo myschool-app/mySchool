@@ -135,6 +135,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Autenticação
 LOGIN_REDIRECT_URL = 'app-inicio'
 LOGIN_URL = 'app-login'
+LOGOUT_REDIRECT_URL = 'publico-inicio'
 
 # Servidor de Email
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

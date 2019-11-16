@@ -21,6 +21,10 @@ from django.conf.urls.static import static
 from utilizadores import views as utilizadores_views
 
 urlpatterns = [
+    # Páginas Públicas
+    path('', include('myschool_app.urls')),
+    # Páginas da Aplicação
+    path('app/', include('myschool_app.urls_app')),
     # Administração
     path('admin/docs/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
@@ -29,8 +33,7 @@ urlpatterns = [
     path('app/perfil/', utilizadores_views.perfil, name="app-perfil"),
     path('app/login/', auth_views.LoginView.as_view(
         template_name='utilizadores/login.html', redirect_authenticated_user=True), name='app-login'),
-    path('app/logout/', auth_views.LogoutView.as_view(
-        template_name='utilizadores/logout.html'), name='app-logout'),
+    path('app/logout/', auth_views.LogoutView.as_view(), name='app-logout'),
     # Recuperação da password
     path('app/recuperar-password/', auth_views.PasswordResetView.as_view(
         template_name='utilizadores/recuperar_password.html'), name='app-recuperar-passowrd'),
@@ -40,8 +43,6 @@ urlpatterns = [
         template_name='utilizadores/recuperar_password_confirmacao.html'), name='app-recuperar-password-confirmacao'),
     path('app/recuperar-password/recuperada', auth_views.PasswordResetCompleteView.as_view(
         template_name='utilizadores/recuperar_password_recuperada.html'), name='app-recuperar-password-recuperada'),
-    # Páginas Públicas e App
-    path('', include('myschool_app.urls')),
 ]
 
 if settings.DEBUG:
