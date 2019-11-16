@@ -5,8 +5,8 @@ from .models import Perfil
 
 
 class UtilizadorRegistoForm(UserCreationForm):
-    first_name = forms.CharField(required=True)
-    last_name = forms.CharField(required=True)
+    first_name = forms.CharField(required=True, label="Primeiro Nome")
+    last_name = forms.CharField(required=True, label="Último Nome")
     email = forms.EmailField()
 
     class Meta:

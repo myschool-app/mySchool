@@ -1,5 +1,10 @@
-{% extends 'myschool_app/app/base.html' %} {% block content %}
+{% extends 'myschool_app/app/base.html' %}
 
+{% block title %}
+  Dashboard
+{% endblock title %}
+
+{% block content %}
 <div class="d-flex">
   {% include 'myschool_app/app/partials/_sidebar.html' %}
 
@@ -173,5 +178,4 @@
     </div>
   </div>
 </div>
-
-{% endblock %}
+{% endblock content %}

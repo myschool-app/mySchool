@@ -1,0 +1,38 @@
+{% extends 'myschool_app/app/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  Adicionar Disciplina
+{% endblock title %}
+
+{% block content %}
+<div class="d-flex">
+  {% include 'myschool_app/app/partials/_sidebar.html' %}
+
+  <div class="content p-4">
+    <h2>Disciplinas</h2>
+
+    <div class="row mt-4">
+      <div class="col-md-10">
+        <form method="POST">
+          {% csrf_token %}
+          {{ form | crispy }}
+          <input type="submit" class="btn btn-info" value="Guardar">
+        </form>
+      </div>
+      <!-- Dica -->
+      <div class="col-md-2">
+        <div class="card text-center">
+          <div class="card-header text-white bg-dark">
+            <i class="fas fa-2x fa-lightbulb m-2"></i> <br />
+            <h4>Dica</h4>
+          </div>
+          <div class="card-body m-0 p-3">
+            <p>Não precisas de registar professores para adicionares disciplinas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

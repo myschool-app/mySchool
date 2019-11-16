@@ -1,9 +1,11 @@
 from django.urls import path
-from . import views as views_app
+from .views_app import *
 
 urlpatterns = [
     # Páginas da Aplicação
-    path('', views_app.Dashboard.as_view(), name="app-inicio"),
-    path('app/disciplinas/', views_app.DisciplinaListView.as_view(),
+    path('', Dashboard.as_view(), name="app-inicio"),
+    path('disciplinas/', DisciplinaListView.as_view(),
          name="app-disciplinas-lista"),
+    path('disciplinas/adicionar/', DisciplinaFormView.as_view(),
+         name="app-disciplinas-adicionar")
 ]

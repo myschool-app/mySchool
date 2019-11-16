@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'myschool_app/fontawesome/css/all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'myschool_app/css/bootadmin.min.css' %}" />
 
-    <title>Dashboard | mySchool</title>
+    <title>mySchool - {% block title %}{% endblock title %}</title>
   </head>
   <body class="bg-light">
     {% include 'myschool_app/app/partials/_navbar.html' %}
