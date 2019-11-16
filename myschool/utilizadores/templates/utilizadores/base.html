@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="{% static 'myschool_app/css/fontawesome-all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'myschool_app/css/bootadmin.min.css' %}" />
 
-    <title>mySchool</title>
+    <title>mySchool - {% block title %}{% endblock title %}</title>
   </head>
   <body class="bg-light">
 
+    <!-- Mensagens -->
     {% if messages %}
       {% for message in messages %}
         <div class="m-3 alert alert-{{ message.tags }}">
@@ -22,8 +23,9 @@
       {% endfor %}
     {% endif %}
 
+    <!-- Conteúdo de cada página -->
     {% block content %}
-    {% endblock %}
+    {% endblock content %}
     
     <script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
     <script src="{% static 'myschool_app/js/bootstrap.bundle.min.js' %}"></script>

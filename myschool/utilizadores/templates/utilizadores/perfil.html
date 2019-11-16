@@ -1,5 +1,9 @@
 {% extends 'myschool_app/app/base.html' %}
 
+{% block title %}
+  Perfil
+{% endblock title %}
+
 {% block content %}
 <div class="d-flex">
   {% include 'myschool_app/app/partials/_sidebar.html' %}
@@ -24,4 +28,4 @@
     <a href="#" class="btn btn-sm btn-info">Editar Perfil</a>
   </div>
 </div>
-{% endblock %}
+{% endblock content %}
