@@ -1,0 +1,18 @@
+{% extends 'myschool_app/publico/base.html' %}
+
+{% block title %}
+  Página Inicial
+{% endblock title %}
+
+{% block content %}
+  <div class="jumbotron p-5 m-5">
+    <h1 class="display-4 font-weight-bold">
+      <div class="d-none d-md-inline"><i class="fas fa-book-open"></i></div>
+      mySchool
+    </h1>
+    <p class="lead">Aplicação para gestão escolar, focada nos estudantes.</p>
+    <p class="lead mt-4">
+      <a class="btn btn-md btn-primary" href="{% url 'app-registar' %}" role="button"><i class="fas fa-edit"></i> Regista-te já</a>
+    </p>
+  </div>
+{% endblock content %}

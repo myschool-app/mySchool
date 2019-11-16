@@ -1,0 +1,49 @@
+{% extends 'myschool_app/app/base.html' %} {% block content %}
+
+<div class="d-flex">
+  {% include 'myschool_app/app/partials/_sidebar.html' %}
+
+  <div class="content p-4">
+    <h2>Disciplinas</h2>
+
+    <div class="row mt-4">
+      <div class="col-md-10">
+        <a href="#" class="btn btn-sm btn-info mb-3"> <i class="fas fa-plus"></i> Adicionar</a>
+        <table class="table table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Descrição</th>
+              <th scope="col">Professor</th>
+              <th scope="col">Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for disciplina in disciplinas %}
+              <tr>
+                <td>{{ disciplina.descricao }}</td>
+                <td>{{ disciplina.professor|default_if_none:'Sem Professor' }}</td>
+                <td>
+                  <a href="#" class="btn btn-warning btn-sm">Editar</a>
+                  <a href="#" class="btn btn-danger btn-sm">Remover</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <!-- Dica -->
+      <div class="col-md-2">
+        <div class="card text-center">
+          <div class="card-header text-white bg-dark">
+            <i class="fas fa-2x fa-lightbulb m-2"></i> <br />
+            <h4>Dica</h4>
+          </div>
+          <div class="card-body m-0 p-3">
+            <p>Não precisas de registar professores para adicionares disciplinas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

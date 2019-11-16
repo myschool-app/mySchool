@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Aplicação para gestão escolar" />
+    <meta name="author" content="Afonso Santos" />
+    <title>mySchool - {% block title %}{% endblock %}</title>
+
+    <!-- Folhas de Estilo -->
+    <link rel="stylesheet" href="{% static 'myschool_app/css/bootswatch.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'myschool_app/fontawesome/css/all.min.css' %}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    {% include 'myschool_app/publico/partials/_navbar.html' %}
+
+    <!-- Conteúdo de cada página -->
+    {% block content %}
+    {% endblock content %}
+
+    <!-- Javascript -->
+    <script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'myschool_app/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

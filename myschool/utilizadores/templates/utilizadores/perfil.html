@@ -1,0 +1,27 @@
+{% extends 'myschool_app/app/base.html' %}
+
+{% block content %}
+<div class="d-flex">
+  {% include 'myschool_app/app/partials/_sidebar.html' %}
+
+  <div class="content p-4">
+    <h2>Perfil</h2>
+
+    <div class="row mt-4">
+      <div class="col">
+        <img src="{{ user.perfil.imagem.url }}" class="rounded" alt="Imagem de Perfil de {{ user.username }}">
+      </div>
+
+      <div class="col">
+        <h4>Utilizador</h4>
+        <h2 class="badge badge-success">{{ user.username }}</h2>
+      </div>
+      <div class="col">
+        <h4>Endereço de Email</h4>
+        <p>{{ user.email }}</p>
+      </div>
+    </div>
+    <a href="#" class="btn btn-sm btn-info">Editar Perfil</a>
+  </div>
+</div>
+{% endblock %}

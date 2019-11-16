@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="{% static 'myschool_app/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'myschool_app/css/fontawesome-all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'myschool_app/css/bootadmin.min.css' %}" />
+
+    <title>mySchool</title>
+  </head>
+  <body class="bg-light">
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="m-3 alert alert-{{ message.tags }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+    
+    <script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'myschool_app/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'myschool_app/js/bootadmin.min.js' %}"></script>
+  </body>
+</html>
