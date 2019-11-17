@@ -1,0 +1,26 @@
+{% extends 'myschool_app/app/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  Remover Disciplina
+{% endblock title %}
+
+{% block content %}
+<div class="d-flex">
+  {% include 'myschool_app/app/partials/_sidebar.html' %}
+
+  <div class="content p-4">
+    <h2>Disciplinas</h2>
+
+    <div class="row mt-4">
+      <div class="col">
+        <form method="POST">
+          {% csrf_token %}
+          <h4>Queres mesmo remover a disciplina {{ disciplina.descricao }}?</h4>
+          <input type="submit" class="btn btn-danger" value="Eliminar">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

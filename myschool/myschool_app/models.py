@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
 
 # Professor
@@ -26,11 +27,14 @@ class Disciplina(models.Model):
     utilizador = models.ForeignKey(User, on_delete=models.CASCADE)
     descricao = models.CharField(max_length=50, verbose_name="Descrição")
     professor = models.OneToOneField(
-        'Professor', on_delete=models.CASCADE, blank=True, null=True, verbose_name="Professor")
+        'Professor', on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Professor")
 
     class Meta:
         verbose_name = "Disciplina"
         verbose_name_plural = "Disciplinas"
+
+    def get_absolute_url(self):
+        return reverse('app-disciplinas-editar', kwargs={'pk': self.pk})
 
     def __str__(self):
         return self.descricao
