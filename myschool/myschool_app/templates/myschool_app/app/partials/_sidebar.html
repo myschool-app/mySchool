@@ -1,10 +1,10 @@
 <div class="sidebar sidebar-dark bg-dark">
   <ul class="list-unstyled">
     <li {% if request.path == '/app/' %} class="active" {% endif %}>
-      <a href="{% url 'app-inicio' %}"><i class="fa fa-fw fa-tachometer-alt"></i> Dashboard</a>
+      <a href="{% url 'app-inicio' %}"><i class="fa fa-fw fa-tachometer-alt mr-2"></i> Dashboard</a>
     </li>
     <li>
-      <a href="#registos" data-toggle="collapse"> <i class="fa fa-fw fa-sticky-note"></i> Registos </a>
+      <a href="#registos" data-toggle="collapse"> <i class="fa fa-fw fa-sticky-note mr-2"></i> Registos </a>
       <ul id="registos" class="list-unstyled collapse">
         <li><a href="{% url 'app-disciplinas-lista' %}">Disciplinas</a></li>
         <li><a href="#">Testes</a></li>
@@ -13,10 +13,15 @@
       </ul>
     </li>
     <li {% if request.path == '/app/calendario/' %} class="active" {% endif %}>
-      <a href="#"><i class="fa fa-fw fa-calendar"></i> Calendário</a>
+      <a href="#"><i class="fa fa-fw fa-calendar  mr-2"></i> Calendário</a>
     </li>
     <li {% if request.path == '/app/definicoes/' %} class="active" {% endif %}>
-      <a href="#"><i class="fa fa-fw fa-cog"></i> Definições</a>
+      <a href="#"><i class="fa fa-fw fa-cog  mr-2"></i> Definições</a>
     </li>
+    {% if request.user.username == 'admin' %}
+      <li>
+        <a href="/admin/" target="_blank"><i class="fa fa-fw fa-user-cog mr-2"></i> Administração</a>
+      </li>
+    {% endif %}
   </ul>
 </div>
