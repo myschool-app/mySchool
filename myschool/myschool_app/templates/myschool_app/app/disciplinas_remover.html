@@ -16,8 +16,10 @@
       <div class="col">
         <form method="POST">
           {% csrf_token %}
-          <h4>Queres mesmo remover a disciplina {{ disciplina.descricao }}?</h4>
-          <input type="submit" class="btn btn-danger" value="Eliminar">
+          <p class="mb-3">Queres mesmo remover a disciplina <strong>{{ disciplina.descricao }}</strong>?</p>
+          
+          <a href="{% url 'app-disciplinas-lista' %}" class="btn btn-dark">Voltar</a>
+          <input type="submit" class="btn btn-danger" value="Remover">
         </form>
       </div>
     </div>
