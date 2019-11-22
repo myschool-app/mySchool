@@ -11,6 +11,7 @@ from django.views.generic import (
     TemplateView
 )
 from .models import *
+from .forms import *
 
 
 # Dashboard
@@ -55,11 +56,15 @@ class DisciplinaCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     Cria uma disciplina
     """
 
-    model = Disciplina
     template_name = 'myschool_app/app/disciplinas_form.html'
-    fields = ['descricao', 'professor']
+    form_class = DisciplinaForm
     success_url = reverse_lazy('app-disciplinas-lista')
     success_message = "A disciplina %(descricao)s foi criada com sucesso!"
+
+    def get_form_kwargs(self):
+        kwargs = super(DisciplinaCreateView, self).get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
 
     def form_valid(self, form):
         form.instance.utilizador = self.request.user
@@ -75,10 +80,15 @@ class DisciplinaUpdateView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTe
 
     model = Disciplina
     template_name = 'myschool_app/app/disciplinas_form.html'
-    fields = ['descricao', 'professor']
+    form_class = DisciplinaForm
     success_url = reverse_lazy('app-disciplinas-lista')
     context_object_name = 'disciplina'
     success_message = "A disciplina %(descricao)s foi atualizada com sucesso!"
+
+    def get_form_kwargs(self):
+        kwargs = super(DisciplinaUpdateView, self).get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
 
     def form_valid(self, form):
         form.instance.utilizador = self.request.user
