@@ -26,27 +26,32 @@
         {% endif %}
         
         <a href="{% url 'app-disciplinas-adicionar' %}" class="btn btn-sm btn-info mb-3"> <i class="fas fa-plus"></i> Adicionar</a>
-        <table class="table table-hover">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col">Descrição</th>
-              <th scope="col">Professor</th>
-              <th scope="col">Opções</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for disciplina in disciplinas %}
+        
+        {% if disciplinas %} <!-- Verifica se existem disciplinas registadas -->
+          <table class="table table-hover">
+            <thead class="thead-light">
               <tr>
-                <td>{{ disciplina.descricao }}</td>
-                <td>{{ disciplina.professor|default_if_none:'Sem Professor' }}</td>
-                <td>
-                  <a href="{% url 'app-disciplinas-editar' disciplina.id %}" class="btn btn-warning btn-sm">Editar</a>
-                  <a href="{% url 'app-disciplinas-remover' disciplina.id %}" class="btn btn-danger btn-sm">Remover</a>
-                </td>
+                <th scope="col">Descrição</th>
+                <th scope="col">Professor</th>
+                <th scope="col">Opções</th>
               </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {% for disciplina in disciplinas %}
+                <tr>
+                  <td>{{ disciplina.descricao }}</td>
+                  <td>{{ disciplina.professor|default_if_none:'Sem Professor' }}</td>
+                  <td>
+                    <a href="{% url 'app-disciplinas-editar' disciplina.id %}" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="{% url 'app-disciplinas-remover' disciplina.id %}" class="btn btn-danger btn-sm">Remover</a>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% else %}
+          {% include 'myschool_app/app/partials/_sem-registos.html' with seccao="disciplinas" %}
+        {% endif %}
       </div>
       <!-- Dica -->
       <div class="col-md-2">
