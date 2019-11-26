@@ -38,7 +38,8 @@ class Dashboard(LoginRequiredMixin, TemplateView):
 
 class DisciplinaListView(LoginRequiredMixin, ListView):
     """
-    Mostra a lista de disciplinas
+    Mostra a lista de disciplinas, próprias de cada utilizador
+    registado na tabela Disciplina
     """
 
     model = Disciplina
