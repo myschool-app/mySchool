@@ -33,7 +33,12 @@ class Dashboard(LoginRequiredMixin, TemplateView):
             utilizador=self.request.user).count()
         return context
 
-# Lista de Disciplinas
+
+"""
+Disciplinas
+"""
+
+# Lista de disciplinas
 
 
 class DisciplinaListView(LoginRequiredMixin, ListView):
@@ -126,3 +131,94 @@ class DisciplinaDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTe
         messages.success(self.request, self.success_message %
                          disciplina.__dict__)
         return super(DisciplinaDeleteView, self).delete(request, *args, **kwargs)
+
+
+"""
+Professores
+"""
+
+# Lista de Professores
+
+
+class ProfessorListView(LoginRequiredMixin, ListView):
+    """
+    Mostra a lista de professores, próprios de cada utilizador
+    registado na tabela Professor
+    """
+
+    model = Professor
+    template_name = 'myschool_app/app/professores.html'
+    context_object_name = 'professores'
+
+    def get_queryset(self):
+        return Professor.objects.filter(utilizador=self.request.user)
+
+# Adicionar Professor
+
+
+class ProfessorCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    """
+    Cria uma professor
+    """
+
+    model = Professor
+    fields = ['nome', 'email', 'telefone']
+    template_name = 'myschool_app/app/professores_form.html'
+    success_url = reverse_lazy('app-professores-lista')
+    success_message = "O professor %(nome)s foi adicionado com sucesso!"
+
+    def form_valid(self, form):
+        form.instance.utilizador = self.request.user
+        return super().form_valid(form)
+
+# Editar Professor
+
+
+class ProfessorUpdateView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, UpdateView):
+    """
+    Edita uma disciplina
+    """
+
+    model = Professor
+    template_name = 'myschool_app/app/professores_form.html'
+    fields = ['nome', 'email', 'telefone']
+    success_url = reverse_lazy('app-professores-lista')
+    context_object_name = 'professor'
+    success_message = "O professor %(nome)s foi atualizado com sucesso!"
+
+    def form_valid(self, form):
+        form.instance.utilizador = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        professor = self.get_object()
+        if self.request.user == professor.utilizador:
+            return True
+        return False
+
+
+# Remover Professor
+
+
+class ProfessorDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, DeleteView):
+    """
+    Remove um professor
+    """
+
+    model = Professor
+    template_name = 'myschool_app/app/professores_remover.html'
+    success_url = reverse_lazy('app-professores-lista')
+    context_object_name = 'professor'
+    success_message = "O professor %(nome)s foi removido com sucesso!"
+
+    def test_func(self):
+        professor = self.get_object()
+        if self.request.user == professor.utilizador:
+            return True
+        return False
+
+    def delete(self, request, *args, **kwargs):
+        professor = self.get_object()
+        messages.success(self.request, self.success_message %
+                         professor.__dict__)
+        return super(ProfessorDeleteView, self).delete(request, *args, **kwargs)

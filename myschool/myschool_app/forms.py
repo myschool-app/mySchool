@@ -9,7 +9,9 @@ class DisciplinaForm(forms.ModelForm):
         fields = ['descricao', 'professor', ]
 
     def __init__(self, *args, **kwargs):
-        utilizador = kwargs.pop('user') # utilizador que tem sessão iniciada na aplicação
+        # utilizador que tem sessão iniciada na aplicação
+        utilizador = kwargs.pop('user')
         super(DisciplinaForm, self).__init__(*args, **kwargs)
+        # filtra os professores que pertencem ao utilizador acima
         self.fields['professor'].queryset = Professor.objects.filter(
             utilizador=utilizador)

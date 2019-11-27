@@ -9,7 +9,7 @@
         <li><a href="{% url 'app-disciplinas-lista' %}">Disciplinas</a></li>
         <li><a href="#">Testes</a></li>
         <li><a href="#">Eventos</a></li>
-        <li><a href="#">Professores</a></li>
+        <li><a href="{% url 'app-professores-lista' %}">Professores</a></li>
       </ul>
     </li>
     <li {% if request.path == '/app/calendario/' %} class="active" {% endif %}>
