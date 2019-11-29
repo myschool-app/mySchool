@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     # Desenvolvimento
     '.ngrok.io',
     # Máquinas locais
+    'localhost',
     '192.168.1.84',
     '127.0.0.1'
 ]
