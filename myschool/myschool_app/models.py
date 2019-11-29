@@ -26,7 +26,7 @@ class Professor(models.Model):
 class Disciplina(models.Model):
     utilizador = models.ForeignKey(User, on_delete=models.CASCADE)
     descricao = models.CharField(max_length=50, verbose_name="Descrição")
-    professor = models.OneToOneField(
+    professor = models.ForeignKey(
         'Professor', on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Professor")
 
     class Meta:
