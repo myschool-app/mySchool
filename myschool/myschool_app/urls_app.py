@@ -21,5 +21,13 @@ urlpatterns = [
     path('professores/<int:pk>/editar/',
          ProfessorUpdateView.as_view(), name="app-professores-editar"),
     path('professores/<int:pk>/remover/',
-         ProfessorDeleteView.as_view(), name="app-professores-remover")
+         ProfessorDeleteView.as_view(), name="app-professores-remover"),
+    # Testes
+    path('testes/', TesteListView.as_view(), name="app-testes-lista"),
+    path('testes/adicionar/', TesteCreateView.as_view(),
+         name="app-testes-adicionar"),
+    path('testes/<int:pk>/editar/',
+         TesteUpdateView.as_view(), name="app-testes-editar"),
+    path('testes/<int:pk>/remover/',
+         TesteDeleteView.as_view(), name="app-testes-remover")
 ]

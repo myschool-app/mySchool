@@ -47,15 +47,17 @@ class Teste(models.Model):
     disciplina = models.ForeignKey(
         'Disciplina', on_delete=models.CASCADE, verbose_name="Disciplina")
     data = models.DateField(verbose_name="Data")
+    notas = models.TextField(max_length=255, blank=True, verbose_name="Notas")
     realizado = models.BooleanField(verbose_name="Realizado?")
-    avaliacao = models.FloatField(verbose_name="Avaliação", blank=True)
+    avaliacao = models.FloatField(
+        verbose_name="Avaliação", blank=True, null=True)
 
     class Meta:
         verbose_name = "Teste"
         verbose_name_plural = "Testes"
 
     def __str__(self):
-        return self.disciplina
+        return self.disciplina.descricao
 
 # Evento
 

@@ -27,7 +27,7 @@
         
         <a href="{% url 'app-professores-adicionar' %}" class="btn btn-sm btn-info mb-3"> <i class="fas fa-plus"></i> Adicionar</a>
         
-        {% if professores %} <!-- Verifica se existem disciplinas registadas -->
+        {% if professores %} <!-- Verifica se existem professores registadas -->
           <table class="table table-hover">
             <thead class="thead-light">
               <tr>
@@ -50,7 +50,7 @@
             </tbody>
           </table>
         {% else %}
-          {% include 'myschool_app/app/partials/_sem-registos.html' with seccao="professores" %}
+          {% include 'myschool_app/app/partials/_sem-registos.html' with mensagem="Não tem professores registados" %}
         {% endif %}
       </div>
     </div>

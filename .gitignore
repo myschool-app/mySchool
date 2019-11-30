@@ -5,6 +5,8 @@
 # Ficheiros e directórios personalizados
 .vscode
 myschool/ngrok.exe
+.VSCodeCounter
+codealike.json
 
 ### Django ###
 *.log

@@ -31,6 +31,10 @@ class Dashboard(LoginRequiredMixin, TemplateView):
         # Contagem dos professores
         context['quantidade_professores'] = Professor.objects.filter(
             utilizador=self.request.user).count()
+        context['quantidade_testes'] = Teste.objects.filter(
+            utilizador=self.request.user).count()
+        context['proximos_testes'] = Teste.objects.all().filter(
+            utilizador=self.request.user)
         return context
 
 
@@ -222,3 +226,100 @@ class ProfessorDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTes
         messages.success(self.request, self.success_message %
                          professor.__dict__)
         return super(ProfessorDeleteView, self).delete(request, *args, **kwargs)
+
+
+"""
+Testes
+"""
+
+# Lista de Testes
+
+
+class TesteListView(LoginRequiredMixin, ListView):
+    """
+    Mostra a lista de testes, próprios de cada utilizador
+    registado na tabela Teste
+    """
+
+    model = Teste
+    template_name = 'myschool_app/app/testes.html'
+    context_object_name = 'testes'
+
+    def get_queryset(self):
+        return Teste.objects.filter(utilizador=self.request.user)
+
+# Adicionar Teste
+
+
+class TesteCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    """
+    Cria um teste
+    """
+
+    template_name = 'myschool_app/app/testes_form.html'
+    form_class = TesteForm
+    success_url = reverse_lazy('app-testes-lista')
+    success_message = "O teste da disciplina %(disciplina)s foi criado com sucesso!"
+
+    def get_form_kwargs(self):
+        kwargs = super(TesteCreateView, self).get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
+
+    def form_valid(self, form):
+        form.instance.utilizador = self.request.user
+        return super().form_valid(form)
+
+# Editar Teste
+
+
+class TesteUpdateView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, UpdateView):
+    """
+    Edita um teste
+    """
+
+    model = Teste
+    template_name = 'myschool_app/app/testes_form.html'
+    form_class = TesteForm
+    success_url = reverse_lazy('app-testes-lista')
+    success_message = "O teste da disciplina %(disciplina)s foi atualizado com sucesso!"
+
+    def get_form_kwargs(self):
+        kwargs = super(TesteUpdateView, self).get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
+
+    def form_valid(self, form):
+        form.instance.utilizador = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        teste = self.get_object()
+        if self.request.user == teste.utilizador:
+            return True
+        return False
+
+# Remover Teste
+
+
+class TesteDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, DeleteView):
+    """
+    Remove um teste
+    """
+
+    model = Teste
+    template_name = 'myschool_app/app/testes_remover.html'
+    success_url = reverse_lazy('app-testes-lista')
+    context_object_name = 'teste'
+    success_message = "O teste do dia %(data)s foi removido com sucesso!"
+
+    def test_func(self):
+        teste = self.get_object()
+        if self.request.user == teste.utilizador:
+            return True
+        return False
+
+    def delete(self, request, *args, **kwargs):
+        teste = self.get_object()
+        messages.success(self.request, self.success_message % teste.__dict__)
+        return super(TesteDeleteView, self).delete(request, *args, **kwargs)

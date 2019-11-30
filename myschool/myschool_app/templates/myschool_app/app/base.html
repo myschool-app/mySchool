@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{% static 'myschool_app/fontawesome/css/all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'myschool_app/css/bootadmin.min.css' %}" />
 
+    <script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
+
     <title>mySchool - {% block title %}{% endblock title %}</title>
   </head>
   <body class="bg-light">
@@ -18,7 +20,6 @@
     {% block content %}
     {% endblock content %}
 
-    <script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
     <script src="{% static 'myschool_app/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'myschool_app/js/bootadmin.min.js' %}"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

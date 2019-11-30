@@ -1,0 +1,56 @@
+{% extends 'myschool_app/app/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  Adicionar Teste
+{% endblock title %}
+
+{% block content %}
+<div class="d-flex">
+  {% include 'myschool_app/app/partials/_sidebar.html' %}
+
+  <div class="content p-4">
+    <h2>Testes</h2>
+
+    <div class="row mt-4">
+      <div class="col">
+        <form method="POST">
+          {% csrf_token %}
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              {{ form.disciplina|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-6">
+              {{ form.data|as_crispy_field }}
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              {{ form.realizado|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-6">
+              {{ form.avaliacao|as_crispy_field }}
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col">
+              {{ form.notas|as_crispy_field }}
+            </div>
+          </div>
+
+          <a href="{% url 'app-testes-lista' %}" class="btn btn-dark">Voltar</a>
+          <input type="submit" class="btn btn-info" value="Guardar">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Mostra e oculta a nota de acordo com a checkbox
+  $('#id_realizado').change(() => {                
+    $('#div_id_avaliacao').toggle(this.checked);
+ }).change();
+</script>
+
+{% endblock content %}

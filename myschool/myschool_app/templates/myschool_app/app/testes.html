@@ -1,0 +1,73 @@
+{% extends 'myschool_app/app/base.html' %}
+
+{% block title %}
+  Testes
+{% endblock title %}
+
+{% block content %}
+<div class="d-flex">
+  {% include 'myschool_app/app/partials/_sidebar.html' %}
+
+  <div class="content p-4">
+    <h2>Testes</h2>
+
+    <div class="row mt-4">
+      <div class="col">
+        <!-- Mensagens -->
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          {% endfor %}
+        {% endif %}
+        
+        <a href="{% url 'app-testes-adicionar' %}" class="btn btn-sm btn-info mb-3"> <i class="fas fa-plus"></i> Adicionar</a>
+        
+        {% if testes %} <!-- Verifica se existem testes registadas -->
+          <table class="table table-hover">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Disciplina</th>
+                <th scope="col">Data</th>
+                <th scope="col">Realizado</th>
+                <th scope="col">Avaliação</th>
+                <th scope="col">Opções</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for teste in testes %}
+                <tr>
+                  <td>
+                    <a href="{% url 'app-disciplinas-editar' teste.disciplina.id %}">
+                      {{ teste.disciplina }}
+                    </a>
+                  </td>
+                  <td>{{ teste.data }}</td>
+                  <td>
+                    {% if teste.realizado %}
+                    <span class="text-success font-weight-bold">Sim</span>
+                    {% else %}
+                      <span class="text-danger font-weight-bold">Não</span>
+                    {% endif %}
+                  </td>
+                  <td>{{ teste.avaliacao|default_if_none:"" }}</td>
+                  <td>
+                    <a href="{% url 'app-testes-editar' teste.id %}" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="{% url 'app-testes-remover' teste.id %}" class="btn btn-danger btn-sm">Remover</a>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% else %}
+          {% include 'myschool_app/app/partials/_sem-registos.html' with mensagem="Não tem testes registados" %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
