@@ -8,7 +8,7 @@
       <ul id="registos" class="list-unstyled collapse">
         <li><a href="{% url 'app-disciplinas-lista' %}">Disciplinas</a></li>
         <li><a href="{% url 'app-testes-lista' %}">Testes</a></li>
-        <li><a href="#">Eventos</a></li>
+        <li><a href="{% url 'app-eventos-lista' %}">Eventos</a></li>
         <li><a href="{% url 'app-professores-lista' %}">Professores</a></li>
       </ul>
     </li>
@@ -18,7 +18,7 @@
     <li {% if request.path == '/app/definicoes/' %} class="active" {% endif %}>
       <a href="#"><i class="fa fa-fw fa-cog  mr-2"></i> Definições</a>
     </li>
-    {% if request.user.username == 'admin' %}
+    {% if request.user.is_staff %}
       <li>
         <a href="/admin/" target="_blank"><i class="fa fa-fw fa-user-cog mr-2"></i> Administração</a>
       </li>

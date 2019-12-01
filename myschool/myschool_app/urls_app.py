@@ -29,5 +29,13 @@ urlpatterns = [
     path('testes/<int:pk>/editar/',
          TesteUpdateView.as_view(), name="app-testes-editar"),
     path('testes/<int:pk>/remover/',
-         TesteDeleteView.as_view(), name="app-testes-remover")
+         TesteDeleteView.as_view(), name="app-testes-remover"),
+    # Eventos
+    path('eventos/', EventoListView.as_view(), name="app-eventos-lista"),
+    path('eventos/adicionar/', EventoCreateView.as_view(),
+         name="app-eventos-adicionar"),
+    path('eventos/<int:pk>/editar/',
+         EventoUpdateView.as_view(), name="app-eventos-editar"),
+    path('eventos/<int:pk>/remover/',
+         EventoDeleteView.as_view(), name="app-eventos-remover")
 ]

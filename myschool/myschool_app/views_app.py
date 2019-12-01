@@ -25,16 +25,18 @@ class Dashboard(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # Contagem das disciplinas
+        """
+        Contagem de objetos nas diferentes secções
+        """
         context['quantidade_disciplinas'] = Disciplina.objects.filter(
             utilizador=self.request.user).count()
-        # Contagem dos professores
         context['quantidade_professores'] = Professor.objects.filter(
             utilizador=self.request.user).count()
         context['quantidade_testes'] = Teste.objects.filter(
             utilizador=self.request.user).count()
-        context['proximos_testes'] = Teste.objects.all().filter(
-            utilizador=self.request.user)
+        context['quantidade_eventos'] = Evento.objects.filter(
+            utilizador=self.request.user).count()
+
         return context
 
 
@@ -323,3 +325,94 @@ class TesteDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMix
         teste = self.get_object()
         messages.success(self.request, self.success_message % teste.__dict__)
         return super(TesteDeleteView, self).delete(request, *args, **kwargs)
+
+
+"""
+Eventos
+"""
+
+# Lista de Eventos
+
+
+class EventoListView(LoginRequiredMixin, ListView):
+    """
+    Mostra a lista de eventos, próprios de cada utilizador
+    registado na tabela Evento
+    """
+
+    model = Evento
+    template_name = 'myschool_app/app/eventos.html'
+    context_object_name = 'eventos'
+
+    def get_queryset(self):
+        return Evento.objects.filter(utilizador=self.request.user)
+
+
+# Adicionar Evento
+
+
+class EventoCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    """
+    Cria um evento
+    """
+
+    model = Evento
+    fields = ['titulo', 'descricao', 'data_inicio', 'data_fim']
+    template_name = 'myschool_app/app/eventos_form.html'
+    success_url = reverse_lazy('app-eventos-lista')
+    success_message = "O evento com o título %(titulo)s foi criado com sucesso!"
+
+    def form_valid(self, form):
+        form.instance.utilizador = self.request.user
+        return super().form_valid(form)
+
+
+# Editar Evento
+
+
+class EventoUpdateView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, UpdateView):
+    """
+    Edita um evento
+    """
+
+    model = Evento
+    fields = ['titulo', 'descricao', 'data_inicio', 'data_fim']
+    template_name = 'myschool_app/app/eventos_form.html'
+    success_url = reverse_lazy('app-eventos-lista')
+    success_message = "O evento com o título %(titulo)s foi atualizado com sucesso!"
+
+    def form_valid(self, form):
+        form.instance.utilizador = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        evento = self.get_object()
+        if self.request.user == evento.utilizador:
+            return True
+        return False
+
+
+# Remover Evento
+
+
+class EventoDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, DeleteView):
+    """
+    Remove um evento
+    """
+
+    model = Evento
+    template_name = 'myschool_app/app/eventos_remover.html'
+    success_url = reverse_lazy('app-eventos-lista')
+    context_object_name = 'evento'
+    success_message = "O evento com o título %(titulo)s foi removido com sucesso!"
+
+    def test_func(self):
+        evento = self.get_object()
+        if self.request.user == evento.utilizador:
+            return True
+        return False
+
+    def delete(self, request, *args, **kwargs):
+        evento = self.get_object()
+        messages.success(self.request, self.success_message % evento.__dict__)
+        return super(EventoDeleteView, self).delete(request, *args, **kwargs)
