@@ -33,8 +33,15 @@ class ProfessorAdmin(admin.ModelAdmin):
 
 
 # Teste
+class AvaliacaoInline(admin.TabularInline):
+    model = Avaliacao
+
+
 @admin.register(Teste)
 class TesteAdmin(admin.ModelAdmin):
+    inlines = [
+        AvaliacaoInline,
+    ]
     list_display = ['utilizador', 'disciplina', 'data']
     list_filter = ['utilizador']
 
@@ -43,6 +50,12 @@ class TesteAdmin(admin.ModelAdmin):
 @admin.register(Evento)
 class EventoAdmin(admin.ModelAdmin):
     list_display = ['utilizador', 'titulo', 'descricao']
+    list_filter = ['utilizador']
+
+# Avaliação
+@admin.register(Avaliacao)
+class AvaliacaoAdmin(admin.ModelAdmin):
+    list_display = ['utilizador', 'teste', 'avaliacao']
     list_filter = ['utilizador']
 
 

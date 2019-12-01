@@ -33,7 +33,7 @@ class TesteForm(forms.ModelForm):
 
     class Meta:
         model = Teste
-        fields = ['disciplina', 'data', 'notas', 'realizado', 'avaliacao']
+        fields = ['disciplina', 'data', 'notas']
 
     def __init__(self, *args, **kwargs):
         # utilizador que tem sessão iniciada na aplicação

@@ -49,8 +49,6 @@ class Teste(models.Model):
     data = models.DateField(verbose_name="Data")
     notas = models.TextField(max_length=255, blank=True, verbose_name="Notas")
     realizado = models.BooleanField(verbose_name="Realizado?")
-    avaliacao = models.FloatField(
-        verbose_name="Avaliação", blank=True, null=True)
 
     class Meta:
         verbose_name = "Teste"
@@ -75,3 +73,19 @@ class Evento(models.Model):
 
     def __str__(self):
         return self.titulo
+
+# Avaliações
+
+
+class Avaliacao(models.Model):
+    utilizador = models.ForeignKey(User, on_delete=models.CASCADE)
+    teste = models.OneToOneField(Teste, on_delete=models.CASCADE)
+    avaliacao = models.FloatField(verbose_name="Avaliação")
+    notas = models.TextField(max_length=255, verbose_name="Notas", blank=True)
+
+    class Meta:
+        verbose_name = "Avaliação"
+        verbose_name_plural = "Avaliações"
+
+    def __str__(self):
+        return self.teste.disciplina.descricao
