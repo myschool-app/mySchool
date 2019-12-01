@@ -4,6 +4,12 @@ from PIL import Image
 
 
 class Perfil(models.Model):
+    """
+    Objeto Perfil, responsável por armazenar informação relativa ao perfil
+    de cada utilizador da aplicação.
+    Quando um utilizador se regista na aplicação, um perfil é criado
+    automaticamente.
+    """
     utilizador = models.OneToOneField(User, on_delete=models.CASCADE)
     imagem = models.ImageField(
         default='default.jpg', upload_to='img_perfil')

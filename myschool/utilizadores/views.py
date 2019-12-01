@@ -9,6 +9,11 @@ from .forms import (
 
 
 def registo(request):
+    """
+    Apresenta o formulário de registo ao utilizador.
+    Se o método for POST, cria o objeto Utilizador com os dados do formulário. Caso
+    seja outro, devolve o formulário sem dados introduzidos.
+    """
     if request.method == 'POST':
         form = UtilizadorRegistoForm(request.POST)
         if form.is_valid():
@@ -24,6 +29,11 @@ def registo(request):
 
 @login_required
 def perfil(request):
+    """
+    Apresenta o perfil ao utilizador, dentro da aplicação.
+    Se o método for POST, atualiza o objeto Perfil com os dados do formulário. Caso
+    seja outro, devolve o formulário sem dados introduzidos.
+    """
     if request.method == 'POST':
         u_form = UtilizadorUpdateForm(request.POST, instance=request.user)
         p_form = PerfilUpdateForm(

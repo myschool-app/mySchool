@@ -18,6 +18,8 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+
+# Views da aplicação utilizadores
 from utilizadores import views as utilizadores_views
 
 urlpatterns = [
@@ -45,6 +47,7 @@ urlpatterns = [
         template_name='utilizadores/recuperar_password_recuperada.html'), name='app-recuperar-password-recuperada'),
 ]
 
+# Se a opção DEBUG = True
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)

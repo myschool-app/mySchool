@@ -5,6 +5,10 @@ from .models import Perfil
 
 
 class UtilizadorRegistoForm(UserCreationForm):
+    """
+    Formulário para registo de novos utilizadores
+    """
+
     first_name = forms.CharField(required=True, label="Primeiro Nome")
     last_name = forms.CharField(required=True, label="Último Nome")
     email = forms.EmailField()
@@ -16,6 +20,11 @@ class UtilizadorRegistoForm(UserCreationForm):
 
 
 class UtilizadorUpdateForm(forms.ModelForm):
+    """
+    Formulário para atualização dos dados de cada utilizador,
+    como Primeiro e Último Nome e Email.
+    """
+
     first_name = forms.CharField(required=True)
     last_name = forms.CharField(required=True)
     email = forms.EmailField()
@@ -26,6 +35,11 @@ class UtilizadorUpdateForm(forms.ModelForm):
 
 
 class PerfilUpdateForm(forms.ModelForm):
+    """
+    Formulário para atualização do perfil do utilizador.
+    Apenas atualiza a imagem de perfil.
+    """
+
     class Meta:
         model = Perfil
         fields = ['imagem']
