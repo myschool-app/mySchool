@@ -14,7 +14,9 @@ from .models import *
 from .forms import *
 
 
-# Dashboard
+"""
+Dashboard
+"""
 
 
 class Dashboard(LoginRequiredMixin, TemplateView):
