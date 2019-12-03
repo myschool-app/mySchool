@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="{% url 'publico-inicio' %}"><i class="fas fa-book-open"></i> mySchool</a>
   <button
@@ -14,22 +16,22 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'publico-inicio' %}">Página Inicial</a>
+        <a class="nav-link" href="{% url 'publico-inicio' %}">{% trans 'Página Inicial' %}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'publico-funcionalidades' %}">Funcionalidades</a>
+        <a class="nav-link" href="{% url 'publico-funcionalidades' %}">{% trans 'Funcionalidades' %}</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="{% url 'publico-sobre' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Sobre
+          {% trans 'Sobre' %}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{% url 'publico-equipa' %}">Equipa</a>
-          <a class="dropdown-item" href="#">História</a>
+          <a class="dropdown-item" href="{% url 'publico-equipa' %}">{% trans 'Equipa' %}</a>
+          <a class="dropdown-item" href="#">{% trans 'História' %}</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'publico-contactos' %}">Contactos</a>
+        <a class="nav-link" href="{% url 'publico-contactos' %}">{% trans 'Contactos' %}</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -39,10 +41,10 @@
         </li>
       {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'app-registar' %}"><i class="fas fa-edit"></i> Criar uma Conta</a>
+          <a class="nav-link" href="{% url 'app-registar' %}"><i class="fas fa-edit"></i> {% trans 'Criar uma Conta' %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'app-login' %}"><i class="fas fa-user"></i> Login</a>
+          <a class="nav-link" href="{% url 'app-login' %}"><i class="fas fa-user"></i> {% trans 'Login' %}</a>
         </li>
       {% endif %}
     </ul>
