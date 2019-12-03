@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mySchool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-03 20:51+0000\n"
+"POT-Creation-Date: 2019-12-03 21:19+0000\n"
 "PO-Revision-Date: 2019-12-03 19:59+0000\n"
 "Last-Translator: Afonso Santos <afonso.faisca1@gmail.com>\n"
 "Language-Team: \n"
@@ -18,37 +18,100 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.4\n"
 
-#: .\myschool\settings.py:124
-msgid "Português"
+#: .\myschool_app\admin.py:54
+msgid "Administração da aplicação mySchool"
 msgstr ""
 
-#: .\myschool\settings.py:125
-msgid "English"
+#: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:8
+msgid "Reportar um erro"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\publico\base.html:9
+#: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:11
+msgid "Documentação"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:18
+#: .\utilizadores\templates\utilizadores\perfil.html:5
+#: .\utilizadores\templates\utilizadores\perfil.html:13
+msgid "Perfil"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:19
+msgid "Sair"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:4
+msgid "Utilize a opção"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:4
+msgid "Adicionar"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:4
+msgid "para adicionar registos."
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:4
+#: .\myschool_app\templates\myschool_app\publico\index.html:18
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:7
+msgid "Registos"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:9
+msgid "Disciplinas"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:10
+msgid "Testes"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:11
+msgid "Eventos"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:12
+msgid "Professores"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:16
+msgid "Calendário"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:19
+msgid "Definições"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:23
+msgid "Administração"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\publico\base.html:10
 msgid "Aplicação para gestão escolar"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\publico\contactos.html:4
-#: .\myschool_app\templates\myschool_app\publico\contactos.html:8
+#: .\myschool_app\templates\myschool_app\publico\contactos.html:5
+#: .\myschool_app\templates\myschool_app\publico\contactos.html:9
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:34
 msgid "Contactos"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\publico\equipa.html:4
-#: .\myschool_app\templates\myschool_app\publico\equipa.html:8
+#: .\myschool_app\templates\myschool_app\publico\equipa.html:5
+#: .\myschool_app\templates\myschool_app\publico\equipa.html:9
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:29
 msgid "Equipa"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\publico\funcionalidades.html:4
-#: .\myschool_app\templates\myschool_app\publico\funcionalidades.html:8
+#: .\myschool_app\templates\myschool_app\publico\funcionalidades.html:5
+#: .\myschool_app\templates\myschool_app\publico\funcionalidades.html:9
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:22
 msgid "Funcionalidades"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\publico\funcionalidades.html:10
+#: .\myschool_app\templates\myschool_app\publico\funcionalidades.html:11
 msgid "Algumas das funcionalidades da aplicação são..."
 msgstr ""
 
@@ -61,17 +124,13 @@ msgstr "Home Page"
 msgid "Gestão escolar criada a pensar nos estudantes"
 msgstr "School management made thinking in students"
 
-#: .\myschool_app\templates\myschool_app\publico\index.html:18
-msgid "Dashboard"
-msgstr "Dashboard"
-
 #: .\myschool_app\templates\myschool_app\publico\index.html:22
 msgid "Regista-te já"
 msgstr "Sign Up Now"
 
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:26
-#: .\myschool_app\templates\myschool_app\publico\sobre.html:4
-#: .\myschool_app\templates\myschool_app\publico\sobre.html:8
+#: .\myschool_app\templates\myschool_app\publico\sobre.html:5
+#: .\myschool_app\templates\myschool_app\publico\sobre.html:9
 msgid "Sobre"
 msgstr "About"
 
@@ -80,13 +139,40 @@ msgid "História"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:44
+#: .\utilizadores\templates\utilizadores\registo.html:23
 msgid "Criar uma Conta"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:47
+#: .\utilizadores\templates\utilizadores\login.html:6
+#: .\utilizadores\templates\utilizadores\login.html:24
 msgid "Login"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\publico\sobre.html:10
+#: .\myschool_app\templates\myschool_app\publico\sobre.html:11
 msgid "Esta aplicação consiste em..."
+msgstr ""
+
+#: .\utilizadores\templates\utilizadores\login.html:27
+msgid "Recuperar Palavra-Passe"
+msgstr ""
+
+#: .\utilizadores\templates\utilizadores\logout.html:14
+msgid "Obrigado pela visita!"
+msgstr ""
+
+#: .\utilizadores\templates\utilizadores\logout.html:15
+msgid "Entrar novamente?"
+msgstr ""
+
+#: .\utilizadores\templates\utilizadores\perfil.html:17
+msgid "Imagem de perfil de"
+msgstr ""
+
+#: .\utilizadores\templates\utilizadores\registo.html:6
+msgid "Registo"
+msgstr ""
+
+#: .\utilizadores\templates\utilizadores\registo.html:26
+msgid "Já tem uma conta?"
 msgstr ""

@@ -1,7 +1,8 @@
 {% extends 'myschool_app/app/base.html' %}
+{% load i18n %}
 
 {% block title %}
-  Perfil
+  {% trans 'Perfil' %}
 {% endblock title %}
 
 {% block content %}
@@ -9,11 +10,11 @@
   {% include 'myschool_app/app/partials/_sidebar.html' %}
 
   <div class="content p-4">
-    <h2>Perfil</h2>
+    <h2>{% trans 'Perfil' %}</h2>
 
     <div class="row mt-4">
       <div class="col">
-        <img src="{{ user.perfil.imagem.url }}" class="rounded" alt="Imagem de Perfil de {{ user.username }}">
+        <img src="{{ user.perfil.imagem.url }}" class="rounded" alt="{% trans 'Imagem de perfil de' %} {{ user.username }}">
       </div>
 
       <div class="col">

@@ -1,8 +1,9 @@
 {% extends 'utilizadores/base.html' %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block title %}
-  Registo
+  {% trans 'Registo' %}
 {% endblock title %}
 
 {% block content %}
@@ -17,15 +18,13 @@
           <form method="POST">
             {% csrf_token %}
             {{ form | crispy }}
-
             <div class="row">
               <div class="col pr-2">
-                <button type="submit" class="btn btn-block btn-primary">Criar uma Conta</button>
+                <button type="submit" class="btn btn-block btn-primary">{% trans 'Criar uma Conta' %}</button>
               </div>
               <div class="col pl-2">
-                <a class="btn btn-block btn-link" href="{% url 'app-login' %}">Já tem uma conta?</a>
+                <a class="btn btn-block btn-link" href="{% url 'app-login' %}">{% trans 'Já tem uma conta?' %}</a>
               </div>
-
             </div>
           </form>
         </div>

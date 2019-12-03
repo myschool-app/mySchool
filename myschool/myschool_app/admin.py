@@ -1,5 +1,7 @@
 from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
 from .models import *
+
 
 # Disciplina
 
@@ -49,4 +51,4 @@ class EventoAdmin(admin.ModelAdmin):
 # Personalização da área de administração
 admin.site.site_header = 'mySchool'
 admin.site.site_title = 'mySchool'
-admin.site.index_title = 'Administração da aplicação mySchool'
+admin.site.index_title = _('Administração da aplicação mySchool')
