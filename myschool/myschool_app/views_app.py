@@ -303,6 +303,37 @@ class TesteUpdateView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMix
             return True
         return False
 
+
+# Adicionar Avaliação a Teste
+
+
+class TesteAvaliacaoUpdateView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, UpdateView):
+    """
+    Adiciona a avaliação a um teste
+    """
+
+    model = Teste
+    template_name = 'myschool_app/app/testes_avaliacao_form.html'
+    form_class = TesteAvaliacaoForm
+    success_url = reverse_lazy('app-testes-lista')
+    success_message = "Foi adicionada a avaliação de %(avaliacao)s ao teste!"
+
+    def form_valid(self, form, **kwargs):
+        """
+        Preenchimentos dos campos após o utilizador guardar o formulário
+        """
+
+        form.instance.utilizador = self.request.user
+        form.instance.realizado = True
+        return super().form_valid(form)
+
+    def test_func(self):
+        teste = self.get_object()
+        if self.request.user == teste.utilizador:
+            return True
+        return False
+
+
 # Remover Teste
 
 

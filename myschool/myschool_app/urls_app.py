@@ -30,6 +30,8 @@ urlpatterns = [
          TesteUpdateView.as_view(), name="app-testes-editar"),
     path('testes/<int:pk>/remover/',
          TesteDeleteView.as_view(), name="app-testes-remover"),
+    path('testes/<int:pk>/avaliacao/',
+         TesteAvaliacaoUpdateView.as_view(), name="app-testes-avaliacao"),
     # Eventos
     path('eventos/', EventoListView.as_view(), name="app-eventos-lista"),
     path('eventos/adicionar/', EventoCreateView.as_view(),

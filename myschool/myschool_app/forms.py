@@ -45,7 +45,7 @@ class TesteForm(forms.ModelForm):
 
     """
     Verifica se a data introduzida pelo utilizador não é no passado.
-    Caso seja, informa o utilizador com uma mensagem de erro
+    Caso seja, informa o utilizador com uma mensagem de erro.
     """
 
     def clean_data(self):
@@ -53,3 +53,16 @@ class TesteForm(forms.ModelForm):
         if data < datetime.date.today():
             raise forms.ValidationError("A data não pode ser no passado")
         return data
+
+
+# Testes
+
+
+class TesteAvaliacaoForm(forms.ModelForm):
+    """
+    Formulário para criação e edição de testes
+    """
+
+    class Meta:
+        model = Teste
+        fields = ['realizado', 'avaliacao', 'notas']
