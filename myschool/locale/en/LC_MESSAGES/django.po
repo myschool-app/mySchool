@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mySchool\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-03 21:19+0000\n"
-"PO-Revision-Date: 2019-12-03 19:59+0000\n"
+"PO-Revision-Date: 2019-12-03 21:21+0000\n"
 "Last-Translator: Afonso Santos <afonso.faisca1@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -55,7 +55,7 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:4
 #: .\myschool_app\templates\myschool_app\publico\index.html:18
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:7
 msgid "Registos"
@@ -118,21 +118,21 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\publico\index.html:5
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:19
 msgid "Página Inicial"
-msgstr "Home Page"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\index.html:14
 msgid "Gestão escolar criada a pensar nos estudantes"
-msgstr "School management made thinking in students"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\index.html:22
 msgid "Regista-te já"
-msgstr "Sign Up Now"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:26
 #: .\myschool_app\templates\myschool_app\publico\sobre.html:5
 #: .\myschool_app\templates\myschool_app\publico\sobre.html:9
 msgid "Sobre"
-msgstr "About"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:30
 msgid "História"
