@@ -115,7 +115,7 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\index.html:22
 msgid "Regista-te já"
-msgstr ""
+msgstr "Sign Up Now"
 
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:26
 #: .\myschool_app\templates\myschool_app\publico\sobre.html:5
@@ -130,13 +130,13 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:44
 #: .\utilizadores\templates\utilizadores\registo.html:23
 msgid "Criar uma Conta"
-msgstr ""
+msgstr "Create an Account"
 
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:47
 #: .\utilizadores\templates\utilizadores\login.html:6
 #: .\utilizadores\templates\utilizadores\login.html:24
 msgid "Login"
-msgstr ""
+msgstr "Sign In"
 
 #: .\myschool_app\templates\myschool_app\publico\sobre.html:11
 msgid "Esta aplicação consiste em..."
@@ -144,25 +144,25 @@ msgstr ""
 
 #: .\utilizadores\templates\utilizadores\login.html:27
 msgid "Recuperar Palavra-Passe"
-msgstr ""
+msgstr "Recover Password"
 
 #: .\utilizadores\templates\utilizadores\logout.html:14
 msgid "Obrigado pela visita!"
-msgstr ""
+msgstr "Thank you for the visit!"
 
 #: .\utilizadores\templates\utilizadores\logout.html:15
 msgid "Entrar novamente?"
-msgstr ""
+msgstr "Sign In again?"
 
 #: .\utilizadores\templates\utilizadores\perfil.html:17
 msgid "Imagem de perfil de"
-msgstr ""
+msgstr "Profile image of"
 
 #: .\utilizadores\templates\utilizadores\registo.html:6
 msgid "Registo"
-msgstr ""
+msgstr "Sign Up"
 
 #: .\utilizadores\templates\utilizadores\registo.html:26
 msgid "Já tem uma conta?"
-msgstr ""
+msgstr "Already have an accont?"
 
