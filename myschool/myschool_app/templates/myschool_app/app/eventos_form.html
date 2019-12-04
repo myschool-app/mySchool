@@ -1,8 +1,9 @@
 {% extends 'myschool_app/app/base.html' %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block title %}
-  Adicionar Evento
+  {% trans 'Adicionar Evento' %}
 {% endblock title %}
 
 {% block content %}
@@ -10,7 +11,7 @@
   {% include 'myschool_app/app/partials/_sidebar.html' %}
 
   <div class="content p-4">
-    <h2>Eventos</h2>
+    <h2>{% trans 'Eventos' %}</h2>
 
     <div class="row mt-4">
       <div class="col">
@@ -34,8 +35,8 @@
               {{ form.descricao|as_crispy_field }}
             </div>
           </div>
-          <a href="{% url 'app-eventos-lista' %}" class="btn btn-dark">Voltar</a>
-          <input type="submit" class="btn btn-info" value="Guardar">
+          <a href="{% url 'app-eventos-lista' %}" class="btn btn-dark">{% trans 'Voltar' %}</a>
+          <input type="submit" class="btn btn-info" value="{% trans 'Guardar' %}">
         </form>
       </div>
     </div>

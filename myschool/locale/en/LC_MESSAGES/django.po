@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mySchool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-04 17:28+0000\n"
+"POT-Creation-Date: 2019-12-04 17:48+0000\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,20 +13,77 @@ msgstr ""
 msgid "Administração da aplicação mySchool"
 msgstr "mySchool Application Administration"
 
-#: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:6
-#, fuzzy
-#| msgid "Disciplinas"
-msgid "Adicionar Disciplina"
-msgstr "Courses"
-
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:5
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:13
 #: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:14
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:14
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:11
 msgid "Disciplinas"
 msgstr "Courses"
 
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:29
+#: .\myschool_app\templates\myschool_app\app\eventos.html:29
+msgid "Adicionar"
+msgstr "Add"
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:35
+#: .\myschool_app\templates\myschool_app\app\eventos.html:36
+msgid "Descrição"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:36
+#, fuzzy
+#| msgid "Professores"
+msgid "Professor"
+msgstr "Teachers"
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:37
+#: .\myschool_app\templates\myschool_app\app\eventos.html:39
+#, fuzzy
+#| msgid "Definições"
+msgid "Opções"
+msgstr "Settings"
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:44
+#, fuzzy
+#| msgid "Professores"
+msgid "Sem Professor"
+msgstr "Teachers"
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:47
+#: .\myschool_app\templates\myschool_app\app\eventos.html:50
+msgid "Editar"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:48
+#: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:23
+#: .\myschool_app\templates\myschool_app\app\eventos.html:51
+#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:23
+msgid "Remover"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:55
+msgid "Não tem disciplinas registadas"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:64
+msgid "Dica"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:67
+msgid "Não precisas de registar professores para adicionares disciplinas."
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:6
+#, fuzzy
+#| msgid "Disciplinas"
+msgid "Adicionar Disciplina"
+msgstr "Courses"
+
 #: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:28
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:22
+#: .\myschool_app\templates\myschool_app\app\eventos_form.html:38
+#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:22
 msgid "Voltar"
 msgstr ""
 
@@ -37,13 +94,53 @@ msgid "Remover Disciplina"
 msgstr "Courses"
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:20
-#, fuzzy
-#| msgid "Disciplinas"
-msgid "Queres mesmo remover a disciplina"
-msgstr "Courses"
+msgid ""
+"Queres mesmo remover a disciplina <strong>{{ disciplina.descricao }}</"
+"strong>?"
+msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:23
-msgid "Remover"
+#: .\myschool_app\templates\myschool_app\app\eventos.html:5
+#: .\myschool_app\templates\myschool_app\app\eventos.html:13
+#: .\myschool_app\templates\myschool_app\app\eventos_form.html:14
+#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:14
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:13
+msgid "Eventos"
+msgstr "Events"
+
+#: .\myschool_app\templates\myschool_app\app\eventos.html:35
+msgid "Título"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\eventos.html:37
+msgid "Data de Início"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\eventos.html:38
+msgid "Data de Fim"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\eventos.html:58
+msgid "Não tem eventos registados"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\eventos_form.html:6
+#, fuzzy
+#| msgid "Adicionar"
+msgid "Adicionar Evento"
+msgstr "Add"
+
+#: .\myschool_app\templates\myschool_app\app\eventos_form.html:39
+msgid "Guardar"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:6
+msgid "Remover Evento"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:20
+msgid ""
+"Queres mesmo remover o evento com o título <strong>{{ evento.titulo }}</"
+"strong>, do dia <strong>{{ evento.data_inicio }}</strong>?"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:10
@@ -65,16 +162,13 @@ msgid "Sair"
 msgstr "Logout"
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:4
-msgid "Utilize a opção"
-msgstr "Use the option"
-
-#: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:4
-msgid "Adicionar"
-msgstr "Add"
-
-#: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:4
-msgid "para adicionar registos."
-msgstr "to add records."
+#, python-format
+msgid ""
+" %%}\n"
+"            Utilize a opção <span class=\"badge badge-info\">%(adicionar)s</"
+"span> para adicionar registos.\n"
+"        "
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:6
 #: .\myschool_app\templates\myschool_app\publico\index.html:18
@@ -88,10 +182,6 @@ msgstr "Records"
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:12
 msgid "Testes"
 msgstr "Tests"
-
-#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:13
-msgid "Eventos"
-msgstr "Events"
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:14
 msgid "Professores"
@@ -196,3 +286,14 @@ msgstr "Sign Up"
 #: .\utilizadores\templates\utilizadores\registo.html:26
 msgid "Já tem uma conta?"
 msgstr "Already have an accont?"
+
+#, fuzzy
+#~| msgid "Disciplinas"
+#~ msgid "Queres mesmo remover a disciplina"
+#~ msgstr "Courses"
+
+#~ msgid "Utilize a opção"
+#~ msgstr "Use the option"
+
+#~ msgid "para adicionar registos."
+#~ msgstr "to add records."
