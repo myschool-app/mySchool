@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mySchool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-04 17:24+0000\n"
+"POT-Creation-Date: 2019-12-04 17:28+0000\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,10 +37,10 @@ msgid "Remover Disciplina"
 msgstr "Courses"
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:20
-msgid ""
-"Queres mesmo remover a disciplina <strong>{{ disciplina.descricao }}</"
-"strong>?"
-msgstr ""
+#, fuzzy
+#| msgid "Disciplinas"
+msgid "Queres mesmo remover a disciplina"
+msgstr "Courses"
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:23
 msgid "Remover"
