@@ -1,3 +1,5 @@
+![](.github/logo.svg)
+
 # mySchool
 
 mySchool é uma aplicação criada com a framework Django que permite uma gestão escolar mais flexível e simplificada.
