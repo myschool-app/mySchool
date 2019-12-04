@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block title %}
-  Dashboard
+  {% trans 'Dashboard' %}
 {% endblock title %}
 
 {% block content %}
@@ -10,8 +10,8 @@
   {% include 'myschool_app/app/partials/_sidebar.html' %}
 
   <div class="content p-4">
-    <h2>Dashboard</h2>
-    <h5 class="text-muted mb-4">Ponto de acesso para todas as informações</h5>
+    <h2>{% trans 'Dashboard' %}</h2>
+    <h5 class="text-muted mb-4">{% trans 'Ponto de acesso para todas as informações' %}</h5>
 
     <div class="row mb-4">
       <div class="col-sm">
@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="flex-grow-1 bg-white p-4">
-            <p class="text-uppercase text-secondary mb-0">Disciplinas</p>
+            <p class="text-uppercase text-secondary mb-0">{% trans 'Disciplinas' %}</p>
             <h3 class="font-weight-bold mb-0">{{ quantidade_disciplinas }}</h3>
           </div>
         </div>
@@ -35,7 +35,7 @@
             </div>
           </div>
           <div class="flex-grow-1 bg-white p-4">
-            <p class="text-uppercase text-secondary mb-0">Testes</p>
+            <p class="text-uppercase text-secondary mb-0">{% trans 'Testes' %}</p>
             <h3 class="font-weight-bold mb-0">{{ quantidade_testes }}</h3>
           </div>
         </div>
@@ -48,7 +48,7 @@
             </div>
           </div>
           <div class="flex-grow-1 bg-white p-4">
-            <p class="text-uppercase text-secondary mb-0">Professores</p>
+            <p class="text-uppercase text-secondary mb-0">{% trans 'Professores' %}</p>
             <h3 class="font-weight-bold mb-0">{{ quantidade_professores }}</h3>
           </div>
         </div>
@@ -61,7 +61,7 @@
             </div>
           </div>
           <div class="flex-grow-1 bg-white p-4">
-            <p class="text-uppercase text-secondary mb-0">Eventos</p>
+            <p class="text-uppercase text-secondary mb-0">{% trans 'Eventos' %}</p>
             <h3 class="font-weight-bold mb-0">{{ quantidade_eventos }}</h3>
           </div>
         </div>
@@ -71,7 +71,7 @@
     <div class="row mb-4">
       <div class="col-md-8">
         <div class="card">
-          <div class="card-header bg-success text-white font-weight-bold"><i class="fas fa-forward"></i> Próximos Testes</div>
+          <div class="card-header bg-success text-white font-weight-bold"><i class="fas fa-forward"></i> {% trans 'Próximos Testes' %}</div>
           <div class="card-body">
             <table class="table table-hover">
               <thead>
@@ -130,7 +130,7 @@
       </div>
       <div class="col-md-4">
         <div class="card">
-          <div class="card-header bg-info text-white font-weight-bold"><i class="fas fa-calendar"></i> Próximos Eventos</div>
+          <div class="card-header bg-info text-white font-weight-bold"><i class="fas fa-calendar"></i> {% trans 'Próximos Eventos' %}</div>
           <div class="card-body">
             <table class="table table-hover">
               <thead>
@@ -172,7 +172,7 @@
     </div>
 
     <div class="card">
-      <div class="card-header bg-dark text-white font-weight-bold"><i class="fas fa-chart-bar"></i> Evolução das Notas</div>
+      <div class="card-header bg-dark text-white font-weight-bold"><i class="fas fa-chart-bar"></i> {% trans 'Evolução das Notas' %}</div>
       <div class="card-body">
         <div id="grafico" style="width: 900px; height: 400px"></div>
       </div>

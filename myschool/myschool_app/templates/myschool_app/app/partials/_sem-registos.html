@@ -1,8 +1,8 @@
+{% load i18n %}
+
 <div class="mt-2 mb-4">
-    <h5>{{ mensagem }}</h5>
+    <h5>{% trans mensagem %}</h5>
     <p>
-        {% blocktrans with adiconar={% trans 'Adicionar' %} %}
-            Utilize a opção <span class="badge badge-info">{{ adicionar }}</span> para adicionar registos.
-        {% endblocktrans %}
+        {% blocktrans %}Utilize a opção <span class="badge badge-info">Adicionar</span> para adicionar registos.{% endblocktrans %}
     </p>
 </div>

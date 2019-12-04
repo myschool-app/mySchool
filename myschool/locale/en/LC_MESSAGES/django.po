@@ -2,53 +2,140 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mySchool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-04 17:48+0000\n"
+"POT-Creation-Date: 2019-12-04 18:55+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Afonso Santos <afonso.faisca1@gmail.com>\n"
+"Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: .\myschool_app\admin.py:54
 msgid "Administração da aplicação mySchool"
 msgstr "mySchool Application Administration"
 
+#: .\myschool_app\models.py:11 .\myschool_app\models.py:30
+#: .\myschool_app\models.py:50 .\myschool_app\models.py:73
+msgid "Utilizador"
+msgstr ""
+
+#: .\myschool_app\models.py:12
+msgid "Nome"
+msgstr ""
+
+#: .\myschool_app\models.py:13
+msgid "Endereço de Email"
+msgstr ""
+
+#: .\myschool_app\models.py:15
+msgid "Telefone"
+msgstr ""
+
+#: .\myschool_app\models.py:18 .\myschool_app\models.py:33
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:36
+msgid "Professor"
+msgstr ""
+
+#: .\myschool_app\models.py:19
+#: .\myschool_app\templates\myschool_app\app\index.html:51
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:14
+#: .\myschool_app\templates\myschool_app\app\professores_form.html:6
+#: .\myschool_app\templates\myschool_app\app\professores_form.html:14
+#: .\myschool_app\templates\myschool_app\app\professores_remover.html:13
+msgid "Professores"
+msgstr "Teachers"
+
+#: .\myschool_app\models.py:31 .\myschool_app\models.py:75
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:35
+#: .\myschool_app\templates\myschool_app\app\eventos.html:36
+msgid "Descrição"
+msgstr ""
+
+#: .\myschool_app\models.py:36 .\myschool_app\models.py:52
+msgid "Disciplina"
+msgstr ""
+
+#: .\myschool_app\models.py:37
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:5
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:13
+#: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:6
 #: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:14
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:14
+#: .\myschool_app\templates\myschool_app\app\index.html:25
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:11
 msgid "Disciplinas"
 msgstr "Courses"
+
+#: .\myschool_app\models.py:53
+msgid "Data"
+msgstr ""
+
+#: .\myschool_app\models.py:55
+msgid "Notas"
+msgstr ""
+
+#: .\myschool_app\models.py:57
+msgid "Realizado?"
+msgstr ""
+
+#: .\myschool_app\models.py:59
+msgid "Avaliação"
+msgstr ""
+
+#: .\myschool_app\models.py:62
+msgid "Teste"
+msgstr ""
+
+#: .\myschool_app\models.py:63
+#: .\myschool_app\templates\myschool_app\app\index.html:38
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:12
+msgid "Testes"
+msgstr "Tests"
+
+#: .\myschool_app\models.py:74
+#: .\myschool_app\templates\myschool_app\app\eventos.html:35
+msgid "Título"
+msgstr ""
+
+#: .\myschool_app\models.py:76
+#: .\myschool_app\templates\myschool_app\app\eventos.html:37
+msgid "Data de Início"
+msgstr ""
+
+#: .\myschool_app\models.py:77
+#: .\myschool_app\templates\myschool_app\app\eventos.html:38
+msgid "Data de Fim"
+msgstr ""
+
+#: .\myschool_app\models.py:80
+msgid "Evento"
+msgstr ""
+
+#: .\myschool_app\models.py:81
+#: .\myschool_app\templates\myschool_app\app\eventos.html:5
+#: .\myschool_app\templates\myschool_app\app\eventos.html:13
+#: .\myschool_app\templates\myschool_app\app\eventos_form.html:14
+#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:14
+#: .\myschool_app\templates\myschool_app\app\index.html:64
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:13
+msgid "Eventos"
+msgstr "Events"
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:29
 #: .\myschool_app\templates\myschool_app\app\eventos.html:29
 msgid "Adicionar"
 msgstr "Add"
 
-#: .\myschool_app\templates\myschool_app\app\disciplinas.html:35
-#: .\myschool_app\templates\myschool_app\app\eventos.html:36
-msgid "Descrição"
-msgstr ""
-
-#: .\myschool_app\templates\myschool_app\app\disciplinas.html:36
-#, fuzzy
-#| msgid "Professores"
-msgid "Professor"
-msgstr "Teachers"
-
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:37
 #: .\myschool_app\templates\myschool_app\app\eventos.html:39
-#, fuzzy
-#| msgid "Definições"
 msgid "Opções"
-msgstr "Settings"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:44
-#, fuzzy
-#| msgid "Professores"
 msgid "Sem Professor"
-msgstr "Teachers"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:47
 #: .\myschool_app\templates\myschool_app\app\eventos.html:50
@@ -59,14 +146,11 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:23
 #: .\myschool_app\templates\myschool_app\app\eventos.html:51
 #: .\myschool_app\templates\myschool_app\app\eventos_remover.html:23
+#: .\myschool_app\templates\myschool_app\app\professores_remover.html:24
 msgid "Remover"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\disciplinas.html:55
-msgid "Não tem disciplinas registadas"
-msgstr ""
-
-#: .\myschool_app\templates\myschool_app\app\disciplinas.html:64
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:63
 msgid "Dica"
 msgstr ""
 
@@ -74,24 +158,24 @@ msgstr ""
 msgid "Não precisas de registar professores para adicionares disciplinas."
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:6
-#, fuzzy
-#| msgid "Disciplinas"
-msgid "Adicionar Disciplina"
-msgstr "Courses"
-
 #: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:28
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:22
 #: .\myschool_app\templates\myschool_app\app\eventos_form.html:38
 #: .\myschool_app\templates\myschool_app\app\eventos_remover.html:22
+#: .\myschool_app\templates\myschool_app\app\professores_form.html:31
+#: .\myschool_app\templates\myschool_app\app\professores_remover.html:23
 msgid "Voltar"
 msgstr ""
 
+#: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:29
+#: .\myschool_app\templates\myschool_app\app\eventos_form.html:39
+#: .\myschool_app\templates\myschool_app\app\professores_form.html:32
+msgid "Guardar"
+msgstr ""
+
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:6
-#, fuzzy
-#| msgid "Disciplinas"
 msgid "Remover Disciplina"
-msgstr "Courses"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:20
 msgid ""
@@ -99,38 +183,8 @@ msgid ""
 "strong>?"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\eventos.html:5
-#: .\myschool_app\templates\myschool_app\app\eventos.html:13
-#: .\myschool_app\templates\myschool_app\app\eventos_form.html:14
-#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:14
-#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:13
-msgid "Eventos"
-msgstr "Events"
-
-#: .\myschool_app\templates\myschool_app\app\eventos.html:35
-msgid "Título"
-msgstr ""
-
-#: .\myschool_app\templates\myschool_app\app\eventos.html:37
-msgid "Data de Início"
-msgstr ""
-
-#: .\myschool_app\templates\myschool_app\app\eventos.html:38
-msgid "Data de Fim"
-msgstr ""
-
-#: .\myschool_app\templates\myschool_app\app\eventos.html:58
-msgid "Não tem eventos registados"
-msgstr ""
-
 #: .\myschool_app\templates\myschool_app\app\eventos_form.html:6
-#, fuzzy
-#| msgid "Adicionar"
 msgid "Adicionar Evento"
-msgstr "Add"
-
-#: .\myschool_app\templates\myschool_app\app\eventos_form.html:39
-msgid "Guardar"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\eventos_remover.html:6
@@ -141,6 +195,29 @@ msgstr ""
 msgid ""
 "Queres mesmo remover o evento com o título <strong>{{ evento.titulo }}</"
 "strong>, do dia <strong>{{ evento.data_inicio }}</strong>?"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\index.html:5
+#: .\myschool_app\templates\myschool_app\app\index.html:13
+#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:6
+#: .\myschool_app\templates\myschool_app\publico\index.html:18
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: .\myschool_app\templates\myschool_app\app\index.html:14
+msgid "Ponto de acesso para todas as informações"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\index.html:74
+msgid "Próximos Testes"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\index.html:133
+msgid "Próximos Eventos"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\index.html:175
+msgid "Evolução das Notas"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:10
@@ -161,31 +238,15 @@ msgstr "Profile"
 msgid "Sair"
 msgstr "Logout"
 
-#: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:4
-#, python-format
+#: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:6
 msgid ""
-" %%}\n"
-"            Utilize a opção <span class=\"badge badge-info\">%(adicionar)s</"
-"span> para adicionar registos.\n"
-"        "
+"Utilize a opção <span class=\"badge badge-info\">Adicionar</span> para "
+"adicionar registos."
 msgstr ""
-
-#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:6
-#: .\myschool_app\templates\myschool_app\publico\index.html:18
-msgid "Dashboard"
-msgstr "Dashboard"
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:9
 msgid "Registos"
 msgstr "Records"
-
-#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:12
-msgid "Testes"
-msgstr "Tests"
-
-#: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:14
-msgid "Professores"
-msgstr "Teachers"
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:18
 msgid "Calendário"
@@ -198,6 +259,17 @@ msgstr "Settings"
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:25
 msgid "Administração"
 msgstr "Administration"
+
+#: .\myschool_app\templates\myschool_app\app\professores_remover.html:5
+#, fuzzy
+#| msgid "Professores"
+msgid "Remover Professor"
+msgstr "Teachers"
+
+#: .\myschool_app\templates\myschool_app\app\professores_remover.html:20
+#, python-format
+msgid "Queres mesmo remover o professor <strong>%(professor.nome)s</strong>?"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\base.html:10
 msgid "Aplicação para gestão escolar"

@@ -18,6 +18,7 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
 
 # Views da aplicação utilizadores
 from utilizadores import views as utilizadores_views
@@ -30,6 +31,7 @@ urlpatterns = [
     # Administração
     path('admin/docs/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),
     # Autenticação
     path('app/registo/', utilizadores_views.registo, name='app-registar'),
     path('app/perfil/', utilizadores_views.perfil, name="app-perfil"),

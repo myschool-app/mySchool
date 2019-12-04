@@ -42,7 +42,7 @@
                 <tr>
                   <td>{{ disciplina.descricao }}</td>
                   {% trans 'Sem Professor' as sem_professor %}
-                  <td>{{ disciplina.professor|default_if_none:{{ sem_professor }} }}</td>
+                  <td>{{ disciplina.professor|default_if_none:sem_professor }}</td>
                   <td>
                     <a href="{% url 'app-disciplinas-editar' disciplina.id %}" class="btn btn-warning btn-sm">{% trans 'Editar' %}</a>
                     <a href="{% url 'app-disciplinas-remover' disciplina.id %}" class="btn btn-danger btn-sm">{% trans 'Remover' %}</a>
@@ -52,8 +52,7 @@
             </tbody>
           </table>
         {% else %}
-          {% trans 'Não tem disciplinas registadas' as mensagem %}
-          {% include 'myschool_app/app/partials/_sem-registos.html' with mensagem={{ mensagem }}
+          {% include 'myschool_app/app/partials/_sem-registos.html' with mensagem="Não tem disciplinas registadas" %}
         {% endif %}
       </div>
       <!-- Dica -->
@@ -64,7 +63,9 @@
             <h4>{% trans 'Dica' %}</h4>
           </div>
           <div class="card-body m-0 p-3">
-            <p>{% trans 'Não precisas de registar professores para adicionares disciplinas.' %}</p>
+            <p>
+              {% trans 'Não precisas de registar professores para adicionares disciplinas.' %}
+            </p>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
 # Ignores templates files due to issue with Prettier formatting
 
-myschool/myschool_app/templates/
-myschool/utilizadores/templates/
+*.html

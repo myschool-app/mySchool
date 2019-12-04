@@ -55,8 +55,7 @@
             </tbody>
           </table>
         {% else %}
-          {% trans 'Não tem eventos registados' as mensagem %}
-          {% include 'myschool_app/app/partials/_sem-registos.html' with mensagem={{ mensagem }}
+          {% include 'myschool_app/app/partials/_sem-registos.html' with mensagem="Não tem eventos registados" %}
         {% endif %}
       </div>
     </div>

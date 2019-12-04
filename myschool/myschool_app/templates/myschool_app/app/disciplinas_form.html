@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block title %}
-  {% trans 'Adicionar Disciplina' %}
+  {% trans 'Disciplinas' %}
 {% endblock title %}
 
 {% block content %}
@@ -26,7 +26,7 @@
             </div>
           </div>
           <a href="{% url 'app-disciplinas-lista' %}" class="btn btn-dark">{% trans 'Voltar' %}</a>
-          <input type="submit" class="btn btn-info" value="Guardar">
+          <input type="submit" class="btn btn-info" value="{% trans 'Guardar' %}">
         </form>
       </div>
     </div>
