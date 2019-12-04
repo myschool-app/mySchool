@@ -124,7 +124,7 @@ LANGUAGES = [
     ('en', 'English'),
 ]
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'pt-PT'
 
 TIME_ZONE = 'UTC'
 
