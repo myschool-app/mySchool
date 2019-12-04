@@ -1,7 +1,8 @@
 {% extends 'myschool_app/app/base.html' %}
+{% load i18n %}
 
 {% block title %}
-  Testes
+  {% trans 'Testes' %}
 {% endblock title %}
 
 {% block content %}
@@ -9,7 +10,7 @@
   {% include 'myschool_app/app/partials/_sidebar.html' %}
 
   <div class="content p-4">
-    <h2>Testes</h2>
+    <h2>{% trans 'Testes' %}</h2>
 
     <div class="row mt-4">
       <div class="col">
@@ -25,17 +26,17 @@
           {% endfor %}
         {% endif %}
         
-        <a href="{% url 'app-testes-adicionar' %}" class="btn btn-sm btn-info mb-3"> <i class="fas fa-plus"></i> Adicionar</a>
+        <a href="{% url 'app-testes-adicionar' %}" class="btn btn-sm btn-info mb-3"> <i class="fas fa-plus"></i> {% trans 'Adicionar' %}</a>
         
         {% if testes %} <!-- Verifica se existem testes registadas -->
           <table class="table table-hover">
             <thead class="thead-light">
               <tr>
-                <th scope="col">Disciplina</th>
-                <th scope="col">Data</th>
-                <th scope="col">Realizado</th>
-                <th scope="col">Avaliação</th>
-                <th scope="col">Opções</th>
+                <th scope="col">{% trans 'Disciplina' %}</th>
+                <th scope="col">{% trans 'Data' %}</th>
+                <th scope="col">{% trans 'Realizado?' %}</th>
+                <th scope="col">{% trans 'Avaliação' %}</th>
+                <th scope="col">{% trans 'Opções' %}</th>
               </tr>
             </thead>
             <tbody>
@@ -56,9 +57,9 @@
                   </td>
                   <td>{{ teste.avaliacao|default_if_none:"" }}</td>
                   <td>
-                    <a href="{% url 'app-testes-editar' teste.id %}" class="btn btn-warning btn-sm">Editar</a>
-                    <a href="{% url 'app-testes-remover' teste.id %}" class="btn btn-danger btn-sm">Remover</a>
-                    <a href="{% url 'app-testes-avaliacao' teste.id %}" class="btn btn-success btn-sm">Avaliação</a>
+                    <a href="{% url 'app-testes-editar' teste.id %}" class="btn btn-warning btn-sm">{% trans 'Editar' %}</a>
+                    <a href="{% url 'app-testes-remover' teste.id %}" class="btn btn-danger btn-sm">{% trans 'Remover' %}</a>
+                    <a href="{% url 'app-testes-avaliacao' teste.id %}" class="btn btn-success btn-sm">{% trans 'Avaliação' %}</a>
                   </td>
                 </tr>
               {% endfor %}

@@ -261,10 +261,9 @@ msgid "Administração"
 msgstr "Administration"
 
 #: .\myschool_app\templates\myschool_app\app\professores_remover.html:5
-#, fuzzy
 #| msgid "Professores"
 msgid "Remover Professor"
-msgstr "Teachers"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\professores_remover.html:20
 #, python-format
