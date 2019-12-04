@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mySchool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-04 18:55+0000\n"
+"POT-Creation-Date: 2019-12-04 19:03+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Afonso Santos <afonso.faisca1@gmail.com>\n"
 "Language-Team: \n"
@@ -22,6 +22,7 @@ msgid "Utilizador"
 msgstr ""
 
 #: .\myschool_app\models.py:12
+#: .\myschool_app\templates\myschool_app\app\professores.html:35
 msgid "Nome"
 msgstr ""
 
@@ -41,9 +42,11 @@ msgstr ""
 #: .\myschool_app\models.py:19
 #: .\myschool_app\templates\myschool_app\app\index.html:51
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:14
+#: .\myschool_app\templates\myschool_app\app\professores.html:5
+#: .\myschool_app\templates\myschool_app\app\professores.html:13
 #: .\myschool_app\templates\myschool_app\app\professores_form.html:6
 #: .\myschool_app\templates\myschool_app\app\professores_form.html:14
-#: .\myschool_app\templates\myschool_app\app\professores_remover.html:13
+#: .\myschool_app\templates\myschool_app\app\professores_remover.html:14
 msgid "Professores"
 msgstr "Teachers"
 
@@ -54,6 +57,7 @@ msgid "Descrição"
 msgstr ""
 
 #: .\myschool_app\models.py:36 .\myschool_app\models.py:52
+#: .\myschool_app\templates\myschool_app\app\testes.html:35
 msgid "Disciplina"
 msgstr ""
 
@@ -69,6 +73,7 @@ msgid "Disciplinas"
 msgstr "Courses"
 
 #: .\myschool_app\models.py:53
+#: .\myschool_app\templates\myschool_app\app\testes.html:36
 msgid "Data"
 msgstr ""
 
@@ -77,10 +82,13 @@ msgid "Notas"
 msgstr ""
 
 #: .\myschool_app\models.py:57
+#: .\myschool_app\templates\myschool_app\app\testes.html:37
 msgid "Realizado?"
 msgstr ""
 
 #: .\myschool_app\models.py:59
+#: .\myschool_app\templates\myschool_app\app\testes.html:38
+#: .\myschool_app\templates\myschool_app\app\testes.html:62
 msgid "Avaliação"
 msgstr ""
 
@@ -91,6 +99,12 @@ msgstr ""
 #: .\myschool_app\models.py:63
 #: .\myschool_app\templates\myschool_app\app\index.html:38
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:12
+#: .\myschool_app\templates\myschool_app\app\testes.html:5
+#: .\myschool_app\templates\myschool_app\app\testes.html:13
+#: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:14
+#: .\myschool_app\templates\myschool_app\app\testes_form.html:6
+#: .\myschool_app\templates\myschool_app\app\testes_form.html:14
+#: .\myschool_app\templates\myschool_app\app\testes_remover.html:14
 msgid "Testes"
 msgstr "Tests"
 
@@ -125,11 +139,15 @@ msgstr "Events"
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:29
 #: .\myschool_app\templates\myschool_app\app\eventos.html:29
+#: .\myschool_app\templates\myschool_app\app\professores.html:29
+#: .\myschool_app\templates\myschool_app\app\testes.html:29
 msgid "Adicionar"
 msgstr "Add"
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:37
 #: .\myschool_app\templates\myschool_app\app\eventos.html:39
+#: .\myschool_app\templates\myschool_app\app\professores.html:37
+#: .\myschool_app\templates\myschool_app\app\testes.html:39
 msgid "Opções"
 msgstr ""
 
@@ -139,6 +157,8 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:47
 #: .\myschool_app\templates\myschool_app\app\eventos.html:50
+#: .\myschool_app\templates\myschool_app\app\professores.html:46
+#: .\myschool_app\templates\myschool_app\app\testes.html:60
 msgid "Editar"
 msgstr ""
 
@@ -146,7 +166,10 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:23
 #: .\myschool_app\templates\myschool_app\app\eventos.html:51
 #: .\myschool_app\templates\myschool_app\app\eventos_remover.html:23
-#: .\myschool_app\templates\myschool_app\app\professores_remover.html:24
+#: .\myschool_app\templates\myschool_app\app\professores.html:47
+#: .\myschool_app\templates\myschool_app\app\professores_remover.html:25
+#: .\myschool_app\templates\myschool_app\app\testes.html:61
+#: .\myschool_app\templates\myschool_app\app\testes_remover.html:25
 msgid "Remover"
 msgstr ""
 
@@ -163,13 +186,18 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\eventos_form.html:38
 #: .\myschool_app\templates\myschool_app\app\eventos_remover.html:22
 #: .\myschool_app\templates\myschool_app\app\professores_form.html:31
-#: .\myschool_app\templates\myschool_app\app\professores_remover.html:23
+#: .\myschool_app\templates\myschool_app\app\professores_remover.html:24
+#: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:30
+#: .\myschool_app\templates\myschool_app\app\testes_form.html:34
+#: .\myschool_app\templates\myschool_app\app\testes_remover.html:24
 msgid "Voltar"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:29
 #: .\myschool_app\templates\myschool_app\app\eventos_form.html:39
 #: .\myschool_app\templates\myschool_app\app\professores_form.html:32
+#: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:31
+#: .\myschool_app\templates\myschool_app\app\testes_form.html:35
 msgid "Guardar"
 msgstr ""
 
@@ -260,14 +288,34 @@ msgstr "Settings"
 msgid "Administração"
 msgstr "Administration"
 
-#: .\myschool_app\templates\myschool_app\app\professores_remover.html:5
-#| msgid "Professores"
+#: .\myschool_app\templates\myschool_app\app\professores.html:36
+msgid "Email"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\professores_remover.html:6
 msgid "Remover Professor"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\professores_remover.html:20
+#: .\myschool_app\templates\myschool_app\app\professores_remover.html:21
 #, python-format
 msgid "Queres mesmo remover o professor <strong>%(professor.nome)s</strong>?"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:6
+#, fuzzy
+#| msgid "Administração"
+msgid "Adicionar Avaliação"
+msgstr "Administration"
+
+#: .\myschool_app\templates\myschool_app\app\testes_remover.html:6
+msgid "Remover Teste"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\testes_remover.html:21
+#, python-format
+msgid ""
+"Queres mesmo remover o teste da disciplina <strong>%(teste.disciplina)s</"
+"strong>, do dia <strong>%(teste.data)s</strong>?"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\base.html:10
