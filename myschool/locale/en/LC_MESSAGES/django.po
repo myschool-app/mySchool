@@ -302,10 +302,9 @@ msgid "Queres mesmo remover o professor <strong>%(professor.nome)s</strong>?"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:6
-#, fuzzy
 #| msgid "Administração"
 msgid "Adicionar Avaliação"
-msgstr "Administration"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\testes_remover.html:6
 msgid "Remover Teste"
