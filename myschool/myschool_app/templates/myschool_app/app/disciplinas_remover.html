@@ -1,8 +1,9 @@
 {% extends 'myschool_app/app/base.html' %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block title %}
-  Remover Disciplina
+  {% trans 'Remover Disciplina' %}
 {% endblock title %}
 
 {% block content %}
@@ -10,16 +11,16 @@
   {% include 'myschool_app/app/partials/_sidebar.html' %}
 
   <div class="content p-4">
-    <h2>Disciplinas</h2>
+    <h2>{% trans 'Disciplinas' %}</h2>
 
     <div class="row mt-4">
       <div class="col">
         <form method="POST">
           {% csrf_token %}
-          <p class="mb-3">Queres mesmo remover a disciplina <strong>{{ disciplina.descricao }}</strong>?</p>
+          <p class="mb-3">{% trans 'Queres mesmo remover a disciplina <strong>{{ disciplina.descricao }}</strong>?' %}</p>
           
-          <a href="{% url 'app-disciplinas-lista' %}" class="btn btn-dark">Voltar</a>
-          <input type="submit" class="btn btn-danger" value="Remover">
+          <a href="{% url 'app-disciplinas-lista' %}" class="btn btn-dark">{% trans 'Voltar' %}</a>
+          <input type="submit" class="btn btn-danger" value="{% trans 'Remover' %}">
         </form>
       </div>
     </div>
