@@ -1,4 +1,4 @@
-![](.github/logo.svg)
+![](https://user-images.githubusercontent.com/46262740/70154844-1cff5100-16a9-11ea-9b70-dfe4a357aa04.png)
 
 # mySchool
 
