@@ -1,7 +1,7 @@
 asgiref==3.2.3
 autopep8==1.4.4
 Django==3.0
-django-crispy-forms==1.8.0
+django-crispy-forms==1.8.1
 docutils==0.15.2
 Pillow==6.2.1
 pycodestyle==2.5.0
