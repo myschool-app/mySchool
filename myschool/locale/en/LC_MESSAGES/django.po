@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mySchool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-04 19:03+0000\n"
+"POT-Creation-Date: 2019-12-05 19:48+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Afonso Santos <afonso.faisca1@gmail.com>\n"
 "Language-Team: \n"
@@ -302,7 +302,6 @@ msgid "Queres mesmo remover o professor <strong>%(professor.nome)s</strong>?"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:6
-#| msgid "Administração"
 msgid "Adicionar Avaliação"
 msgstr ""
 
