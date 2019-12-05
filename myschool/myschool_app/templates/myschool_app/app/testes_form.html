@@ -39,3 +39,12 @@
   </div>
 </div>
 {% endblock content %}
+
+{% block scripts %}
+  <script>
+    $('#id_data').datepicker({
+      format: 'dd/mm/yyyy',
+      language: 'pt'
+    });
+  </script>
+{% endblock scripts %}
