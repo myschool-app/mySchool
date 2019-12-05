@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'utilizadores.apps.UtilizadoresConfig',
     # Aplicações PIP
     'crispy_forms',
+    'django_extensions',
     # Django
     'django.contrib.admindocs',
     'django.contrib.admin',
