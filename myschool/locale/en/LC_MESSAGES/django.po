@@ -14,7 +14,7 @@ msgstr ""
 
 #: .\myschool_app\admin.py:54
 msgid "Administração da aplicação mySchool"
-msgstr "mySchool Application Administration"
+msgstr ""
 
 #: .\myschool_app\models.py:11 .\myschool_app\models.py:30
 #: .\myschool_app\models.py:50 .\myschool_app\models.py:73
@@ -48,7 +48,7 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\professores_form.html:14
 #: .\myschool_app\templates\myschool_app\app\professores_remover.html:14
 msgid "Professores"
-msgstr "Teachers"
+msgstr ""
 
 #: .\myschool_app\models.py:31 .\myschool_app\models.py:75
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:35
@@ -70,7 +70,7 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\index.html:25
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:11
 msgid "Disciplinas"
-msgstr "Courses"
+msgstr ""
 
 #: .\myschool_app\models.py:53
 #: .\myschool_app\templates\myschool_app\app\testes.html:36
@@ -106,7 +106,7 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\testes_form.html:14
 #: .\myschool_app\templates\myschool_app\app\testes_remover.html:14
 msgid "Testes"
-msgstr "Tests"
+msgstr ""
 
 #: .\myschool_app\models.py:74
 #: .\myschool_app\templates\myschool_app\app\eventos.html:35
@@ -135,14 +135,14 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\index.html:64
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:13
 msgid "Eventos"
-msgstr "Events"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:29
 #: .\myschool_app\templates\myschool_app\app\eventos.html:29
 #: .\myschool_app\templates\myschool_app\app\professores.html:29
 #: .\myschool_app\templates\myschool_app\app\testes.html:29
 msgid "Adicionar"
-msgstr "Add"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:37
 #: .\myschool_app\templates\myschool_app\app\eventos.html:39
@@ -230,7 +230,7 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:6
 #: .\myschool_app\templates\myschool_app\publico\index.html:18
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\index.html:14
 msgid "Ponto de acesso para todas as informações"
@@ -250,21 +250,21 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:10
 msgid "Reportar um erro"
-msgstr "Report an error"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:13
 msgid "Documentação"
-msgstr "Documentation"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:20
 #: .\utilizadores\templates\utilizadores\perfil.html:5
 #: .\utilizadores\templates\utilizadores\perfil.html:13
 msgid "Perfil"
-msgstr "Profile"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:21
 msgid "Sair"
-msgstr "Logout"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:6
 msgid ""
@@ -274,19 +274,19 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:9
 msgid "Registos"
-msgstr "Records"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:18
 msgid "Calendário"
-msgstr "Calendar"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:21
 msgid "Definições"
-msgstr "Settings"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:25
 msgid "Administração"
-msgstr "Administration"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\professores.html:36
 msgid "Email"
@@ -318,19 +318,19 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\base.html:10
 msgid "Aplicação para gestão escolar"
-msgstr "App for school management"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\contactos.html:5
 #: .\myschool_app\templates\myschool_app\publico\contactos.html:9
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:34
 msgid "Contactos"
-msgstr "Contacts"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\equipa.html:5
 #: .\myschool_app\templates\myschool_app\publico\equipa.html:9
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:29
 msgid "Equipa"
-msgstr "Team"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\funcionalidades.html:5
 #: .\myschool_app\templates\myschool_app\publico\funcionalidades.html:9
@@ -345,7 +345,7 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\publico\index.html:5
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:19
 msgid "Página Inicial"
-msgstr "Home Page"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\index.html:14
 msgid "Gestão escolar criada a pensar nos estudantes"
@@ -353,13 +353,13 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\index.html:22
 msgid "Regista-te já"
-msgstr "Sign Up Now"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:26
 #: .\myschool_app\templates\myschool_app\publico\sobre.html:5
 #: .\myschool_app\templates\myschool_app\publico\sobre.html:9
 msgid "Sobre"
-msgstr "About"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:30
 msgid "História"
@@ -368,13 +368,13 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:44
 #: .\utilizadores\templates\utilizadores\registo.html:23
 msgid "Criar uma Conta"
-msgstr "Create an Account"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\partials\_navbar.html:47
 #: .\utilizadores\templates\utilizadores\login.html:6
 #: .\utilizadores\templates\utilizadores\login.html:24
 msgid "Login"
-msgstr "Sign In"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\sobre.html:11
 msgid "Esta aplicação consiste em..."
@@ -382,27 +382,27 @@ msgstr ""
 
 #: .\utilizadores\templates\utilizadores\login.html:27
 msgid "Recuperar Palavra-Passe"
-msgstr "Recover Password"
+msgstr ""
 
 #: .\utilizadores\templates\utilizadores\logout.html:14
 msgid "Obrigado pela visita!"
-msgstr "Thank you for the visit!"
+msgstr ""
 
 #: .\utilizadores\templates\utilizadores\logout.html:15
 msgid "Entrar novamente?"
-msgstr "Sign In again?"
+msgstr ""
 
 #: .\utilizadores\templates\utilizadores\perfil.html:17
 msgid "Imagem de perfil de"
-msgstr "Profile image of"
+msgstr ""
 
 #: .\utilizadores\templates\utilizadores\registo.html:6
 msgid "Registo"
-msgstr "Sign Up"
+msgstr ""
 
 #: .\utilizadores\templates\utilizadores\registo.html:26
 msgid "Já tem uma conta?"
-msgstr "Already have an accont?"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Disciplinas"
