@@ -16,7 +16,7 @@ Viste a [página da documentação](https://docs.myschool-app.tk/) para mais inf
 
 ## Contribuição
 
-Novas funcionalidades são bem-vindas! Antes de qualquer alteração, abra uma [_Issue_](https://github.com/myschool-app/mySchool/issues) para discutirmos o problema e as possíveis soluções.
+Novas funcionalidades são bem-vindas! Antes de qualquer alteração, abra uma [Questão (_Issue_)](https://github.com/myschool-app/mySchool/issues) para discutirmos o problema e as possíveis soluções.
 
 ## Licença
 
