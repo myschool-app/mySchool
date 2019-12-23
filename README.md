@@ -6,8 +6,9 @@ mySchool é uma aplicação criada com a framework Django que permite uma gestã
 
 ## Funcionalidades
 
-- Permite controlar os processos associados ao percurso escolar, como **disicplinas, testes, professores e eventos**.
-- ...
+- Permite controlar os processos associados ao percurso escolar, como **disicplinas, testes, professores e eventos**
+- Vista de calendário com eventos e testes
+- Muito mais...
 
 ## Uso
 
