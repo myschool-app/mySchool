@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,6 +27,10 @@ SECRET_KEY = 'c0snx&$fc-+x+4hyv7vmf-njoo#xc@rj$3ijieg#mhr+!&=&bg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+ADMINS = [
+    ('Afonso', 'afonso.faisca1@gmail.com'),
+]
 
 ALLOWED_HOSTS = [
     # Desenvolvimento
