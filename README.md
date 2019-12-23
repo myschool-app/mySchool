@@ -25,3 +25,4 @@ Novas funcionalidades são bem-vindas! Antes de qualquer alteração, abra uma [
 ## Apoios
 
 - [POEditor](https://poeditor.com/) por apoiar os projetos _Open Source_ e fornecer uma plataforma de tradução colaborativa onde os utilizadores da aplicação a podem traduzir para o seu idioma.
+- [Transifex](https://www.transifex.com/) por fornecer uma plataforma que permiter a tradução de projetos totalmente online.
