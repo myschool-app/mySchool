@@ -4,7 +4,7 @@ Django==3.0.2
 django-crispy-forms==1.8.1
 django-extensions==2.2.5
 docutils==0.15.2
-Pillow==6.2.1
+Pillow==7.0.0
 pip-autoremove==0.9.1
 pycodestyle==2.5.0
 pytz==2019.3
