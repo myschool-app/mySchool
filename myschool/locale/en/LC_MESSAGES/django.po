@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 14:08+0000\n"
+"POT-Creation-Date: 2020-02-09 15:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -193,7 +193,6 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:58
 #: .\myschool_app\templates\myschool_app\app\eventos.html:61
-#: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:6
 #: .\myschool_app\templates\myschool_app\app\professores.html:57
 #: .\myschool_app\templates\myschool_app\app\testes.html:72
 msgid ""
@@ -412,6 +411,10 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\sobre.html:11
 msgid "Esta aplicação consiste em..."
+msgstr ""
+
+#: .\utilizadores\apps.py:7
+msgid "Utilizadores"
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\login.html:27
