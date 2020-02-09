@@ -52,7 +52,12 @@
             </tbody>
           </table>
         {% else %}
-          {% include 'myschool_app/app/partials/_sem-registos.html' with mensagem="Não tem disciplinas registadas" %}
+          <div class="mt-2 mb-4">
+            <h5>{% trans 'Não tem disciplinas registadas' %}</h5>
+            <p>
+              {% blocktrans %}Utilize a opção <span class="badge badge-info">Adicionar</span> para adicionar registos.{% endblocktrans %}
+            </p>
+          </div>
         {% endif %}
       </div>
       <!-- Dica -->

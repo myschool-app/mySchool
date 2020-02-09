@@ -18,7 +18,7 @@
         <form method="POST">
           {% csrf_token %}
           <p class="mb-3">
-            {% trans "Queres mesmo remover o evento com o título " %} <strong>{{ evento.titulo }}</strong> {% trans " do dia " %} <strong>{{ evento.data_inicio }}</strong> ?
+            {% blocktrans with titulo=evento.titulo data=evento.data_inicio %}Queres mesmo remover o evento com o título <strong>{{ titulo }}</strong> do dia <strong>{{ data }}</strong>? {% endblocktrans %}
           </p>
           
           <a href="{% url 'app-eventos-lista' %}" class="btn btn-dark">{% trans 'Voltar' %}</a>

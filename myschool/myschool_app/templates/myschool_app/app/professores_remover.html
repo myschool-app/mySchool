@@ -18,7 +18,7 @@
         <form method="POST">
           {% csrf_token %}
           <p class="mb-3">
-            {% blocktrans %} Queres mesmo remover o professor <strong>{{ professor.nome }}</strong>?{% endblocktrans %}
+            {% blocktrans with nome=professor.nome %} Queres mesmo remover o professor <strong>{{ nome }}</strong>?{% endblocktrans %}
           </p>
           
           <a href="{% url 'app-professores-lista' %}" class="btn btn-dark">{%trans 'Voltar' %}</a>

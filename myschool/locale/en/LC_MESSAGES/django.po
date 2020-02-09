@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 13:48+0000\n"
+"POT-Creation-Date: 2020-02-09 14:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -187,11 +187,25 @@ msgstr ""
 msgid "Remover"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\disciplinas.html:63
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:56
+msgid "Não tem disciplinas registadas"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:58
+#: .\myschool_app\templates\myschool_app\app\eventos.html:61
+#: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:6
+#: .\myschool_app\templates\myschool_app\app\professores.html:57
+#: .\myschool_app\templates\myschool_app\app\testes.html:72
+msgid ""
+"Utilize a opção <span class=\"badge badge-info\">Adicionar</span> para "
+"adicionar registos."
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:68
 msgid "Dica"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\disciplinas.html:67
+#: .\myschool_app\templates\myschool_app\app\disciplinas.html:72
 msgid "Não precisas de registar professores para adicionares disciplinas."
 msgstr ""
 
@@ -220,7 +234,12 @@ msgid "Remover Disciplina"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:21
-msgid "Queres mesmo remover a disciplina "
+#, python-format
+msgid " Queres mesmo remover a disciplina <strong>%(disciplina)s</strong>?"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\eventos.html:59
+msgid "Não tem eventos registados"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\eventos_form.html:6
@@ -232,11 +251,10 @@ msgid "Remover Evento"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\eventos_remover.html:21
-msgid "Queres mesmo remover o evento com o título "
-msgstr ""
-
-#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:21
-msgid " do dia "
+#, python-format
+msgid ""
+"Queres mesmo remover o evento com o título <strong>%(titulo)s</strong> do "
+"dia <strong>%(data)s</strong>? "
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\index.html:5
@@ -280,12 +298,6 @@ msgstr ""
 msgid "Sair"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\partials\_sem-registos.html:6
-msgid ""
-"Utilize a opção <span class=\"badge badge-info\">Adicionar</span> para "
-"adicionar registos."
-msgstr ""
-
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:9
 msgid "Registos"
 msgstr ""
@@ -306,13 +318,21 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
+#: .\myschool_app\templates\myschool_app\app\professores.html:55
+msgid "Não tem professores registados"
+msgstr ""
+
 #: .\myschool_app\templates\myschool_app\app\professores_remover.html:6
 msgid "Remover Professor"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\professores_remover.html:21
 #, python-format
-msgid " Queres mesmo remover o professor <strong>%(professor.nome)s</strong>?"
+msgid " Queres mesmo remover o professor <strong>%(nome)s</strong>?"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\testes.html:70
+msgid "Não tem testes registados"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:6
@@ -324,11 +344,10 @@ msgid "Remover Teste"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\testes_remover.html:21
-msgid "Queres mesmo remover o teste da disciplina "
-msgstr ""
-
-#: .\myschool_app\templates\myschool_app\app\testes_remover.html:21
-msgid ", do dia "
+#, python-format
+msgid ""
+" Queres mesmo remover o teste do dia <strong>%(data)s</strong>, da "
+"disciplina <strong>%(disciplina)s</strong>?"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\base.html:10
