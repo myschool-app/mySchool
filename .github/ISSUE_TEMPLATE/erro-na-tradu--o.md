@@ -18,7 +18,7 @@ assignees: ''
 - **Frase/Termo Original**:
 - **Frase/Termo Corrigido**:
 
-** Capturas de ecrã**
+**Capturas de ecrã**
 Caso considere necessário, adicione algumas capturas de ecrã.
 
 **Outras informações**
