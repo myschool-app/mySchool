@@ -6,7 +6,6 @@
 .vscode
 myschool/ngrok.exe
 .VSCodeCounter
-.github
 
 ### Django ###
 *.log
