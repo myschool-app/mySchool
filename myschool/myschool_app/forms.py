@@ -43,17 +43,6 @@ class TesteForm(forms.ModelForm):
         self.fields['disciplina'].queryset = Disciplina.objects.filter(
             utilizador=utilizador)
 
-    """
-    Verifica se a data introduzida pelo utilizador não é no passado.
-    Caso seja, informa o utilizador com uma mensagem de erro.
-    """
-
-    def clean_data(self):
-        data = self.cleaned_data['data']
-        if data < datetime.date.today():
-            raise forms.ValidationError("A data não pode ser no passado!")
-        return data
-
 
 # Testes
 
