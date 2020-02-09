@@ -51,7 +51,7 @@ class TesteForm(forms.ModelForm):
     def clean_data(self):
         data = self.cleaned_data['data']
         if data < datetime.date.today():
-            raise forms.ValidationError("A data não pode ser no passado")
+            raise forms.ValidationError("A data não pode ser no passado!")
         return data
 
 

@@ -54,5 +54,18 @@
       format: 'dd/mm/yyyy',
       language: 'pt'
     });
+
+    // Validação de datas
+    $('form').submit(function() {
+      var data_inicio = $('#id_data_inicio').val();
+      var data_fim = $('#id_data_fim').val();
+
+      if (data_fim < data_inicio) {
+        toastr["error"]("A data de fim não pode ser inferior à data de início!", "Validação")
+        return false;
+      } else {
+        return true;
+      }
+    });
   </script>
 {% endblock scripts %}

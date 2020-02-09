@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{% static 'myschool_app/fontawesome/css/all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'myschool_app/css/bootadmin.min.css' %}" />
     <link rel="stylesheet" href="{% static 'myschool_app/css/bootstrap-datepicker3.min.css' %}">
+    <link rel="stylesheet" href="{% static 'myschool_app/css/sweetalert2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'myschool_app/css/toastr.min.css' %}">
 
     <script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
 
@@ -26,6 +28,8 @@
     <script src="{% static 'myschool_app/js/bootadmin.min.js' %}"></script>
     <script src="{% static 'myschool_app/js/bootstrap-datepicker.min.js' %}"></script>
     <script src="{% static 'myschool_app/js/bootstrap-datepicker.pt.min.js' %}"></script>
+    <script src="{% static 'myschool_app/js/sweetalert2.all.min.js' %}"></script>
+    <script src="{% static 'myschool_app/js/toastr.min.js' %}"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
       /*
@@ -36,6 +40,27 @@
           $('[data-toggle="tooltip"]').tooltip();
         });
       });
+
+      /*
+       * Configuração do Toastr
+       */
+       toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-bottom-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      }
     </script>
 
     {% block scripts %}

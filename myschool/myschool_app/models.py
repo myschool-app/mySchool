@@ -73,8 +73,8 @@ class Evento(models.Model):
         User, on_delete=models.CASCADE, verbose_name=_('Utilizador'))
     titulo = models.CharField(max_length=50, verbose_name=_('Título'))
     descricao = models.CharField(max_length=255, verbose_name=_('Descrição'))
-    data_inicio = models.DateTimeField(verbose_name=_('Data de Início'))
-    data_fim = models.DateTimeField(verbose_name=_('Data de Fim'))
+    data_inicio = models.DateField(verbose_name=_('Data de Início'))
+    data_fim = models.DateField(verbose_name=_('Data de Fim'))
 
     class Meta:
         verbose_name = _('Evento')

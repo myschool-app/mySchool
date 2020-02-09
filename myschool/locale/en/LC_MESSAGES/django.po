@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-23 15:29+0000\n"
+"POT-Creation-Date: 2020-02-09 13:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\myschool\settings.py:127
+#: .\myschool\settings.py:131
 msgid "Português"
 msgstr ""
 
-#: .\myschool\settings.py:128
+#: .\myschool\settings.py:132
 msgid "Inglês"
 msgstr ""
 
@@ -177,9 +177,9 @@ msgid "Editar"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:48
-#: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:23
+#: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:25
 #: .\myschool_app\templates\myschool_app\app\eventos.html:51
-#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:23
+#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:25
 #: .\myschool_app\templates\myschool_app\app\professores.html:47
 #: .\myschool_app\templates\myschool_app\app\professores_remover.html:25
 #: .\myschool_app\templates\myschool_app\app\testes.html:61
@@ -196,9 +196,9 @@ msgid "Não precisas de registar professores para adicionares disciplinas."
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas_form.html:28
-#: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:22
+#: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:24
 #: .\myschool_app\templates\myschool_app\app\eventos_form.html:38
-#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:22
+#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:24
 #: .\myschool_app\templates\myschool_app\app\professores_form.html:31
 #: .\myschool_app\templates\myschool_app\app\professores_remover.html:24
 #: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:30
@@ -219,10 +219,8 @@ msgstr ""
 msgid "Remover Disciplina"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:20
-msgid ""
-"Queres mesmo remover a disciplina <strong>{{ disciplina.descricao }}</"
-"strong>?"
+#: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:21
+msgid "Queres mesmo remover a disciplina "
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\eventos_form.html:6
@@ -233,10 +231,12 @@ msgstr ""
 msgid "Remover Evento"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:20
-msgid ""
-"Queres mesmo remover o evento com o título <strong>{{ evento.titulo }}</"
-"strong>, do dia <strong>{{ evento.data_inicio }}</strong>?"
+#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:21
+msgid "Queres mesmo remover o evento com o título "
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\eventos_remover.html:21
+msgid " do dia "
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\index.html:5
@@ -312,7 +312,7 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\professores_remover.html:21
 #, python-format
-msgid "Queres mesmo remover o professor <strong>%(professor.nome)s</strong>?"
+msgid " Queres mesmo remover o professor <strong>%(professor.nome)s</strong>?"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:6
@@ -324,10 +324,11 @@ msgid "Remover Teste"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\testes_remover.html:21
-#, python-format
-msgid ""
-"Queres mesmo remover o teste da disciplina <strong>%(teste.disciplina)s</"
-"strong>, do dia <strong>%(teste.data)s</strong>?"
+msgid "Queres mesmo remover o teste da disciplina "
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\testes_remover.html:21
+msgid ", do dia "
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\base.html:10

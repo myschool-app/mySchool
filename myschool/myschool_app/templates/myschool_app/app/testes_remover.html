@@ -18,7 +18,7 @@
         <form method="POST">
           {% csrf_token %}
           <p class="mb-3">
-            {% blocktrans %}Queres mesmo remover o teste da disciplina <strong>{{ teste.disciplina }}</strong>, do dia <strong>{{ teste.data }}</strong>?{% endblocktrans %}
+            {% trans 'Queres mesmo remover o teste da disciplina ' %} <strong>{{ teste.disciplina }}</strong>{% trans ', do dia ' %} <strong> {{ teste.data }}</strong>?
           </p>
           
           <a href="{% url 'app-testes-lista' %}" class="btn btn-dark">{% trans 'Voltar' %}</a>
