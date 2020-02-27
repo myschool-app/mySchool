@@ -83,46 +83,31 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>10/09/2019</td>
-                  <td>Português</td>
-                  <td>
-                    <span class="badge badge-primary">Por Realizar</span>
-                  </td>
-                  <td>
-                    <a href="#" class="btn btn-info btn-sm">Editar</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>12/10/2019</td>
-                  <td>Sistemas de Informação</td>
-                  <td>
-                    <span class="badge badge-primary">Por Realizar</span>
-                  </td>
-                  <td>
-                    <a href="#" class="btn btn-info btn-sm">Editar</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>30/10/2019</td>
-                  <td>Português</td>
-                  <td>
-                    <span class="badge badge-success">Realizado (Nota: 12)</span>
-                  </td>
-                  <td>
-                    <a href="#" class="btn btn-info btn-sm">Editar</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>02/11/2019</td>
-                  <td>Linguagens de Programação</td>
-                  <td>
-                    <span class="badge badge-success">Realizado (Nota: 18)</span>
-                  </td>
-                  <td>
-                    <a href="#" class="btn btn-info btn-sm">Editar</a>
-                  </td>
-                </tr>
+                {% for teste in testes %}
+                  <tr>
+                    <td>{{ teste.data|date:'d/M/Y' }}</td>
+                    <td>
+                      <a href="{% url 'app-disciplinas-editar' teste.disciplina.id %}">
+                        {{ teste.disciplina }}
+                      </a>
+                    </td>
+                    <td>
+                      {% if teste.avaliacao is None %}
+                        <span class="badge badge-warning">
+                          Por Avaliar
+                        </span>
+                      <!-- Implementar escala de avaliações -->  
+                      {% else %}
+                        <span class="badge badge-dark">
+                          Avaliado: {{ teste.avaliacao }}
+                        </span>
+                      {% endif %}
+                    </td>
+                    <td>
+                      <a href="{% url 'app-testes-editar' teste.id %}" class="btn btn-info btn-sm">Editar</a>
+                    </td>
+                  </tr>
+                {% endfor %}
               </tbody>
             </table>
           </div>

@@ -39,6 +39,10 @@ class Dashboard(LoginRequiredMixin, TemplateView):
         context['quantidade_eventos'] = Evento.objects.filter(
             utilizador=self.request.user).count()
 
+        context['testes'] = Teste.objects.filter(utilizador=self.request.user)
+        context['eventos'] = Evento.objects.filter(
+            utilizador=self.request.user)
+
         return context
 
 
