@@ -1,4 +1,5 @@
 {% extends 'utilizadores/base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 {% load i18n %}
 
@@ -9,9 +10,9 @@
 {% block content %}
 <div class="container h-100">
   <div class="row h-100 justify-content-center align-items-center">
-    <div class="col-md-4">
-      <h1 class="text-center mb-4">
-          <a href="{% url 'publico-inicio' %}" class="text-dark">mySchool</a>
+    <div class="col-md-4 m-4">
+      <h1 class="text-center p-4">
+        <img src="{% static 'myschool_app/img/myschool_preto.png' %}" style="width: 80%; height: auto;" alt="mySchool">
       </h1>
       <div class="card">
         <div class="card-body">

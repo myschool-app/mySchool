@@ -1,4 +1,5 @@
 {% extends 'utilizadores/base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 {% load i18n %}
 
@@ -9,9 +10,10 @@
 {% block content %}
 <div class="container h-100">
   <div class="row h-100 justify-content-center align-items-center">
-    <div class="col-md-4">
-      <h1 class="text-center mb-4">
-        <a href="{% url 'publico-inicio' %}" class="text-dark">mySchool</a>
+    <div class="col-md-4 m-2">
+      <h1 class="text-center p-4">
+        {% comment %} <a href="{% url 'publico-inicio' %}" class="text-dark">mySchool</a> {% endcomment %}
+        <img src="{% static 'myschool_app/img/myschool_preto.png' %}" style="width: 80%; height: auto;" alt="mySchool">
       </h1>
       <div class="card">
         <div class="card-body">
@@ -21,10 +23,10 @@
 
             <div class="row"> 
               <div class="col pr-2">
-                <button type="submit" class="btn btn-block btn-primary"><i class="fas fa-lock mr-2"></i>{% trans 'Login' %}</button>
+                <button type="submit" class="btn btn-block btn-primary"><i class="fas fa-lock mr-2"></i>{% trans 'Entrar' %}</button>
               </div>
               <div class="col pl-2">
-                <a class="btn btn-block btn-link" href="#">{% trans 'Recuperar Palavra-Passe' %}</a>
+                <a id="btnRecuperarPassword" class="btn btn-block btn-link" href="#">{% trans 'Recuperar Palavra-Passe' %}</a>
               </div>
             </div>
           </form>
@@ -34,3 +36,15 @@
   </div>
 </div>
 {% endblock content %}
+
+{% block scripts %}
+  <script>
+    $('#btnRecuperarPassword').click(function() {
+      Swal.fire({
+        icon: 'error',
+        title: 'Não Implementado',
+        text: 'A recuperação de palavra-passe não está implementada.'
+      })
+    });
+  </script>
+{% endblock %}
