@@ -11,4 +11,4 @@ pip-upgrade-outdated==1.5
 pycodestyle==2.5.0
 pytz==2019.3
 six==1.14.0
-sqlparse==0.3.0
+sqlparse==0.3.1
