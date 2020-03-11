@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from django.utils.translation import gettext_lazy as _
 
+import sentry_sdk
+from django.utils.translation import gettext_lazy as _
+from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -167,6 +169,16 @@ LOGOUT_REDIRECT_URL = 'publico-inicio'
 # EMAIL_HOST_PASSWORD = 'qaaoahcdjmgwfsqb'
 
 # Tradução
-LOCALE_PATHS = [
+LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
-]
+)
+
+if DEBUG is False:
+    sentry_sdk.init(
+        dsn="https://0c67ef81471f46b59a99e4921e1d1775@sentry.io/3966168",
+        integrations=[DjangoIntegration()],
+
+        # If you wish to associate users to errors (assuming you are using
+        # django.contrib.auth) you may enable sending PII data.
+        send_default_pii=True
+    )
