@@ -20,27 +20,24 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.views.i18n import JavaScriptCatalog
+from djsgettext.views import I18n
 
 
 # Views da aplicação utilizadores
 from utilizadores import views as utilizadores_views
 
 
-def trigger_error(request):
-    division_by_zero = 1 / 0
-
-
 urlpatterns = [
     # Páginas Públicas
     path('', include('myschool_app.urls')),
-    path('sentry-debug/', trigger_error),
     # Páginas da Aplicação
     path('app/', include('myschool_app.urls_app')),
     # Administração
     path('admin/docs/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
-    path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
+    #path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
+    path('js-gettext/', I18n.as_view()),
     # Autenticação
     path('app/registo/', utilizadores_views.registo, name='app-registar'),
     path('app/perfil/', utilizadores_views.perfil, name="app-perfil"),
