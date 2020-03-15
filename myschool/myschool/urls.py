@@ -18,17 +18,24 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from django.conf.urls.i18n import i18n_patterns
 from django.views.i18n import JavaScriptCatalog
 
 
 # Views da aplicação utilizadores
 from utilizadores import views as utilizadores_views
 
+# View para testar a integração do Sentry
+
+
+def trigger_error(request):
+    division_by_zero = 1 / 0
+
 
 urlpatterns = [
     # Páginas Públicas
     path('', include('myschool_app.urls')),
+    # Sentry
+    path('sentry-debug/', trigger_error),
     # Páginas da Aplicação
     path('app/', include('myschool_app.urls_app')),
     # Administração

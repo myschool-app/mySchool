@@ -1,0 +1,19 @@
+{
+  "python.pythonPath": "d:\\Programação\\PAP\\Django\\mySchool\\venv\\Scripts\\python.exe",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": ["--load-plugins=pylint_django"],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    ".vscode": false,
+    "**/*.pyc": true,
+    "**/__pycache__/": true
+  },
+  "workbench.editor.enablePreview": false,
+  "prettier.singleQuote": true,
+  "editor.formatOnSave": true
+}
