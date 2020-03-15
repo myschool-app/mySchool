@@ -20,7 +20,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.views.i18n import JavaScriptCatalog
-from djsgettext.views import I18n
 
 
 # Views da aplicação utilizadores
@@ -36,8 +35,7 @@ urlpatterns = [
     path('admin/docs/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
-    #path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
-    path('js-gettext/', I18n.as_view()),
+    path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
     # Autenticação
     path('app/registo/', utilizadores_views.registo, name='app-registar'),
     path('app/perfil/', utilizadores_views.perfil, name="app-perfil"),
