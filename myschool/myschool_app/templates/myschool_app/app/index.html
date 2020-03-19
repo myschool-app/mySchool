@@ -6,10 +6,6 @@
 {% endblock title %}
 
 {% block content %}
-<div class="d-flex">
-  {% include 'myschool_app/app/partials/_sidebar.html' %}
-
-  <div class="content p-4">
     <h2>{% trans 'Dashboard' %}</h2>
     <h5 class="text-muted mb-4">{% trans 'Ponto de acesso para todas as informações' %}</h5>
 
@@ -73,6 +69,7 @@
         <div class="card">
           <div class="card-header bg-success text-white font-weight-bold"><i class="fas fa-forward"></i> {% trans 'Próximos Testes' %}</div>
           <div class="card-body">
+          {% if testes %}
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -110,6 +107,10 @@
                 {% endfor %}
               </tbody>
             </table>
+            {% else %}
+              <h4>Sem registos.</h4>
+              <p>Adicione registos para começar</p>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -159,47 +160,9 @@
     <div class="card">
       <div class="card-header bg-dark text-white font-weight-bold"><i class="fas fa-chart-bar"></i> {% trans 'Evolução das Notas' %}</div>
       <div class="card-body">
-        <div id="grafico" style="width: 900px; height: 400px"></div>
       </div>
     </div>
-  </div>
-</div>
 {% endblock content %}
 
 {% block scripts %}
-  <script>
-        /*
-        * Gráfico de exemplo
-        */
-        google.charts.load('current', { packages: ['corechart'] });
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-            ['Disciplina', 'Nota', { role: 'style' }],
-            ['Matemática', 20, 'pink'],
-            ['TIC', 10, 'black'],
-            ['Sistemas de Informação', 19, 'gold'],
-            ['Sistemas de Informação', 19, 'red'],
-            ['Sistemas de Informação', 19, 'orange'],
-            ['Sistemas de Informação', 19, 'yellow'],
-            ['Sistemas de Informação', 19, 'green'],
-            ['Sistemas de Informação', 19, 'blue'],
-            ['Sistemas de Informação', 19, 'darkgreen'],
-            ['Desenvolvimento Web', 10, 'gray']
-          ]);
-
-          var view = new google.visualization.DataView(data);
-          view.setColumns([0, 1, { calc: 'stringify', sourceColumn: 1, type: 'string', role: 'annotation' }, 2]);
-
-          var options = {
-            title: '',
-            width: 950,
-            height: 400,
-            bar: { groupWidth: '95%' },
-            legend: { position: 'none' }
-          };
-          var chart = new google.visualization.ColumnChart(document.getElementById('grafico'));
-          chart.draw(view, options);
-        }
-    </script>
 {% endblock scripts %}

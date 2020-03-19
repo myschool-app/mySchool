@@ -20,8 +20,16 @@
   <body class="bg-light">
     {% include 'myschool_app/app/partials/_navbar.html' %}
     
-    {% block content %}
-    {% endblock content %}
+
+    <div class="d-flex">
+      {% include 'myschool_app/app/partials/_sidebar.html' %}
+      <div class="content p-4">
+
+        {% block content %}{% endblock content %}
+
+        {% include 'myschool_app/app/partials/_footer.html' %}
+      </div>
+    </div>
 
     <script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
     <script src="{% static 'myschool_app/js/bootstrap.bundle.min.js' %}"></script>
@@ -61,6 +69,11 @@
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
       }
+
+      /*
+      * Ano atual para o rodapé
+      */
+      document.getElementById("ano").innerHTML = new Date().getFullYear();
     </script>
 
     {% block scripts %}
