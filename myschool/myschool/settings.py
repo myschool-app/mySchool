@@ -15,6 +15,7 @@ import os
 import sentry_sdk
 from django.utils.translation import gettext_lazy as _
 from sentry_sdk.integrations.django import DjangoIntegration
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,7 +29,7 @@ PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 SECRET_KEY = 'c0snx&$fc-+x+4hyv7vmf-njoo#xc@rj$3ijieg#mhr+!&=&bg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ADMINS = [
     ('Afonso', 'afonso.faisca1@gmail.com'),
@@ -40,7 +41,8 @@ ALLOWED_HOSTS = [
     # Máquinas locais
     'localhost',
     '192.168.1.84',
-    '127.0.0.1'
+    '127.0.0.1',
+    '.herokuapp.com'
 ]
 
 
@@ -65,6 +67,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -195,3 +198,6 @@ if DEBUG is False:
         # django.contrib.auth) you may enable sending PII data.
         send_default_pii=True
     )
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
