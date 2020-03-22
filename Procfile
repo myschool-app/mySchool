@@ -1,1 +1,1 @@
-web: gunicorn myschool.wsgi:application
+web: gunicorn --pythonpath myschool myschool.wsgi:application --log-file -
