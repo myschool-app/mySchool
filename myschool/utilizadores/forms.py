@@ -32,14 +32,3 @@ class UtilizadorUpdateForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'email']
-
-
-class PerfilUpdateForm(forms.ModelForm):
-    """
-    Formulário para atualização do perfil do utilizador.
-    Apenas atualiza a imagem de perfil.
-    """
-
-    class Meta:
-        model = Perfil
-        fields = ['imagem']

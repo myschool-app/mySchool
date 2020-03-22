@@ -1,11 +1,14 @@
-import os
-from decouple import config
-
-import sentry_sdk
 from django.utils.translation import gettext_lazy as _
+import sentry_sdk
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
 
@@ -13,7 +16,7 @@ PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # Application definition
 
@@ -103,14 +106,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'app-inicio'
 LOGIN_URL = 'app-login'
 LOGOUT_REDIRECT_URL = 'publico-inicio'
-
-# Servidor de Email
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'afonso.faisca1@gmail.com'
-# EMAIL_HOST_PASSWORD = 'qaaoahcdjmgwfsqb'
 
 # Tradução
 LOCALE_PATHS = (

@@ -1,5 +1,6 @@
 {% extends 'myschool_app/app/base.html' %}
 {% load i18n %}
+{% load app_tags %}
 
 {% block title %}
   {% trans 'Perfil' %}
@@ -10,7 +11,7 @@
 
     <div class="row mt-4">
       <div class="col">
-        <img src="{{ user.perfil.imagem.url }}" class="rounded" alt="{% trans 'Imagem de perfil de' %} {{ user.username }}">
+        <img src="{{ user|gravatar:100 }}" class="rounded p-4" alt="{% trans 'Imagem de perfil de' %} {{ user.username }}">
       </div>
 
       <div class="col">

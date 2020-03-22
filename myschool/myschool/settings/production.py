@@ -23,14 +23,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myschool',
-        'USER': 'postgres',
-        'PASSWORD': 'afonso123',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
+    'default': {}
 }
 
 sentry_sdk.init(
