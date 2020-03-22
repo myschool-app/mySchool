@@ -11,7 +11,7 @@
 
     <div class="row mt-4">
       <div class="col">
-        <form method="POST">
+        <form method="POST" id="form-avaliacao">
           {% csrf_token %}
           <div class="form-row">
             <div class="form-group col-md-2">
@@ -29,3 +29,18 @@
       </div>
     </div>
 {% endblock content %}
+
+{% block scripts %}
+  <script>
+  // Validação do campo Avaliação
+  // Apenas pode conter valores entre 0 e 20
+    $('#form-avaliacao').submit(function () {
+      var avaliacao = $.trim($('#id_avaliacao').val());
+
+      if (avaliacao > 20) {
+        toastr.error('A nota de avaliação tem de estar entre 0 e 20!', 'Erro');
+        return false;
+      }
+    });
+  </script>
+{% endblock scripts %}
