@@ -49,6 +49,8 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    # WhiteNoise
+    'whitenoise.runserver_nostatic',
     # mySchool
     'myschool_app.apps.MyschoolAppConfig',
     'utilizadores.apps.UtilizadoresConfig',

@@ -6,10 +6,6 @@
 {% endblock title %}
 
 {% block content %}
-<div class="d-flex">
-  {% include 'myschool_app/app/partials/_sidebar.html' %}
-
-  <div class="content p-4">
     <h2>{% trans 'Perfil' %}</h2>
 
     <div class="row mt-4">
@@ -27,6 +23,4 @@
       </div>
     </div>
     <a href="#" class="btn btn-sm btn-info">Editar Perfil</a>
-  </div>
-</div>
 {% endblock content %}
