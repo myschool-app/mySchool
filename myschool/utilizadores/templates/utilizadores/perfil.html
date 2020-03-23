@@ -7,21 +7,37 @@
 {% endblock title %}
 
 {% block content %}
-    <h2>{% trans 'Perfil' %}</h2>
+  <h2>{% trans 'Perfil' %}</h2>
 
-    <div class="row mt-4">
-      <div class="col">
-        <img src="{{ user|gravatar:100 }}" class="rounded p-4" alt="{% trans 'Imagem de perfil de' %} {{ user.username }}">
-      </div>
-
-      <div class="col">
-        <h4>Utilizador</h4>
-        <h2 class="badge badge-success">{{ user.username }}</h2>
-      </div>
-      <div class="col">
-        <h4>Endereço de Email</h4>
-        <p>{{ user.email }}</p>
+  <div class="row mt-4">
+    <div class="col-md-4 text-center">
+      <div class="card">
+        <div class="card-body">
+          <img src="{{ user|gravatar:150 }}" class="rounded p-4">
+          <h5 class="display-4" style="font-size: 2.6em;">{{ user.first_name }} {{ user.last_name }}</h5>
+        </div>
       </div>
     </div>
-    <a href="#" class="btn btn-sm btn-info">Editar Perfil</a>
+
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <form class="p-2">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">{% trans 'Nome de utilizador:' %}</label>
+              <input class="col-sm-9 form-control" type="text" value="{{ user.username }}" readonly>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">{% trans 'Endereço de email:' %}</label>
+              <input class="col-sm-9 form-control" type="text" value="{{ user.email }}" readonly>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">{% trans 'Data de registo:' %}</label>
+              <input class="col-sm-9 form-control" type="text" value="{{ user.date_joined }}" readonly>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock content %}
