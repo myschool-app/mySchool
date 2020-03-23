@@ -10,6 +10,7 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -67,6 +68,10 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+TEMPLATE_DIRS = [
+    os.path.join(PROJECT_ROOT, 'templates'),
 ]
 
 WSGI_APPLICATION = 'myschool.wsgi.application'

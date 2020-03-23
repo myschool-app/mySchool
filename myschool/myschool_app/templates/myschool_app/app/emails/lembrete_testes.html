@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembrete de Testes</title>
+</head>
+<body>
+  <p>Olá {{ utilizador.username }},</p>
+  <p>Informamos que os seguintes testes estão agendados para daqui a 5 dias ({{ teste.data|add:5  }}):</p>
+
+  <ul>
+    <li><strong>Disciplina:</strong> {{ teste.disciplina }}</li>
+  </ul>
+</body>
+</html>

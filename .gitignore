@@ -3,7 +3,6 @@
 # Edit at https://www.gitignore.io/?templates=django
 
 # Ficheiros e directórios personalizados
-myschool/ngrok.exe
 .VSCodeCounter
 .env
 
