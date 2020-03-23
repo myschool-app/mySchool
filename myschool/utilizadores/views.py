@@ -35,7 +35,7 @@ def perfil(request):
     """
     if request.method == 'POST':
         u_form = UtilizadorUpdateForm(request.POST, instance=request.user)
-        if u_form.is_valid() and p_form.is_valid():
+        if u_form.is_valid():
             u_form.save()
             messages.success(
                 request, f'A sua conta foi atualizada!')
