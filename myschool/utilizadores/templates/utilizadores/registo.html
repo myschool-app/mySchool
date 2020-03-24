@@ -8,29 +8,30 @@
 {% endblock title %}
 
 {% block content %}
-<div class="container h-100">
-  <div class="row h-100 justify-content-center align-items-center">
-    <div class="col-md-4 m-4">
-      <h1 class="text-center p-4">
-        <img src="{% static 'myschool_app/img/myschool_preto.png' %}" style="width: 80%; height: auto;" alt="mySchool">
-      </h1>
-      <div class="card">
-        <div class="card-body">
-          <form method="POST">
-            {% csrf_token %}
-            {{ form | crispy }}
-            <div class="row">
-              <div class="col pr-2">
-                <button type="submit" class="btn btn-block btn-primary">{% trans 'Criar uma Conta' %}</button>
+  <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-md-4 m-4">
+        <h1 class="text-center p-4">
+          <img src="{% static 'myschool_app/img/myschool_preto.png' %}" style="width: 80%; height: auto;"
+               alt="mySchool">
+        </h1>
+        <div class="card">
+          <div class="card-body">
+            <form method="POST">
+              {% csrf_token %}
+              {{ form | crispy }}
+              <div class="row">
+                <div class="col pr-2">
+                  <button type="submit" class="btn btn-block btn-primary">{% trans 'Criar uma Conta' %}</button>
+                </div>
+                <div class="col pl-2">
+                  <a class="btn btn-block btn-link" href="{% url 'app-login' %}">{% trans 'Já tem uma conta?' %}</a>
+                </div>
               </div>
-              <div class="col pl-2">
-                <a class="btn btn-block btn-link" href="{% url 'app-login' %}">{% trans 'Já tem uma conta?' %}</a>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 {% endblock content %}

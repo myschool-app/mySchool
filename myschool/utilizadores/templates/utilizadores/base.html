@@ -2,45 +2,45 @@
 
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-    <link rel="stylesheet" href="{% static 'myschool_app/css/bootstrap.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'myschool_app/fontawesome/css/all.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'myschool_app/css/bootadmin.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'myschool_app/css/bootstrap.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'myschool_app/fontawesome/css/all.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'myschool_app/css/bootadmin.min.css' %}"/>
 
-    <title>mySchool - {% block title %}{% endblock title %}</title>
-  </head>
-  <body class="bg-light">
+  <title>mySchool - {% block title %}{% endblock title %}</title>
+</head>
+<body class="bg-light">
 
-    <!-- Mensagens -->
-    {% if messages %}
-      {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
-          {{ message }}
-          <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      {% endfor %}
-    {% endif %}
-
-    <div class="d-flex">
-      <div class="content p-4">
-
-        {% block content %}{% endblock content %}
-
-        {% include 'myschool_app/app/partials/_footer.html' %}
-      </div>
+<!-- Mensagens -->
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-    
-    <script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
-    <script src="{% static 'myschool_app/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'myschool_app/js/bootadmin.min.js' %}"></script>
-    <script src="{% static 'myschool_app/js/sweetalert2.all.min.js' %}"></script>
+  {% endfor %}
+{% endif %}
 
-    {% block scripts %}
-    {% endblock %}
-  </body>
+<div class="d-flex">
+  <div class="content p-4">
+
+    {% block content %}{% endblock content %}
+
+    {% include 'myschool_app/app/partials/_footer.html' %}
+  </div>
+</div>
+
+<script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
+<script src="{% static 'myschool_app/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'myschool_app/js/bootadmin.min.js' %}"></script>
+<script src="{% static 'myschool_app/js/sweetalert2.all.min.js' %}"></script>
+
+{% block scripts %}
+{% endblock %}
+</body>
 </html>

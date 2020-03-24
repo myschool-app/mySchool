@@ -7,19 +7,20 @@
 {% endblock title %}
 
 {% block content %}
-    <h2>{% trans 'Disciplinas' %}</h2>
+  <h2>{% trans 'Disciplinas' %}</h2>
 
-    <div class="row mt-4">
-      <div class="col">
-        <form method="POST">
-          {% csrf_token %}
-          <p class="mb-3">
-            {% blocktrans with disciplina=disciplina.descricao %} Queres mesmo remover a disciplina <strong>{{ disciplina }}</strong>?{% endblocktrans %}
-          </p>
-          
-          <a href="{% url 'app-disciplinas-lista' %}" class="btn btn-dark">{% trans 'Voltar' %}</a>
-          <input type="submit" class="btn btn-danger" value="{% trans 'Remover' %}">
-        </form>
-      </div>
+  <div class="row mt-4">
+    <div class="col">
+      <form method="POST">
+        {% csrf_token %}
+        <p class="mb-3">
+          {% blocktrans with disciplina=disciplina.descricao %} Queres mesmo remover a disciplina
+            <strong>{{ disciplina }}</strong>?{% endblocktrans %}
+        </p>
+
+        <a href="{% url 'app-disciplinas-lista' %}" class="btn btn-dark">{% trans 'Voltar' %}</a>
+        <input type="submit" class="btn btn-danger" value="{% trans 'Remover' %}">
+      </form>
     </div>
+  </div>
 {% endblock content %}

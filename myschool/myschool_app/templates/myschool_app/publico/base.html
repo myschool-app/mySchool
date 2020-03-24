@@ -3,34 +3,37 @@
 
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="{% trans 'Aplicação para gestão escolar' %}" />
-    <meta name="author" content="Afonso Santos" />
-    <title>mySchool - {% block title %}{% endblock title %}</title>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta name="description" content="{% trans 'Aplicação para gestão escolar' %}"/>
+  <meta name="author" content="Afonso Santos"/>
+  <title>mySchool - {% block title %}{% endblock title %}</title>
 
-    <!-- Folhas de Estilo -->
-    <link rel="stylesheet" href="{% static 'myschool_app/css/bootswatch.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'myschool_app/fontawesome/css/all.min.css' %}" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-  </head>
-  <body>
-    {% include 'myschool_app/publico/partials/_navbar.html' %}
+  <!-- Folhas de Estilo -->
+  <link rel="stylesheet" href="{% static 'myschool_app/css/bootswatch.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'myschool_app/fontawesome/css/all.min.css' %}"/>
+  <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/>
+</head>
+<body>
+{% include 'myschool_app/publico/partials/_navbar.html' %}
 
-    {% block content %}
-    {% endblock content %}
+{% block content %}
+{% endblock content %}
 
-    <!-- Javascript -->
-    <script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
-    <script src="{% static 'myschool_app/js/bootstrap.bundle.min.js' %}"></script>
-    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-    <script>
-    var mensagem = {% trans "Este website usa cookies para melhorar a sua experiência." %}
-    var fechar = {% trans "Aceitar" %}
-    var link = {% trans "Saber Mais" %}
+<!-- Javascript -->
+<script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
+<script src="{% static 'myschool_app/js/bootstrap.bundle.min.js' %}"></script>
+<script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+  var mensagem =
+  {% trans "Este website usa cookies para melhorar a sua experiência." %}
+  var fechar =
+  {% trans "Aceitar" %}
+  var link = {% trans "Saber Mais" %}
 
       window.cookieconsent.initialise({
         "palette": {
@@ -49,6 +52,6 @@
           "link": link
         }
       });
-    </script>
-  </body>
+</script>
+</body>
 </html>

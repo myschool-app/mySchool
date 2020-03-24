@@ -22,7 +22,8 @@
         <a class="nav-link" href="{% url 'publico-funcionalidades' %}">{% trans 'Funcionalidades' %}</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="{% url 'publico-sobre' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="{% url 'publico-sobre' %}" id="navbarDropdownMenuLink" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {% trans 'Sobre' %}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -41,7 +42,8 @@
         </li>
       {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'app-registar' %}"><i class="fas fa-edit"></i> {% trans 'Criar uma Conta' %}</a>
+          <a class="nav-link" href="{% url 'app-registar' %}"><i class="fas fa-edit"></i> {% trans 'Criar uma Conta' %}
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'app-login' %}"><i class="fas fa-user"></i> {% trans 'Login' %}</a>

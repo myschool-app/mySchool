@@ -4,14 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
+  dependencies = [
+    ('utilizadores', '0001_initial'),
+  ]
 
-    dependencies = [
-        ('utilizadores', '0001_initial'),
-    ]
-
-    operations = [
-        migrations.AlterModelOptions(
-            name='perfil',
-            options={'verbose_name': 'Perfil', 'verbose_name_plural': 'Perfis'},
-        ),
-    ]
+  operations = [
+    migrations.AlterModelOptions(
+      name='perfil',
+      options={'verbose_name': 'Perfil', 'verbose_name_plural': 'Perfis'},
+    ),
+  ]

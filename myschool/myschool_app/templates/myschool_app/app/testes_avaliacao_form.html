@@ -7,33 +7,33 @@
 {% endblock title %}
 
 {% block content %}
-    <h2>{% trans 'Testes' %}</h2>
+  <h2>{% trans 'Testes' %}</h2>
 
-    <div class="row mt-4">
-      <div class="col">
-        <form method="POST" id="form-avaliacao">
-          {% csrf_token %}
-          <div class="form-row">
-            <div class="form-group col-md-2">
-              {{ form.avaliacao|as_crispy_field }}
-            </div>
+  <div class="row mt-4">
+    <div class="col">
+      <form method="POST" id="form-avaliacao">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            {{ form.avaliacao|as_crispy_field }}
           </div>
-          <div class="form-row">
-            <div class="form-group col">
-              {{ form.notas|as_crispy_field }}
-            </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col">
+            {{ form.notas|as_crispy_field }}
           </div>
-          <a href="{% url 'app-testes-lista' %}" class="btn btn-dark">{% trans 'Voltar' %}</a>
-          <input type="submit" class="btn btn-info" value="{% trans 'Guardar' %}">
-        </form>
-      </div>
+        </div>
+        <a href="{% url 'app-testes-lista' %}" class="btn btn-dark">{% trans 'Voltar' %}</a>
+        <input type="submit" class="btn btn-info" value="{% trans 'Guardar' %}">
+      </form>
     </div>
+  </div>
 {% endblock content %}
 
 {% block scripts %}
   <script>
-  // Validação do campo Avaliação
-  // Apenas pode conter valores entre 0 e 20
+    // Validação do campo Avaliação
+    // Apenas pode conter valores entre 0 e 20
     $('#form-avaliacao').submit(function () {
       var avaliacao = $.trim($('#id_avaliacao').val());
 

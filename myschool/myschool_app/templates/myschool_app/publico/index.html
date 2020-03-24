@@ -12,14 +12,16 @@
       mySchool
     </h1>
     <p class="lead">{% trans 'Gestão escolar criada a pensar nos estudantes' %}</p>
-    
+
     {% if user.is_authenticated %}
       <p class="lead mt-4">
-        <a class="btn btn-md btn-primary" href="{% url 'app-inicio' %}" role="button"><i class="fas fa-cog"></i> {% trans 'Dashboard' %}</a>
+        <a class="btn btn-md btn-primary" href="{% url 'app-inicio' %}" role="button"><i
+          class="fas fa-cog"></i> {% trans 'Dashboard' %}</a>
       </p>
     {% else %}
       <p class="lead mt-4">
-        <a class="btn btn-md btn-primary" href="{% url 'app-registar' %}" role="button"><i class="fas fa-edit"></i> {% trans 'Regista-te já' %}</a>
+        <a class="btn btn-md btn-primary" href="{% url 'app-registar' %}" role="button"><i
+          class="fas fa-edit"></i> {% trans 'Regista-te já' %}</a>
       </p>
     {% endif %}
   </div>
