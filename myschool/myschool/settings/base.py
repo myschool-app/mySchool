@@ -48,6 +48,25 @@ MIDDLEWARE = [
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+LOGGING = {
+  'version': 1,
+  'disable_existing_loggers': False,
+  'handlers': {
+    'file': {
+      'level': 'DEBUG',
+      'class': 'logging.FileHandler',
+      'filename': 'logs/debug.log',
+    },
+  },
+  'loggers': {
+    'django': {
+      'handlers': ['file'],
+      'level': 'DEBUG',
+      'propagate': True,
+    },
+  },
+}
+
 ROOT_URLCONF = 'myschool.urls'
 
 TEMPLATES = [

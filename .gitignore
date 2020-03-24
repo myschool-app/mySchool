@@ -6,6 +6,7 @@
 .VSCodeCounter
 .env
 !/myschool/myschool_app/scripts/*.py
+logs/
 
 ### Django ###
 *.log
