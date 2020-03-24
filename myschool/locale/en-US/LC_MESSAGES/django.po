@@ -290,7 +290,7 @@ msgstr ""
 #: .\utilizadores\templates\utilizadores\perfil.html:5
 #: .\utilizadores\templates\utilizadores\perfil.html:13
 msgid "Perfil"
-msgstr ""
+msgstr "Profile"
 
 #: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:21
 msgid "Sair"
