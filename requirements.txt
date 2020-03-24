@@ -21,6 +21,7 @@ pip-upgrade-outdated==1.5
 pipenv==2018.11.26
 pluggy==0.13.1
 py==1.8.1
+pyChart.JS==0.3.0
 pycodestyle==2.5.0
 pygubu==0.9.8.4
 pyparsing==2.4.6
