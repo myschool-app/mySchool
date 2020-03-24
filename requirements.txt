@@ -14,7 +14,7 @@ django-extensions==2.2.8
 docutils==0.16
 filelock==3.0.12
 more-itertools==8.2.0
-packaging==20.1
+packaging==20.3
 Pillow==7.0.0
 pip-autoremove==0.9.1
 pip-upgrade-outdated==1.5
