@@ -6,12 +6,20 @@
       <a href="{% url 'app-inicio' %}"><i class="fa fa-fw fa-tachometer-alt mr-2"></i> {% trans 'Dashboard' %}</a>
     </li>
     <li>
-      <a href="#registos" data-toggle="collapse"> <i class="fa fa-fw fa-sticky-note mr-2"></i> {% trans 'Registos' %}</a>
+      <a href="#registos" data-toggle="collapse"> <i class="fa fa-fw fa-sticky-note mr-2"></i> {% trans 'Registos' %}
+      </a>
       <ul id="registos" class="list-unstyled collapse">
         <li><a href="{% url 'app-disciplinas-lista' %}">{% trans 'Disciplinas' %}</a></li>
         <li><a href="{% url 'app-testes-lista' %}">{% trans 'Testes' %}</a></li>
         <li><a href="{% url 'app-eventos-lista' %}">{% trans 'Eventos' %}</a></li>
         <li><a href="{% url 'app-professores-lista' %}">{% trans 'Professores' %}</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#graficos" data-toggle="collapse"> <i class="fa fa-fw fa-chart-bar mr-2"></i> {% trans 'Gráficos' %}
+      </a>
+      <ul id="graficos" class="list-unstyled collapse">
+        <li><a href="#">{% trans 'Testes' %}</a></li>
       </ul>
     </li>
     <li {% if request.path == '/app/calendario/' %} class="active" {% endif %}>
@@ -21,7 +29,7 @@
       <a href="#"><i class="fa fa-fw fa-cog  mr-2"></i> {% trans 'Definições' %}</a>
     </li>
     {% if request.user.is_staff %}
-      <li>
+      <li class="bg-danger">
         <a href="/admin/" target="_blank"><i class="fa fa-fw fa-user-cog mr-2"></i> {% trans 'Administração' %}</a>
       </li>
     {% endif %}

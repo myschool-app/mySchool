@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'myschool.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
 LANGUAGES = [
-  ('pt-PT', _('Português')),
-  ('en-US', _('Inglês')),
+  ('pt', _('Português')),
+  ('en', _('Inglês')),
 ]
 
-LANGUAGE_CODE = 'en-US'
+LANGUAGE_CODE = 'pt'
 
 TIME_ZONE = 'UTC'
 

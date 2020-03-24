@@ -6,163 +6,156 @@
 {% endblock title %}
 
 {% block content %}
-    <h2>{% trans 'Dashboard' %}</h2>
-    <h5 class="text-muted mb-4">{% trans 'Ponto de acesso para todas as informações' %}</h5>
+  <h2>{% trans 'Dashboard' %}</h2>
+  <h5 class="text-muted mb-4">{% trans 'Ponto de acesso para todas as informações' %}</h5>
 
-    <div class="row mb-4">
-      <div class="col-sm">
-        <div class="d-flex border">
-          <div class="bg-primary text-light p-4">
-            <div class="d-flex align-items-center h-100">
-              <i class="fa fa-3x fa-fw fa-book"></i>
-            </div>
-          </div>
-          <div class="flex-grow-1 bg-white p-4">
-            <p class="text-uppercase text-secondary mb-0">{% trans 'Disciplinas' %}</p>
-            <h3 class="font-weight-bold mb-0">{{ quantidade_disciplinas }}</h3>
+  <div class="row mb-4">
+    <div class="col-sm">
+      <div class="d-flex border">
+        <div class="bg-primary text-light p-4">
+          <div class="d-flex align-items-center h-100">
+            <i class="fa fa-3x fa-fw fa-book"></i>
           </div>
         </div>
-      </div>
-      <div class="col-md">
-        <div class="d-flex border">
-          <div class="bg-success text-light p-4">
-            <div class="d-flex align-items-center h-100">
-              <i class="fa fa-3x fa-fw fa-comments"></i>
-            </div>
-          </div>
-          <div class="flex-grow-1 bg-white p-4">
-            <p class="text-uppercase text-secondary mb-0">{% trans 'Testes' %}</p>
-            <h3 class="font-weight-bold mb-0">{{ quantidade_testes }}</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="d-flex border">
-          <div class="bg-danger text-light p-4">
-            <div class="d-flex align-items-center h-100">
-              <i class="fa fa-3x fa-fw fa-users"></i>
-            </div>
-          </div>
-          <div class="flex-grow-1 bg-white p-4">
-            <p class="text-uppercase text-secondary mb-0">{% trans 'Professores' %}</p>
-            <h3 class="font-weight-bold mb-0">{{ quantidade_professores }}</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md">
-        <div class="d-flex border">
-          <div class="bg-info text-light p-4">
-            <div class="d-flex align-items-center h-100">
-              <i class="fa fa-3x fa-fw fa-calendar"></i>
-            </div>
-          </div>
-          <div class="flex-grow-1 bg-white p-4">
-            <p class="text-uppercase text-secondary mb-0">{% trans 'Eventos' %}</p>
-            <h3 class="font-weight-bold mb-0">{{ quantidade_eventos }}</h3>
-          </div>
+        <div class="flex-grow-1 bg-white p-4">
+          <p class="text-uppercase text-secondary mb-0">{% trans 'Disciplinas' %}</p>
+          <h3 class="font-weight-bold mb-0">{{ quantidade_disciplinas }}</h3>
         </div>
       </div>
     </div>
+    <div class="col-md">
+      <div class="d-flex border">
+        <div class="bg-success text-light p-4">
+          <div class="d-flex align-items-center h-100">
+            <i class="fa fa-3x fa-fw fa-comments"></i>
+          </div>
+        </div>
+        <div class="flex-grow-1 bg-white p-4">
+          <p class="text-uppercase text-secondary mb-0">{% trans 'Testes' %}</p>
+          <h3 class="font-weight-bold mb-0">{{ quantidade_testes }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="d-flex border">
+        <div class="bg-danger text-light p-4">
+          <div class="d-flex align-items-center h-100">
+            <i class="fa fa-3x fa-fw fa-users"></i>
+          </div>
+        </div>
+        <div class="flex-grow-1 bg-white p-4">
+          <p class="text-uppercase text-secondary mb-0">{% trans 'Professores' %}</p>
+          <h3 class="font-weight-bold mb-0">{{ quantidade_professores }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="d-flex border">
+        <div class="bg-info text-light p-4">
+          <div class="d-flex align-items-center h-100">
+            <i class="fa fa-3x fa-fw fa-calendar"></i>
+          </div>
+        </div>
+        <div class="flex-grow-1 bg-white p-4">
+          <p class="text-uppercase text-secondary mb-0">{% trans 'Eventos' %}</p>
+          <h3 class="font-weight-bold mb-0">{{ quantidade_eventos }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="row mb-4">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header bg-success text-white font-weight-bold"><i class="fas fa-forward"></i> {% trans 'Próximos Testes' %}</div>
-          <div class="card-body">
+  <div class="row mb-4">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header bg-success text-white font-weight-bold"><i
+          class="fas fa-forward"></i> {% trans 'Próximos Testes' %}</div>
+        <div class="card-body">
           {% if testes %}
             <table class="table table-hover">
               <thead>
-                <tr>
-                  <th scope="col">Data</th>
-                  <th scope="col">Disciplina</th>
-                  <th scope="col">Estado</th>
-                  <th scope="col">Opções</th>
-                </tr>
+              <tr>
+                <th scope="col">Data</th>
+                <th scope="col">Disciplina</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Opções</th>
+              </tr>
               </thead>
               <tbody>
-                {% for teste in testes %}
-                  <tr>
-                    <td>{{ teste.data|date:'d/M/Y' }}</td>
-                    <td>
-                      <a href="{% url 'app-disciplinas-editar' teste.disciplina.id %}">
-                        {{ teste.disciplina }}
-                      </a>
-                    </td>
-                    <td>
-                      {% if teste.avaliacao is None %}
-                        <span class="badge badge-warning">
+              {% for teste in testes %}
+                <tr>
+                  <td>{{ teste.data|date:'d/M/Y' }}</td>
+                  <td>
+                    <a href="{% url 'app-disciplinas-editar' teste.disciplina.id %}">
+                      {{ teste.disciplina }}
+                    </a>
+                  </td>
+                  <td>
+                    {% if teste.avaliacao is None %}
+                      <span class="badge badge-warning">
                           Por Avaliar
                         </span>
-                      <!-- Implementar escala de avaliações -->  
-                      {% else %}
-                        <span class="badge badge-dark">
+                      <!-- Implementar escala de avaliações -->
+                    {% else %}
+                      <span class="badge badge-dark">
                           Avaliado: {{ teste.avaliacao }}
                         </span>
-                      {% endif %}
-                    </td>
-                    <td>
-                      <a href="{% url 'app-testes-editar' teste.id %}" class="btn btn-info btn-sm">Editar</a>
-                    </td>
-                  </tr>
-                {% endfor %}
+                    {% endif %}
+                  </td>
+                  <td>
+                    <a href="{% url 'app-testes-editar' teste.id %}" class="btn btn-info btn-sm">Editar</a>
+                  </td>
+                </tr>
+              {% endfor %}
               </tbody>
             </table>
-            {% else %}
-              <h4>Sem registos.</h4>
-              <p>Adicione registos para começar</p>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header bg-info text-white font-weight-bold"><i class="fas fa-calendar"></i> {% trans 'Próximos Eventos' %}</div>
-          <div class="card-body">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">Data</th>
-                  <th scope="col">Título</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>10/09/2019</td>
-                  <td>
-                    <a href="#">Reunião</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>12/10/2019</td>
-                  <td>
-                    <a href="#">Consulta</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>30/10/2019</td>
-                  <td>
-                    <a href="#">Visita de Estudo</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>02/11/2019</td>
-                  <td>
-                    <a href="#">Reunião</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          {% else %}
+            <h4>Sem registos.</h4>
+            <p>Adicione registos para começar</p>
+          {% endif %}
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <div class="card-header bg-dark text-white font-weight-bold"><i class="fas fa-chart-bar"></i> {% trans 'Evolução das Notas' %}</div>
-      <div class="card-body">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header bg-info text-white font-weight-bold"><i
+          class="fas fa-calendar"></i> {% trans 'Próximos Eventos' %}</div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Título</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>10/09/2019</td>
+              <td>
+                <a href="#">Reunião</a>
+              </td>
+            </tr>
+            <tr>
+              <td>12/10/2019</td>
+              <td>
+                <a href="#">Consulta</a>
+              </td>
+            </tr>
+            <tr>
+              <td>30/10/2019</td>
+              <td>
+                <a href="#">Visita de Estudo</a>
+              </td>
+            </tr>
+            <tr>
+              <td>02/11/2019</td>
+              <td>
+                <a href="#">Reunião</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
+  </div>
 {% endblock content %}
-
-{% block scripts %}
-{% endblock scripts %}
