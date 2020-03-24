@@ -23,7 +23,7 @@ pluggy==0.13.1
 py==1.8.1
 pyChart.JS==0.3.0
 pycodestyle==2.5.0
-pygubu==0.9.8.4
+pygubu==0.9.8.6
 pyparsing==2.4.6
 pytest==5.3.5
 python-dotenv==0.10.5
