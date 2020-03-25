@@ -24,34 +24,32 @@
 {% endblock content %}
 
 <!-- Javascript -->
-<script src="{% static 'myschool_app/js/jquery.min.js' %}"></script>
+<script src="{% static 'myschool_app/js/jquery-3.4.1.min.js' %}"></script>
 <script src="{% static 'myschool_app/js/bootstrap.bundle.min.js' %}"></script>
 <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-  var mensagem =
-  {% trans "Este website usa cookies para melhorar a sua experiência." %}
-  var fechar =
-  {% trans "Aceitar" %}
-  var link = {% trans "Saber Mais" %}
+  var mensagem = '{% trans "Este website usa cookies para melhorar a sua experiência." %}';
+  var fechar = '{% trans "Aceitar" %}';
+  var link = '{% trans "Saber Mais" %}';
 
-      window.cookieconsent.initialise({
-        "palette": {
-          "popup": {
-            "background": "#237afc"
-          },
-          "button": {
-            "background": "#fff",
-            "text": "#237afc"
-          }
-        },
-        "theme": "edgeless",
-        "content": {
-          "message": mensagem,
-          "dismiss": fechar,
-          "link": link
-        }
-      });
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#237afc"
+      },
+      "button": {
+        "background": "#fff",
+        "text": "#237afc"
+      }
+    },
+    "theme": "edgeless",
+    "content": {
+      "message": mensagem,
+      "dismiss": fechar,
+      "link": link
+    }
+  });
 </script>
 </body>
 </html>
