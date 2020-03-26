@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-26 22:10+0000\n"
+"POT-Creation-Date: 2020-03-26 22:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -227,6 +227,8 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\professores_form.html:28
 #: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:27
 #: .\myschool_app\templates\myschool_app\app\testes_form.html:31
+#: .\utilizadores\templates\utilizadores\perfil.html:72
+#: .\utilizadores\templates\utilizadores\perfil.html:102
 msgid "Guardar"
 msgstr ""
 
@@ -523,6 +525,10 @@ msgstr ""
 
 #: .\utilizadores\templates\utilizadores\perfil.html:40
 msgid "Data do último acesso:"
+msgstr ""
+
+#: .\utilizadores\templates\utilizadores\perfil.html:43
+msgid "Alterar Dados"
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\registo.html:7
