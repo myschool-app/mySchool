@@ -35,8 +35,9 @@ sentry_sdk.init(
   send_default_pii=True
 )
 
-# Configurações sendgrid
+# Configurações de email
 
+DEFAULT_FROM_EMAIL = 'info@myschool-app.tk'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587

@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from django.views.i18n import JavaScriptCatalog
+
 # Views da aplicação utilizadores
 from utilizadores import views as utilizadores_views
 
@@ -49,14 +50,18 @@ urlpatterns = [
     template_name='utilizadores/login.html', redirect_authenticated_user=True), name='app-login'),
   path('app/logout/', auth_views.LogoutView.as_view(), name='app-logout'),
   # Recuperação da password
-  path('app/recuperar-password/', auth_views.PasswordResetView.as_view(
-    template_name='utilizadores/recuperar_password.html'), name='app-recuperar-passowrd'),
-  path('app/recuperar-password/concluido', auth_views.PasswordResetDoneView.as_view(
-    template_name='utilizadores/recuperar_password_concluido.html'), name='app-recuperar-password-concluido'),
-  path('app/recuperar-password/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(
-    template_name='utilizadores/recuperar_password_confirmacao.html'), name='app-recuperar-password-confirmacao'),
-  path('app/recuperar-password/recuperada', auth_views.PasswordResetCompleteView.as_view(
-    template_name='utilizadores/recuperar_password_recuperada.html'), name='app-recuperar-password-recuperada'),
+  path('app/recuperar-password/',
+       auth_views.PasswordResetView.as_view(template_name="utilizadores/password/recuperar_password_form.html"),
+       name="recuperar-password"),
+  path('app/recuperar-password/<uidb64>/<token>/',
+       auth_views.PasswordResetConfirmView.as_view(
+         template_name="utilizadores/password/recuperar_password_alteracao.html"),
+       name="password_reset_confirm"),
+  path('app/recuperar-password/concluido/', auth_views.PasswordResetDoneView.as_view(
+    template_name="utilizadores/password/recuperar_password_concluido.html"), name="password_reset_done"),
+  path('app/recuperar-password/recuperada/', auth_views.PasswordResetCompleteView.as_view(
+    template_name="utilizadores/password/recuperar_password_feito.html"),
+       name="password_reset_complete")
 ]
 
 # Se a opção DEBUG = True
