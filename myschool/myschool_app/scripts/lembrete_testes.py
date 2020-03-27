@@ -4,11 +4,11 @@ from dateutil.relativedelta import relativedelta
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+
 from myschool_app.models import Teste
 
 
-# 50% funcional: prevenção de utilizadores duplicados
-# e envio para a caixa de spam
+# @todo: prevenção de utilizadores duplicados (for each user...)
 
 
 def run():
