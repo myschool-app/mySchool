@@ -6,22 +6,14 @@
 
   <div class="navbar-collapse collapse">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a href="https://github.com/myschool-app/mySchool/issues" class="nav-link" data-toggle="tooltip"
-           data-placement="bottom" title="{% trans 'Reportar um erro' %}"><i class="fa fa-bug"></i></a>
-      </li>
-      <li class="nav-item">
-        <a href="https://docs.myschool-app.tk" target="_blank" class="nav-link" data-toggle="tooltip"
-           data-placement="bottom" title="{% trans 'Documentação' %}"
-        ><i class="fa fa-book"></i
-        ></a>
-      </li>
       <li class="nav-item dropdown">
-        <a href="#" id="dd_user" class="nav-link dropdown-toggle" data-toggle="dropdown"><i
-          class="fa fa-user"></i> {{ user.first_name|capfirst }} {{ user.last_name|capfirst }}</a>
+        <a href="#" id="dd_user" class="nav-link dropdown-toggle"
+           data-toggle="dropdown">{{ user.first_name|capfirst }} {{ user.last_name|capfirst }}</a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd_user">
-          <a href="{% url 'app-perfil' %}" class="dropdown-item">{% trans 'Perfil' %}</a>
-          <a href="{% url 'app-logout' %}" class="dropdown-item">{% trans 'Sair' %}</a>
+          <a href="{% url 'app-perfil' %}" class="dropdown-item"><i
+            class="fas fa-address-card mr-2"></i>{% trans 'Perfil' %}</a>
+          <a href="{% url 'app-logout' %}" class="dropdown-item"><i
+            class="fas fa-sign-out-alt mr-2"></i>{% trans 'Sair' %}</a>
         </div>
       </li>
     </ul>
