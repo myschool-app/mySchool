@@ -40,18 +40,7 @@
 <script src="{% static 'myschool_app/js/toastr.min.js' %}"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-  /*
-   * Popup nos links da navbar
-   */
-  $(document).ready(function () {
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-    });
-  });
-
-  /*
-   * Configuração do Toastr
-   */
+  // Configuração do Toastr
   toastr.options = {
     "closeButton": true,
     "debug": false,
@@ -70,10 +59,18 @@
     "hideMethod": "fadeOut"
   }
 
-  /*
-  * Ano atual para o rodapé
-  */
+  // Ano atual para o rodapé
   document.getElementById("ano").innerHTML = new Date().getFullYear();
+
+  // Mensagem de não implementado
+  function mensagem() {
+    Swal.fire({
+      title: 'Não Implementado',
+      text: 'Esta função ainda não está disponível',
+      icon: 'info',
+      confirmButtonText: 'OK'
+    });
+  }
 </script>
 
 {% block scripts %}

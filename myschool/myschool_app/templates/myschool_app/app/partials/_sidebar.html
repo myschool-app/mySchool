@@ -19,14 +19,14 @@
       <a href="#graficos" data-toggle="collapse"> <i class="fa fa-fw fa-chart-bar mr-2"></i> {% trans 'Gráficos' %}
       </a>
       <ul id="graficos" class="list-unstyled collapse">
-        <li><a href="#">{% trans 'Testes' %}</a></li>
+        <li><a onclick="mensagem()" href="#">{% trans 'Testes' %}</a></li>
       </ul>
     </li>
     <li {% if request.path == '/app/calendario/' %} class="active" {% endif %}>
-      <a href="#"><i class="fa fa-fw fa-calendar  mr-2"></i> {% trans 'Calendário' %}</a>
+      <a onclick="mensagem()" href="#"><i class="fa fa-fw fa-calendar  mr-2"></i> {% trans 'Calendário' %}</a>
     </li>
     <li {% if request.path == '/app/definicoes/' %} class="active" {% endif %}>
-      <a href="#"><i class="fa fa-fw fa-cog  mr-2"></i> {% trans 'Definições' %}</a>
+      <a onclick="mensagem()" href="#"><i class="fa fa-fw fa-cog  mr-2"></i> {% trans 'Definições' %}</a>
     </li>
     {% if request.user.is_staff %}
       <li class="bg-danger">

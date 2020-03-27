@@ -7,7 +7,7 @@
 {% endblock title %}
 
 {% block content %}
-  <h2>{% trans 'Perfil' %}</h2>
+  <h2><i class="fas fa-address-card"></i> {% trans 'Perfil' %}</h2>
 
   <div class="row mt-4">
     <div class="col-md-4 text-center">
@@ -15,6 +15,7 @@
         <div class="card-body">
           <img src="{{ user|gravatar:150 }}" class="img-fluid rounded p-4">
           <h5 class="display-4" style="font-size: 2.6em;">{{ user.first_name }} {{ user.last_name }}</h5>
+          <small class="text-muted">Pode mudar o seu avatar em <a href="https://gravatar.com">gravatar.com</a></small>
         </div>
       </div>
     </div>
@@ -40,7 +41,7 @@
               <label class="col-sm-3 col-form-label">{% trans 'Data do último acesso:' %}</label>
               <input class="col-sm-9 form-control" type="text" value="{{ user.last_login }}" readonly>
             </div>
-            <a href="#" class="mt-3 btn btn-dark">{% trans 'Alterar Dados' %}</a>
+            <a href="#" onclick="mensagem()" class="mt-3 btn btn-dark">{% trans 'Alterar Dados' %}</a>
           </form>
         </div>
       </div>
@@ -93,16 +94,24 @@
               <label class="custom-control-label" for="lembreteEventos">Lembrete de eventos com a data a aproximar-se (5
                 dias antes)</label>
             </div>
-            <div class="custom-control custom-switch my-2">
-              <input type="checkbox" class="custom-control-input" id="anuncios">
-              <label class="custom-control-label" for="anuncios">Anúncios relacionados com o mySchool (novas versões,
-                avisos,
-                ...)</label>
-            </div>
-            <a href="#" class="mt-3 btn btn-dark">{% trans 'Guardar' %}</a>
+            <a href="#" onclick="mensagem()" class="mt-3 btn btn-dark">{% trans 'Guardar' %}</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 {% endblock content %}
+
+{% block scripts %}
+  <script>
+    // Mensagem de não implementado
+    function mensagem() {
+      Swal.fire({
+        title: 'Não Implementado',
+        text: 'Esta função ainda não está disponível',
+        icon: 'info',
+        confirmButtonText: 'OK'
+      });
+    }
+  </script>
+{% endblock %}
