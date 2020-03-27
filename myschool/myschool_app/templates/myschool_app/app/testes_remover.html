@@ -7,19 +7,19 @@
 {% endblock title %}
 
 {% block content %}
-  <h2>{% trans 'Testes' %}</h2>
+  <h2><i class="fas fa-file-alt"></i> {% trans 'Testes' %}</h2>
 
   <div class="row mt-4">
     <div class="col">
       <form method="POST">
         {% csrf_token %}
-        <p class="mb-3">
+        <p class="my-3">
           {% blocktrans with data=teste.data disciplina=teste.disciplina %} Queres mesmo remover o teste do dia
             <strong>{{ data }}</strong>, da disciplina <strong>{{ disciplina }}</strong>?{% endblocktrans %}
         </p>
 
-        <a href="{% url 'app-testes-lista' %}" class="btn btn-dark">{% trans 'Voltar' %}</a>
-        <input type="submit" class="btn btn-danger" value="{% trans 'Remover' %}">
+        <a href="{% url 'app-testes-lista' %}" class="mt-4 btn btn-dark">{% trans 'Voltar' %}</a>
+        <input type="submit" class="mt-4 btn btn-danger" value="{% trans 'Remover' %}">
       </form>
     </div>
   </div>
