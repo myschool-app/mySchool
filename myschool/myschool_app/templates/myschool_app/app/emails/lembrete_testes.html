@@ -6,7 +6,7 @@
   <title>Lembrete de Testes</title>
 </head>
 <body>
-<p>Olá {{ utilizador.username }},</p>
+<p>Olá {{ utilizador.first_name|capfirst }},</p>
 <p>Informamos que os seguintes testes estão agendados para daqui a 5 dias ({{ teste.data|add:5 }}):</p>
 
 <ul>
