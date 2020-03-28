@@ -7,5 +7,11 @@
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/myschool/db.sqlite3</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - Heroku" uuid="642d1a07-b5b1-4fee-bcc1-c0c9c9b613ac">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-35-174-88-65.compute-1.amazonaws.com:5432/duio1vk93bavm</jdbc-url>
+    </data-source>
   </component>
 </project>
