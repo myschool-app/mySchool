@@ -1,11 +1,13 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: mySchool\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-30 17:27+0100\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
-"Project-Id-Version: mySchool\n"
-"Language: en\n"
 
 #: .\myschool\settings\base.py:99
 msgid "Português"
@@ -60,7 +62,7 @@ msgid "Descrição"
 msgstr ""
 
 #: .\myschool_app\models.py:37 .\myschool_app\models.py:54
-#: .\myschool_app\templates\myschool_app\app\testes.html:32
+#: .\myschool_app\templates\myschool_app\app\testes.html:35
 msgid "Disciplina"
 msgstr ""
 
@@ -76,7 +78,7 @@ msgid "Disciplinas"
 msgstr ""
 
 #: .\myschool_app\models.py:55
-#: .\myschool_app\templates\myschool_app\app\testes.html:33
+#: .\myschool_app\templates\myschool_app\app\testes.html:36
 msgid "Data"
 msgstr ""
 
@@ -85,13 +87,13 @@ msgid "Notas"
 msgstr ""
 
 #: .\myschool_app\models.py:59
-#: .\myschool_app\templates\myschool_app\app\testes.html:34
+#: .\myschool_app\templates\myschool_app\app\testes.html:37
 msgid "Realizado?"
 msgstr ""
 
 #: .\myschool_app\models.py:61
-#: .\myschool_app\templates\myschool_app\app\testes.html:35
-#: .\myschool_app\templates\myschool_app\app\testes.html:61
+#: .\myschool_app\templates\myschool_app\app\testes.html:38
+#: .\myschool_app\templates\myschool_app\app\testes.html:64
 msgid "Avaliação"
 msgstr ""
 
@@ -151,7 +153,7 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:34
 #: .\myschool_app\templates\myschool_app\app\eventos.html:36
 #: .\myschool_app\templates\myschool_app\app\professores.html:34
-#: .\myschool_app\templates\myschool_app\app\testes.html:36
+#: .\myschool_app\templates\myschool_app\app\testes.html:39
 msgid "Opções"
 msgstr ""
 
@@ -162,7 +164,7 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:45
 #: .\myschool_app\templates\myschool_app\app\eventos.html:48
 #: .\myschool_app\templates\myschool_app\app\professores.html:44
-#: .\myschool_app\templates\myschool_app\app\testes.html:57
+#: .\myschool_app\templates\myschool_app\app\testes.html:60
 msgid "Editar"
 msgstr ""
 
@@ -172,7 +174,7 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\eventos_remover.html:22
 #: .\myschool_app\templates\myschool_app\app\professores.html:46
 #: .\myschool_app\templates\myschool_app\app\professores_remover.html:22
-#: .\myschool_app\templates\myschool_app\app\testes.html:59
+#: .\myschool_app\templates\myschool_app\app\testes.html:62
 #: .\myschool_app\templates\myschool_app\app\testes_remover.html:22
 msgid "Remover"
 msgstr ""
@@ -184,8 +186,10 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:57
 #: .\myschool_app\templates\myschool_app\app\eventos.html:60
 #: .\myschool_app\templates\myschool_app\app\professores.html:56
-#: .\myschool_app\templates\myschool_app\app\testes.html:71
-msgid "Utilize a opção <span class=\"badge badge-info\">Adicionar</span> para adicionar\n"
+#: .\myschool_app\templates\myschool_app\app\testes.html:74
+msgid ""
+"Utilize a opção <span class=\"badge badge-info\">Adicionar</span> para "
+"adicionar\n"
 "              registos."
 msgstr ""
 
@@ -214,8 +218,8 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\professores_form.html:28
 #: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:27
 #: .\myschool_app\templates\myschool_app\app\testes_form.html:31
-#: .\utilizadores\templates\utilizadores\perfil.html:72
-#: .\utilizadores\templates\utilizadores\perfil.html:102
+#: .\utilizadores\templates\utilizadores\perfil.html:73
+#: .\utilizadores\templates\utilizadores\perfil.html:97
 msgid "Guardar"
 msgstr ""
 
@@ -224,7 +228,9 @@ msgid "Remover Disciplina"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas_remover.html:17
-msgid " Queres mesmo remover a disciplina\n"
+#, python-format
+msgid ""
+" Queres mesmo remover a disciplina\n"
 "            <strong>%(disciplina)s</strong>?"
 msgstr ""
 
@@ -241,7 +247,9 @@ msgid "Remover Evento"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\eventos_remover.html:17
-msgid "Queres mesmo remover o evento com o título\n"
+#, python-format
+msgid ""
+"Queres mesmo remover o evento com o título\n"
 "            <strong>%(titulo)s</strong> do dia <strong>%(data)s</strong>? "
 msgstr ""
 
@@ -264,21 +272,13 @@ msgstr ""
 msgid "Próximos Eventos"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:11
-msgid "Reportar um erro"
-msgstr ""
-
-#: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:15
-msgid "Documentação"
-msgstr ""
-
-#: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:23
+#: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:14
 #: .\utilizadores\templates\utilizadores\perfil.html:6
 #: .\utilizadores\templates\utilizadores\perfil.html:10
 msgid "Perfil"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:24
+#: .\myschool_app\templates\myschool_app\app\partials\_navbar.html:16
 msgid "Sair"
 msgstr ""
 
@@ -315,11 +315,17 @@ msgid "Remover Professor"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\professores_remover.html:17
-msgid " Queres mesmo remover o professor <strong>%(nome)s</strong>\n"
+#, python-format
+msgid ""
+" Queres mesmo remover o professor <strong>%(nome)s</strong>\n"
 "            ?"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\testes.html:69
+#: .\myschool_app\templates\myschool_app\app\testes.html:28
+msgid "Exportar"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\testes.html:72
 msgid "Não tem testes registados"
 msgstr ""
 
@@ -332,23 +338,26 @@ msgid "Remover Teste"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\testes_remover.html:17
-msgid " Queres mesmo remover o teste do dia\n"
-"            <strong>%(data)s</strong>, da disciplina <strong>%(disciplina)s</strong>?"
+#, python-format
+msgid ""
+" Queres mesmo remover o teste do dia\n"
+"            <strong>%(data)s</strong>, da disciplina <strong>%(disciplina)s</"
+"strong>?"
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\publico\base.html:10
 msgid "Aplicação para gestão escolar"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\publico\base.html:32
+#: .\myschool_app\templates\myschool_app\publico\base.html:31
 msgid "Este website usa cookies para melhorar a sua experiência."
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\publico\base.html:33
+#: .\myschool_app\templates\myschool_app\publico\base.html:32
 msgid "Aceitar"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\publico\base.html:34
+#: .\myschool_app\templates\myschool_app\publico\base.html:33
 msgid "Saber Mais"
 msgstr ""
 
@@ -434,11 +443,15 @@ msgid "Alterar"
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\password\recuperar_password_concluido.html:13
-msgid "Enviámos para o seu endereço de email instruções de como recuperar a sua password, caso o endereço de email fornecido esteja registado no mySchool."
+msgid ""
+"Enviámos para o seu endereço de email instruções de como recuperar a sua "
+"password, caso o endereço de email fornecido esteja registado no mySchool."
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\password\recuperar_password_concluido.html:16
-msgid "Se não receber o email, verique o endereço de email fornecido e a pasta de spam."
+msgid ""
+"Se não receber o email, verique o endereço de email fornecido e a pasta de "
+"spam."
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\password\recuperar_password_concluido.html:21
@@ -446,22 +459,30 @@ msgid "Voltar à Página Inicial"
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\password\recuperar_password_email.html:5
-msgid "Para começar o processo de recuperação da password para o utilizador %(user.get_username)s registado no mySchool, clica no link abaixo."
+#, python-format
+msgid ""
+"Para começar o processo de recuperação da password para o utilizador "
+"%(user.get_username)s registado no mySchool, clica no link abaixo."
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\password\recuperar_password_email.html:9
-msgid "Se clicar no link acima não funcionar, copia e cola o endereço num novo separador e tenta novamente."
+msgid ""
+"Se clicar no link acima não funcionar, copia e cola o endereço num novo "
+"separador e tenta novamente."
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\password\recuperar_password_email.html:11
-msgid "\n"
+msgid ""
+"\n"
 "  Cumprimentos,\n"
 "  A equipa do mySchool\n"
 "  "
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\password\recuperar_password_feito.html:13
-msgid "A sua password foi alterada. Já pode fazer login e continuar a usar o mySchool."
+msgid ""
+"A sua password foi alterada. Já pode fazer login e continuar a usar o "
+"mySchool."
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\password\recuperar_password_feito.html:18
@@ -469,30 +490,31 @@ msgid "Fazer Login"
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\password\recuperar_password_form.html:15
-msgid "Introduza o endereço de email que registou com a sua conta de utilizador."
+msgid ""
+"Introduza o endereço de email que registou com a sua conta de utilizador."
 msgstr ""
 
 #: .\utilizadores\templates\utilizadores\password\recuperar_password_form.html:21
 msgid "Enviar"
 msgstr ""
 
-#: .\utilizadores\templates\utilizadores\perfil.html:28
+#: .\utilizadores\templates\utilizadores\perfil.html:29
 msgid "Nome de utilizador:"
 msgstr ""
 
-#: .\utilizadores\templates\utilizadores\perfil.html:32
+#: .\utilizadores\templates\utilizadores\perfil.html:33
 msgid "Endereço de email:"
 msgstr ""
 
-#: .\utilizadores\templates\utilizadores\perfil.html:36
+#: .\utilizadores\templates\utilizadores\perfil.html:37
 msgid "Data de registo:"
 msgstr ""
 
-#: .\utilizadores\templates\utilizadores\perfil.html:40
+#: .\utilizadores\templates\utilizadores\perfil.html:41
 msgid "Data do último acesso:"
 msgstr ""
 
-#: .\utilizadores\templates\utilizadores\perfil.html:43
+#: .\utilizadores\templates\utilizadores\perfil.html:44
 msgid "Alterar Dados"
 msgstr ""
 
@@ -507,4 +529,3 @@ msgstr ""
 #: .\utilizadores\templates\utilizadores\registo.html:19
 msgid "Já tem uma conta?"
 msgstr ""
-
