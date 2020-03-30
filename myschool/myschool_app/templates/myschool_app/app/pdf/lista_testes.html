@@ -21,7 +21,13 @@
         <tr>
           <th scope="row">{{ teste.disciplina }}</th>
           <td>{{ teste.data|date:'d/M/Y' }}</td>
-          <td>{{ teste.realizado|default_if_none:'--' }}</td>
+          <td>
+            {% if teste.realizado %}
+              Sim
+            {% else %}
+              {{ teste.realizado|default_if_none:'--' }}
+            {% endif %}
+          </td>
           <td>{{ teste.avaliacao|default_if_none:'--' }}</td>
           <td>{{ teste.notas }}</td>
         </tr>
