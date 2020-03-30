@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
@@ -474,10 +475,13 @@ PDF
 class TestePDFView(WeasyTemplateResponseMixin, ListView):
   model = Teste
   context_object_name = 'testes'
+  template_name = 'myschool_app/app/pdf/lista_testes.html'
 
   def get_queryset(self):
     return Teste.objects.all().filter(utilizador=self.request.user)
 
-  template_name = 'myschool_app/app/pdf/lista_testes.html'
+  pdf_stylesheets = [
+    settings.BASE_DIR + '\\myschool_app\\static\\myschool_app\\css\\bootstrap.min.css',
+  ]
   pdf_attachment = False
   pdf_filename = 'testes.pdf'
