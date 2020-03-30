@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'myschool_app/css/bootstrap.min.css' %}"/>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 1.5cm;
+      counter-increment: page;
+    }
+
+    #pagina::after {
+      display: inline;
+      content: counter(pages);
+    }
+
+    td {
+      white-space: normal !important;
+      word-wrap: break-word;
+    }
+
+    table {
+      table-layout: fixed;
+    }
+  </style>
+</head>
+<body class="container">
+
+<div class="row mb-4">
+  <div class="col">
+    <img style="width: 20%;" src="{% static 'myschool_app/img/myschool_preto_quadrado.png' %}" alt="mySchool">
+  </div>
+  <div class="col text-right">
+    <h3 class="font-weight-bold">{% block cabecalho %}{% endblock cabecalho %}</h3>
+    <h6 class="text-muted">{{ user.first_name }} {{ user.last_name }} ({{ user.username }})</h6>
+  </div>
+</div>
+
+{% block content %}
+{% endblock %}
+
+<footer class="footer fixed-bottom">
+  <div class="row">
+    <div class="col text-right">
+      <small>
+        Página <span class="font-weight-bold" id="pagina"></span>
+      </small>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

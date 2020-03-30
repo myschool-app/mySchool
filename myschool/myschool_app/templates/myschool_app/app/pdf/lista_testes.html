@@ -1,0 +1,34 @@
+{% extends 'myschool_app/app/pdf/base.html' %}
+
+{% block cabecalho %}
+  Lista de Testes
+{% endblock cabecalho %}
+
+{% block content %}
+  {% if testes %}
+    <table class="table table-borderless">
+      <thead>
+      <tr>
+        <th scope="col">Disciplina</th>
+        <th scope="col">Data</th>
+        <th scope="col">Realizado</th>
+        <th scope="col">Avaliação</th>
+        <th scope="col">Notas</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for teste in testes %}
+        <tr>
+          <th scope="row">{{ teste.disciplina }}</th>
+          <td>{{ teste.data|date:'d/M/Y' }}</td>
+          <td>{{ teste.realizado|default_if_none:'--' }}</td>
+          <td>{{ teste.avaliacao|default_if_none:'--' }}</td>
+          <td>{{ teste.notas }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>Nenhum teste registado.</p>
+  {% endif %}
+{% endblock content %}

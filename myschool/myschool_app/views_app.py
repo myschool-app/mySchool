@@ -9,6 +9,7 @@ from django.views.generic import (
   DeleteView,
   TemplateView
 )
+from django_weasyprint import WeasyTemplateResponseMixin
 
 from .forms import *
 from .models import *
@@ -466,5 +467,17 @@ class EventoDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMi
 
 
 """
-Gráficos
+PDF
 """
+
+
+class TestePDFView(WeasyTemplateResponseMixin, ListView):
+  model = Teste
+  context_object_name = 'testes'
+
+  def get_queryset(self):
+    return Teste.objects.all().filter(utilizador=self.request.user)
+
+  template_name = 'myschool_app/app/pdf/lista_testes.html'
+  pdf_attachment = False
+  pdf_filename = 'testes.pdf'
