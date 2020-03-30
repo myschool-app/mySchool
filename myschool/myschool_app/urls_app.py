@@ -25,7 +25,7 @@ urlpatterns = [
        ProfessorDeleteView.as_view(), name="app-professores-remover"),
   # Testes
   path('testes/', TesteListView.as_view(), name="app-testes-lista"),
-  path('testes/pdf/', TestePDFView.as_view(), name="app-testes-pdf"),
+  path('testes/pdf/', TestePDFListView.as_view(), name="app-testes-pdf"),
   path('testes/adicionar/', TesteCreateView.as_view(),
        name="app-testes-adicionar"),
   path('testes/<int:pk>/editar/',

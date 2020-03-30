@@ -26,6 +26,7 @@ INSTALLED_APPS = [
   # Aplicações PIP
   'crispy_forms',
   'django_extensions',
+  'easy_pdf',
   # Django
   'django.contrib.admindocs',
   'django.contrib.admin',

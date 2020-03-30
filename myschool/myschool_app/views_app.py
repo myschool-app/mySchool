@@ -9,7 +9,7 @@ from django.views.generic import (
   DeleteView,
   TemplateView
 )
-from django_weasyprint import WeasyTemplateResponseMixin
+from easy_pdf.views import PDFTemplateResponseMixin
 
 from .forms import *
 from .models import *
@@ -471,13 +471,15 @@ PDF
 """
 
 
-class TestePDFView(WeasyTemplateResponseMixin, ListView):
+class TestePDFListView(LoginRequiredMixin, PDFTemplateResponseMixin, ListView):
+  """
+  Mostra a lista de testes, próprios de cada utilizador
+  registado na tabela Teste
+  """
+
   model = Teste
-  context_object_name = 'testes'
   template_name = 'myschool_app/app/pdf/lista_testes.html'
+  context_object_name = 'testes'
 
   def get_queryset(self):
-    return Teste.objects.all().filter(utilizador=self.request.user)
-
-  pdf_attachment = False
-  pdf_filename = 'testes.pdf'
+    return Teste.objects.filter(utilizador=self.request.user)
