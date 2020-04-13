@@ -284,19 +284,19 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:9
 msgid "Registos"
-msgstr "Records"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:19
 msgid "Gráficos"
-msgstr "Charts"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:26
 msgid "Calendário"
-msgstr "Calendar"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:29
 msgid "Definições"
-msgstr "Settings"
+msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:33
 msgid "Administração"
