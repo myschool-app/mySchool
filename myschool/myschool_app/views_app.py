@@ -1,7 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import (
     ListView,
@@ -456,7 +455,6 @@ class EventoDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMi
         messages.success(self.request, self.success_message % evento.__dict__)
         return super(EventoDeleteView, self).delete(request, *args, **kwargs)
 
-
 # PDF
 
 
@@ -472,24 +470,3 @@ class EventoDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMi
 #
 #     def get_queryset(self):
 #         return Teste.objects.filter(utilizador=self.request.user)
-
-
-# Gráficos
-class LineChart(Chart):
-    chart_type = 'line'
-    responsive = True
-
-    def get_datasets(self, **kwargs):
-        return [{
-            'label': "My Dataset",
-            'data': Teste.objects.all().values()
-        }]
-
-    def get_labels(self, **kwargs):
-        return ['Red', 'Blue']
-
-
-def TesteGraficoView(request):
-    return render(request, 'myschool_app/app/testes_graficos.html', {
-        'line_chart': LineChart(),
-    })

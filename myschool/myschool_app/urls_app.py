@@ -41,6 +41,4 @@ urlpatterns = [
          EventoUpdateView.as_view(), name="app-eventos-editar"),
     path('eventos/<int:pk>/remover/',
          EventoDeleteView.as_view(), name="app-eventos-remover"),
-    # Gráficos
-    path('graficos/testes/', TesteGraficoView, name="app-graficos-testes")
 ]

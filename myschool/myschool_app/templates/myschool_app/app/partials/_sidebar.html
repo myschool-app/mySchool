@@ -19,7 +19,7 @@
       <a href="#graficos" data-toggle="collapse"> <i class="fa fa-fw fa-chart-bar mr-2"></i> {% trans 'Gráficos' %}
       </a>
       <ul id="graficos" class="list-unstyled collapse">
-        <li><a href="{% url 'app-graficos-testes' %}">{% trans 'Testes' %}</a></li>
+        <li><a onclick="mensagem()" href="#">{% trans 'Testes' %}</a></li>
       </ul>
     </li>
     <li {% if request.path == '/app/calendario/' %} class="active" {% endif %}>
