@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_extensions',
     'easy_pdf',
-    'jchart',
     # Django
     'django.contrib.admindocs',
     'django.contrib.admin',
