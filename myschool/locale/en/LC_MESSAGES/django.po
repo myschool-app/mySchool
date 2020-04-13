@@ -2,18 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mySchool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-30 17:27+0100\n"
+"POT-Creation-Date: 2020-04-13 01:11+0100\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 
-#: .\myschool\settings\base.py:99
+#: .\myschool\settings\base.py:101
 msgid "Português"
 msgstr ""
 
-#: .\myschool\settings\base.py:100
+#: .\myschool\settings\base.py:102
 msgid "Inglês"
 msgstr ""
 
@@ -62,6 +62,8 @@ msgid "Descrição"
 msgstr ""
 
 #: .\myschool_app\models.py:37 .\myschool_app\models.py:54
+#: .\myschool_app\templates\myschool_app\app\index.html:78
+#: .\myschool_app\templates\myschool_app\app\pdf\lista_testes.html:13
 #: .\myschool_app\templates\myschool_app\app\testes.html:35
 msgid "Disciplina"
 msgstr ""
@@ -78,20 +80,25 @@ msgid "Disciplinas"
 msgstr ""
 
 #: .\myschool_app\models.py:55
+#: .\myschool_app\templates\myschool_app\app\index.html:77
+#: .\myschool_app\templates\myschool_app\app\pdf\lista_testes.html:14
 #: .\myschool_app\templates\myschool_app\app\testes.html:36
 msgid "Data"
 msgstr ""
 
 #: .\myschool_app\models.py:57
+#: .\myschool_app\templates\myschool_app\app\pdf\lista_testes.html:17
 msgid "Notas"
 msgstr ""
 
 #: .\myschool_app\models.py:59
+#: .\myschool_app\templates\myschool_app\app\pdf\lista_testes.html:15
 #: .\myschool_app\templates\myschool_app\app\testes.html:37
 msgid "Realizado?"
 msgstr ""
 
 #: .\myschool_app\models.py:61
+#: .\myschool_app\templates\myschool_app\app\pdf\lista_testes.html:16
 #: .\myschool_app\templates\myschool_app\app\testes.html:38
 #: .\myschool_app\templates\myschool_app\app\testes.html:64
 msgid "Avaliação"
@@ -110,17 +117,21 @@ msgstr ""
 #: .\myschool_app\templates\myschool_app\app\testes_avaliacao_form.html:10
 #: .\myschool_app\templates\myschool_app\app\testes_form.html:6
 #: .\myschool_app\templates\myschool_app\app\testes_form.html:10
+#: .\myschool_app\templates\myschool_app\app\testes_graficos.html:6
+#: .\myschool_app\templates\myschool_app\app\testes_graficos.html:10
 #: .\myschool_app\templates\myschool_app\app\testes_remover.html:10
 msgid "Testes"
 msgstr ""
 
 #: .\myschool_app\models.py:77
 #: .\myschool_app\templates\myschool_app\app\eventos.html:32
+#: .\myschool_app\templates\myschool_app\app\index.html:133
 msgid "Título"
 msgstr ""
 
 #: .\myschool_app\models.py:79
 #: .\myschool_app\templates\myschool_app\app\eventos.html:34
+#: .\myschool_app\templates\myschool_app\app\index.html:132
 msgid "Data de Início"
 msgstr ""
 
@@ -152,6 +163,7 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:34
 #: .\myschool_app\templates\myschool_app\app\eventos.html:36
+#: .\myschool_app\templates\myschool_app\app\index.html:80
 #: .\myschool_app\templates\myschool_app\app\professores.html:34
 #: .\myschool_app\templates\myschool_app\app\testes.html:39
 msgid "Opções"
@@ -163,6 +175,7 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\disciplinas.html:45
 #: .\myschool_app\templates\myschool_app\app\eventos.html:48
+#: .\myschool_app\templates\myschool_app\app\index.html:106
 #: .\myschool_app\templates\myschool_app\app\professores.html:44
 #: .\myschool_app\templates\myschool_app\app\testes.html:60
 msgid "Editar"
@@ -268,7 +281,40 @@ msgstr ""
 msgid "Próximos Testes"
 msgstr ""
 
-#: .\myschool_app\templates\myschool_app\app\index.html:121
+#: .\myschool_app\templates\myschool_app\app\index.html:79
+msgid "Estado"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\index.html:95
+msgid "Por Avaliar"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\index.html:100
+#, python-format
+msgid "Avaliado: %(teste.avaliacao)s"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\index.html:113
+#, python-format
+msgid ""
+"Consulte todos os testes\n"
+"              <a href=\"%(url)s\">aqui</a>."
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\index.html:116
+#: .\myschool_app\templates\myschool_app\app\index.html:149
+msgid "Sem registos."
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\index.html:117
+#: .\myschool_app\templates\myschool_app\app\index.html:150
+#, python-format
+msgid ""
+"<a href=\"%(url)s\">Adicione registos</a> para\n"
+"              começar."
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\index.html:126
 msgid "Próximos Eventos"
 msgstr ""
 
@@ -300,6 +346,18 @@ msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\partials\_sidebar.html:33
 msgid "Administração"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\pdf\lista_testes.html:5
+msgid "Lista de Testes"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\pdf\lista_testes.html:27
+msgid "Sim"
+msgstr ""
+
+#: .\myschool_app\templates\myschool_app\app\pdf\lista_testes.html:39
+msgid "Nenhum teste registado."
 msgstr ""
 
 #: .\myschool_app\templates\myschool_app\app\professores.html:33
@@ -528,26 +586,4 @@ msgstr ""
 
 #: .\utilizadores\templates\utilizadores\registo.html:19
 msgid "Já tem uma conta?"
-msgstr ""
-
-#: myschool_app\templates\myschool_app\app\index.html:79
-msgid "Estado"
-msgstr ""
-#: myschool_app\templates\myschool_app\app\index.html:95
-msgid "Por Avaliar"
-msgstr ""
-#: myschool_app\templates\myschool_app\app\index.html:100
-msgid "Avaliado: %(teste.avaliacao)s"
-msgstr ""
-#: myschool_app\templates\myschool_app\app\index.html:111
-msgid "Consulte todos os testes <a href=\"{% url 'app-testes-lista' %}\">aqui</a>."
-msgstr ""
-#: myschool_app\templates\myschool_app\app\index.html:114
-msgid "<a href=\"{% url 'app-testes-lista' %}\">Adicione registos</a> para começar."
-msgstr ""
-#: myschool_app\templates\myschool_app\app\index.html:113
-msgid "Sem registos."
-msgstr ""
-#: myschool_app\templates\myschool_app\app\index.html:145
-msgid "<a href=\"{% url 'app-eventos-lista' %}\">Adicione registos</a> para começar"
 msgstr ""
