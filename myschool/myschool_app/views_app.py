@@ -10,7 +10,6 @@ from django.views.generic import (
     DeleteView,
     TemplateView
 )
-from easy_pdf.views import PDFTemplateResponseMixin
 from jchart import Chart
 
 from .forms import *
@@ -462,18 +461,18 @@ class EventoDeleteView(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMi
 # PDF
 
 
-class TestePDFListView(LoginRequiredMixin, PDFTemplateResponseMixin, ListView):
-    """
-    Mostra a lista de testes, próprios de cada utilizador
-    registado na tabela Teste
-    """
-
-    model = Teste
-    template_name = 'myschool_app/app/pdf/lista_testes.html'
-    context_object_name = 'testes'
-
-    def get_queryset(self):
-        return Teste.objects.filter(utilizador=self.request.user)
+# class TestePDFListView(LoginRequiredMixin, PDFTemplateResponseMixin, ListView):
+#     """
+#     Mostra a lista de testes, próprios de cada utilizador
+#     registado na tabela Teste
+#     """
+#
+#     model = Teste
+#     template_name = 'myschool_app/app/pdf/lista_testes.html'
+#     context_object_name = 'testes'
+#
+#     def get_queryset(self):
+#         return Teste.objects.filter(utilizador=self.request.user)
 
 
 # Gráficos
