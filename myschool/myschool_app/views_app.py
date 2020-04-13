@@ -10,7 +10,6 @@ from django.views.generic import (
     DeleteView,
     TemplateView
 )
-from jchart import Chart
 
 from .forms import *
 from .models import *
