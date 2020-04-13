@@ -529,3 +529,25 @@ msgstr ""
 #: .\utilizadores\templates\utilizadores\registo.html:19
 msgid "Já tem uma conta?"
 msgstr ""
+
+#: myschool_app\templates\myschool_app\app\index.html:79
+msgid "Estado"
+msgstr ""
+#: myschool_app\templates\myschool_app\app\index.html:95
+msgid "Por Avaliar"
+msgstr ""
+#: myschool_app\templates\myschool_app\app\index.html:100
+msgid "Avaliado: %(teste.avaliacao)s"
+msgstr ""
+#: myschool_app\templates\myschool_app\app\index.html:111
+msgid "Consulte todos os testes <a href=\"{% url 'app-testes-lista' %}\">aqui</a>."
+msgstr ""
+#: myschool_app\templates\myschool_app\app\index.html:114
+msgid "<a href=\"{% url 'app-testes-lista' %}\">Adicione registos</a> para começar."
+msgstr ""
+#: myschool_app\templates\myschool_app\app\index.html:113
+msgid "Sem registos."
+msgstr ""
+#: myschool_app\templates\myschool_app\app\index.html:145
+msgid "<a href=\"{% url 'app-eventos-lista' %}\">Adicione registos</a> para começar"
+msgstr ""

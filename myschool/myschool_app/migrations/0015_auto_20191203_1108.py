@@ -4,14 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-  dependencies = [
-    ('myschool_app', '0014_delete_avaliacao'),
-  ]
+    dependencies = [
+        ('myschool_app', '0014_delete_avaliacao'),
+    ]
 
-  operations = [
-    migrations.AlterField(
-      model_name='teste',
-      name='realizado',
-      field=models.BooleanField(blank=True, verbose_name='Realizado?'),
-    ),
-  ]
+    operations = [
+        migrations.AlterField(
+            model_name='teste',
+            name='realizado',
+            field=models.BooleanField(blank=True, verbose_name='Realizado?'),
+        ),
+    ]

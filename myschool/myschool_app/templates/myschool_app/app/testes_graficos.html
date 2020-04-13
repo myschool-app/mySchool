@@ -1,0 +1,23 @@
+{% extends 'myschool_app/app/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+  {% trans 'Testes' %}
+{% endblock title %}
+
+{% block content %}
+  <h2><i class="fas fa-file-alt"></i> {% trans 'Testes' %}</h2>
+
+  <div class="row mt-4">
+    <div class="col">
+      {{ line_chart.as_html }}
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+{% endblock content %}
+
+{% block scripts %}
+
+{% endblock scripts %}

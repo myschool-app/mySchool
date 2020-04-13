@@ -5,15 +5,15 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-  dependencies = [
-    ('myschool_app', '0002_auto_20191117_1638'),
-  ]
+    dependencies = [
+        ('myschool_app', '0002_auto_20191117_1638'),
+    ]
 
-  operations = [
-    migrations.AlterField(
-      model_name='disciplina',
-      name='professor',
-      field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL,
-                              to='myschool_app.Professor', verbose_name='Professor'),
-    ),
-  ]
+    operations = [
+        migrations.AlterField(
+            model_name='disciplina',
+            name='professor',
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL,
+                                    to='myschool_app.Professor', verbose_name='Professor'),
+        ),
+    ]

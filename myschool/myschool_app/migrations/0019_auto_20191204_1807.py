@@ -6,16 +6,16 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-  dependencies = [
-    migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-    ('myschool_app', '0018_auto_20191203_1117'),
-  ]
+    dependencies = [
+        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+        ('myschool_app', '0018_auto_20191203_1117'),
+    ]
 
-  operations = [
-    migrations.AlterField(
-      model_name='professor',
-      name='utilizador',
-      field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL,
-                              verbose_name='Utilizador'),
-    ),
-  ]
+    operations = [
+        migrations.AlterField(
+            model_name='professor',
+            name='utilizador',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL,
+                                    verbose_name='Utilizador'),
+        ),
+    ]

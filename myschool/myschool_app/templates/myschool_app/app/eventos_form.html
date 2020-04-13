@@ -40,28 +40,28 @@
 
 {% block scripts %}
   <script>
-    $('#id_data_inicio').datepicker({
-      format: 'yyyy-mm-dd',
-      language: 'pt'
-      //startDate: '0d'
-    });
-    $('#id_data_fim').datepicker({
-      format: 'yyyy-mm-dd',
-      language: 'pt'
-      //startDate: '0d'
-    });
+      $('#id_data_inicio').datepicker({
+          format: 'yyyy-mm-dd',
+          language: 'pt'
+          //startDate: '0d'
+      });
+      $('#id_data_fim').datepicker({
+          format: 'yyyy-mm-dd',
+          language: 'pt'
+          //startDate: '0d'
+      });
 
-    // Validação de datas
-    $('form').submit(function () {
-      var data_inicio = $('#id_data_inicio').val();
-      var data_fim = $('#id_data_fim').val();
+      // Validação de datas
+      $('form').submit(function () {
+          var data_inicio = $('#id_data_inicio').val();
+          var data_fim = $('#id_data_fim').val();
 
-      if (data_fim < data_inicio) {
-        toastr["error"]("A data de fim não pode ser anterior à data de início!", "Validação")
-        return false;
-      } else {
-        return true;
-      }
-    });
+          if (data_fim < data_inicio) {
+              toastr["error"]("A data de fim não pode ser anterior à data de início!", "Validação")
+              return false;
+          } else {
+              return true;
+          }
+      });
   </script>
 {% endblock scripts %}

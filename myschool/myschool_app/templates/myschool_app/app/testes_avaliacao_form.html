@@ -32,15 +32,15 @@
 
 {% block scripts %}
   <script>
-    // Validação do campo Avaliação
-    // Apenas pode conter valores entre 0 e 20
-    $('#form-avaliacao').submit(function () {
-      var avaliacao = $.trim($('#id_avaliacao').val());
+      // Validação do campo Avaliação
+      // Apenas pode conter valores entre 0 e 20
+      $('#form-avaliacao').submit(function () {
+          var avaliacao = $.trim($('#id_avaliacao').val());
 
-      if (avaliacao > 20) {
-        toastr.error('A nota de avaliação tem de estar entre 0 e 20!', 'Erro');
-        return false;
-      }
-    });
+          if (avaliacao > 20) {
+              toastr.error('A nota de avaliação tem de estar entre 0 e 20!', 'Erro');
+              return false;
+          }
+      });
   </script>
 {% endblock scripts %}

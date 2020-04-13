@@ -40,37 +40,37 @@
 <script src="{% static 'myschool_app/js/toastr.min.js' %}"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-  // Configuração do Toastr
-  toastr.options = {
-    "closeButton": true,
-    "debug": false,
-    "newestOnTop": false,
-    "progressBar": true,
-    "positionClass": "toast-bottom-right",
-    "preventDuplicates": false,
-    "onclick": null,
-    "showDuration": "300",
-    "hideDuration": "1000",
-    "timeOut": "5000",
-    "extendedTimeOut": "1000",
-    "showEasing": "swing",
-    "hideEasing": "linear",
-    "showMethod": "fadeIn",
-    "hideMethod": "fadeOut"
-  }
+    // Configuração do Toastr
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-bottom-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
 
-  // Ano atual para o rodapé
-  document.getElementById("ano").innerHTML = new Date().getFullYear();
+    // Ano atual para o rodapé
+    document.getElementById("ano").innerHTML = new Date().getFullYear();
 
-  // Mensagem de não implementado
-  function mensagem() {
-    Swal.fire({
-      title: 'Não Implementado',
-      text: 'Esta função ainda não está disponível',
-      icon: 'info',
-      confirmButtonText: 'OK'
-    });
-  }
+    // Mensagem de não implementado
+    function mensagem() {
+        Swal.fire({
+            title: 'Não Implementado',
+            text: 'Esta função ainda não está disponível',
+            icon: 'info',
+            confirmButtonText: 'OK'
+        });
+    }
 </script>
 
 {% block scripts %}

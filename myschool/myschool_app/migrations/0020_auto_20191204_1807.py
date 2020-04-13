@@ -6,28 +6,28 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-  dependencies = [
-    migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-    ('myschool_app', '0019_auto_20191204_1807'),
-  ]
+    dependencies = [
+        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+        ('myschool_app', '0019_auto_20191204_1807'),
+    ]
 
-  operations = [
-    migrations.AlterField(
-      model_name='disciplina',
-      name='utilizador',
-      field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL,
-                              verbose_name='Utilizador'),
-    ),
-    migrations.AlterField(
-      model_name='evento',
-      name='utilizador',
-      field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL,
-                              verbose_name='Utilizador'),
-    ),
-    migrations.AlterField(
-      model_name='teste',
-      name='utilizador',
-      field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL,
-                              verbose_name='Utilizador'),
-    ),
-  ]
+    operations = [
+        migrations.AlterField(
+            model_name='disciplina',
+            name='utilizador',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL,
+                                    verbose_name='Utilizador'),
+        ),
+        migrations.AlterField(
+            model_name='evento',
+            name='utilizador',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL,
+                                    verbose_name='Utilizador'),
+        ),
+        migrations.AlterField(
+            model_name='teste',
+            name='utilizador',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL,
+                                    verbose_name='Utilizador'),
+        ),
+    ]

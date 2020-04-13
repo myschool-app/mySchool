@@ -4,14 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-  dependencies = [
-    ('myschool_app', '0009_auto_20191201_1353'),
-  ]
+    dependencies = [
+        ('myschool_app', '0009_auto_20191201_1353'),
+    ]
 
-  operations = [
-    migrations.AlterField(
-      model_name='avaliacao',
-      name='notas',
-      field=models.TextField(blank=True, max_length=255, verbose_name='Notas'),
-    ),
-  ]
+    operations = [
+        migrations.AlterField(
+            model_name='avaliacao',
+            name='notas',
+            field=models.TextField(blank=True, max_length=255, verbose_name='Notas'),
+        ),
+    ]

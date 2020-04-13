@@ -9,31 +9,31 @@ DEBUG = False
 ALLOWED_HOSTS = ['.herokuapp.com', ]
 
 AUTH_PASSWORD_VALIDATORS = [
-  {
-    'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-  },
-  {
-    'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-  },
-  {
-    'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-  },
-  {
-    'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-  },
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
 ]
 
 DATABASES = {
-  'default': {}
+    'default': {}
 }
 
 sentry_sdk.init(
-  dsn="https://0c67ef81471f46b59a99e4921e1d1775@sentry.io/3966168",
-  integrations=[DjangoIntegration()],
+    dsn="https://0c67ef81471f46b59a99e4921e1d1775@sentry.io/3966168",
+    integrations=[DjangoIntegration()],
 
-  # If you wish to associate users to errors (assuming you are using
-  # django.contrib.auth) you may enable sending PII data.
-  send_default_pii=True
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True
 )
 
 # Configurações de email

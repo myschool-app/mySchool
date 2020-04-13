@@ -5,14 +5,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-  dependencies = [
-    ('myschool_app', '0011_auto_20191201_1357'),
-  ]
+    dependencies = [
+        ('myschool_app', '0011_auto_20191201_1357'),
+    ]
 
-  operations = [
-    migrations.AlterField(
-      model_name='avaliacao',
-      name='teste',
-      field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='myschool_app.Teste'),
-    ),
-  ]
+    operations = [
+        migrations.AlterField(
+            model_name='avaliacao',
+            name='teste',
+            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='myschool_app.Teste'),
+        ),
+    ]
